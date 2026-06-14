@@ -1,0 +1,79 @@
+import 'package:flutter/material.dart';
+
+/// Convertit une clé textuelle (stockée dans le JSON de contenu) en [IconData].
+IconData mapIcon(String key) {
+  switch (key) {
+    case 'trending_up':
+      return Icons.trending_up;
+    case 'donut_large':
+      return Icons.donut_large;
+    case 'account_balance':
+      return Icons.account_balance;
+    case 'home_work':
+      return Icons.home_work;
+    case 'currency_bitcoin':
+      return Icons.currency_bitcoin;
+    case 'savings':
+      return Icons.savings;
+    case 'diamond':
+      return Icons.diamond;
+    case 'receipt_long':
+      return Icons.receipt_long;
+    case 'lightbulb':
+      return Icons.lightbulb;
+    case 'description':
+      return Icons.description;
+    case 'gavel':
+      return Icons.gavel;
+    case 'account_balance_wallet':
+      return Icons.account_balance_wallet;
+    case 'campaign':
+      return Icons.campaign;
+    case 'calculate':
+      return Icons.calculate;
+    case 'shopping_cart':
+      return Icons.shopping_cart;
+    case 'checkroom':
+      return Icons.checkroom;
+    case 'computer':
+      return Icons.computer;
+    case 'smartphone':
+      return Icons.smartphone;
+    case 'school':
+      return Icons.school;
+    case 'design_services':
+      return Icons.design_services;
+    case 'lunch_dining':
+      return Icons.lunch_dining;
+    case 'inventory_2':
+      return Icons.inventory_2;
+    case 'handshake':
+      return Icons.handshake;
+    case 'key':
+      return Icons.key;
+    case 'palette':
+      return Icons.palette;
+    case 'fitness_center':
+      return Icons.fitness_center;
+    case 'home_repair_service':
+      return Icons.home_repair_service;
+    case 'spa':
+      return Icons.spa;
+    case 'real_estate_agent':
+      return Icons.real_estate_agent;
+    case 'videocam':
+      return Icons.videocam;
+    case 'show_chart':
+      return Icons.show_chart;
+    case 'percent':
+      return Icons.percent;
+    case 'home':
+      return Icons.home;
+    case 'quiz':
+      return Icons.quiz;
+    case 'menu_book':
+      return Icons.menu_book;
+    default:
+      return Icons.circle;
+  }
+}

@@ -1,0 +1,770 @@
+[
+  {
+    "id": "dropshipping",
+    "title": "Dropshipping de niche",
+    "category": "E-commerce",
+    "icon": "shopping_cart",
+    "pitch": "Vendre en ligne des produits ciblés sans gérer de stock ni de logistique.",
+    "description": "Le dropshipping consiste à vendre des produits sur une boutique en ligne sans les stocker : c'est le fournisseur qui expédie directement au client. En se concentrant sur une niche précise (un public et un besoin bien identifiés plutôt qu'un magasin généraliste), il est possible de se différencier de la concurrence et de mieux cibler sa publicité. Le succès repose surtout sur le choix des produits, la qualité du site, le service client et la maîtrise du coût d'acquisition publicitaire.",
+    "difficulty": "Facile",
+    "investmentMin": 300,
+    "investmentMax": 3000,
+    "timeToProfitMonths": 4,
+    "marketSizeLabel": "E-commerce en France : environ 175 milliards d'euros de ventes par an",
+    "growthRatePercent": 9.5,
+    "marketTrendUnit": "Md€ (ventes e-commerce France)",
+    "marketTrend": [
+      {"year": 2021, "value": 129},
+      {"year": 2022, "value": 147},
+      {"year": 2023, "value": 160},
+      {"year": 2024, "value": 175},
+      {"year": 2025, "value": 191}
+    ],
+    "targetAudience": "Consommateurs en ligne intéressés par des produits de niche (animalerie, sport spécifique, déco, gadgets...), achetant souvent via mobile et réseaux sociaux.",
+    "pros": [
+      "Investissement de départ très faible",
+      "Pas de gestion de stock ni d'expédition",
+      "Lancement rapide, en quelques jours",
+      "Possibilité de tester de nombreux produits avant de s'engager"
+    ],
+    "cons": [
+      "Marges souvent faibles, forte concurrence",
+      "Dépendance forte aux fournisseurs et à leurs délais",
+      "Coût d'acquisition publicitaire en hausse constante",
+      "Service client parfois complexe (délais de livraison longs)"
+    ],
+    "firstSteps": [
+      "Choisir une niche précise avec une vraie demande identifiable",
+      "Identifier 2-3 fournisseurs fiables et tester la qualité des produits",
+      "Créer une boutique en ligne simple et professionnelle",
+      "Lancer de petites campagnes publicitaires test pour valider la demande",
+      "Mettre en place un service client réactif avant de scaler"
+    ],
+    "skillsNeeded": [
+      "Marketing digital et publicité en ligne",
+      "Sélection de produits et négociation fournisseurs",
+      "Service client et gestion des litiges",
+      "Analyse de données (coût d'acquisition, marges)"
+    ]
+  },
+  {
+    "id": "print_on_demand",
+    "title": "Marque de vêtements éco-responsables",
+    "category": "E-commerce",
+    "icon": "checkroom",
+    "pitch": "Créer une marque de vêtements imprimés à la demande, sans stock ni production en avance.",
+    "description": "Le print-on-demand (impression à la demande) permet de créer une marque de vêtements ou d'accessoires (t-shirts, hoodies, sacs...) sans produire de stock à l'avance : chaque commande est fabriquée et expédiée individuellement par un partenaire de production. L'accent éco-responsable (matières biologiques, production locale, packaging réduit) répond à une demande croissante des consommateurs, en particulier chez les jeunes générations, prêtes à payer un peu plus cher pour des marques alignées avec leurs valeurs.",
+    "difficulty": "Facile",
+    "investmentMin": 200,
+    "investmentMax": 2500,
+    "timeToProfitMonths": 5,
+    "marketSizeLabel": "Mode durable en Europe : marché estimé à plus de 7 milliards d'euros",
+    "growthRatePercent": 11.2,
+    "marketTrendUnit": "Md€ (mode durable Europe)",
+    "marketTrend": [
+      {"year": 2021, "value": 4.6},
+      {"year": 2022, "value": 5.3},
+      {"year": 2023, "value": 6.1},
+      {"year": 2024, "value": 6.9},
+      {"year": 2025, "value": 7.8}
+    ],
+    "targetAudience": "Jeunes adultes (18-35 ans) sensibles aux enjeux environnementaux, actifs sur les réseaux sociaux, attachés à l'identité visuelle d'une marque.",
+    "pros": [
+      "Aucune gestion de stock ni d'invendus",
+      "Lancement rapide avec un catalogue de designs limité",
+      "Argument écologique différenciant et porteur",
+      "Tests de designs multiples à faible coût"
+    ],
+    "cons": [
+      "Marges réduites par rapport à une production en gros",
+      "Délais de production/livraison plus longs",
+      "Qualité dépendante du partenaire de production choisi",
+      "Construction d'une identité de marque forte indispensable pour se différencier"
+    ],
+    "firstSteps": [
+      "Définir l'univers de marque (style, valeurs, public cible)",
+      "Sélectionner un partenaire d'impression à la demande certifié éco-responsable",
+      "Créer une collection capsule de 5 à 10 designs",
+      "Lancer une boutique en ligne et une présence sur les réseaux sociaux",
+      "Tester avec une petite communauté avant d'élargir la gamme"
+    ],
+    "skillsNeeded": [
+      "Design graphique ou direction artistique",
+      "Storytelling et communication de marque",
+      "Marketing sur les réseaux sociaux",
+      "Bases en e-commerce"
+    ]
+  },
+  {
+    "id": "saas_niche",
+    "title": "Logiciel SaaS pour une micro-niche B2B",
+    "category": "Tech / SaaS",
+    "icon": "computer",
+    "pitch": "Développer un outil logiciel simple résolvant un problème précis pour un secteur professionnel.",
+    "description": "Un SaaS (Software as a Service) « micro-niche » est un outil logiciel ciblant un problème très spécifique d'un secteur professionnel restreint (par exemple : gestion des plannings pour les salons de coiffure, facturation pour les indépendants du BTP, suivi de stock pour les food trucks). En se concentrant sur un public restreint mais bien identifié, il est plus facile de comprendre précisément ses besoins, de fixer un prix d'abonnement justifié, et de se différencier de logiciels généralistes trop complexes pour ces utilisateurs.",
+    "difficulty": "Difficile",
+    "investmentMin": 1000,
+    "investmentMax": 15000,
+    "timeToProfitMonths": 12,
+    "marketSizeLabel": "Marché mondial du SaaS : plusieurs centaines de milliards de dollars, en forte croissance",
+    "growthRatePercent": 18.0,
+    "marketTrendUnit": "Indice de croissance du marché SaaS (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 116},
+      {"year": 2023, "value": 134},
+      {"year": 2024, "value": 154},
+      {"year": 2025, "value": 178}
+    ],
+    "targetAudience": "Petites entreprises ou indépendants d'un secteur précis, confrontés à un problème récurrent que les outils généralistes ne résolvent pas bien.",
+    "pros": [
+      "Revenus récurrents par abonnement, prévisibles dans le temps",
+      "Marges élevées une fois le produit développé",
+      "Concurrence souvent plus faible sur une micro-niche",
+      "Forte fidélité des clients si le logiciel s'intègre à leur quotidien"
+    ],
+    "cons": [
+      "Développement technique parfois long et coûteux",
+      "Marché potentiellement restreint en nombre de clients",
+      "Nécessite un support client et une maintenance continue",
+      "Acquisition de clients B2B souvent plus lente"
+    ],
+    "firstSteps": [
+      "Identifier un problème précis et récurrent dans un secteur que vous connaissez",
+      "Interroger 15-20 professionnels du secteur sur leurs outils actuels",
+      "Construire un prototype ou MVP avec les fonctionnalités essentielles",
+      "Tester avec quelques clients pilotes avant de facturer",
+      "Mettre en place un modèle d'abonnement mensuel simple"
+    ],
+    "skillsNeeded": [
+      "Développement logiciel ou gestion d'une équipe technique",
+      "Compréhension fine du secteur cible",
+      "Vente B2B et relation client",
+      "Gestion de produit (priorisation des fonctionnalités)"
+    ]
+  },
+  {
+    "id": "app_mobile",
+    "title": "Application mobile freemium",
+    "category": "Tech / SaaS",
+    "icon": "smartphone",
+    "pitch": "Lancer une application mobile gratuite avec des fonctionnalités premium payantes.",
+    "description": "Le modèle freemium consiste à proposer une application gratuite avec des fonctionnalités de base, et à monétiser via des fonctionnalités premium (abonnement), de la publicité, ou des achats intégrés. Les catégories porteuses incluent la productivité, le bien-être, l'éducation, le suivi d'habitudes ou le fitness. La clé du succès réside dans l'acquisition d'une large base d'utilisateurs gratuits, puis dans la conversion d'une fraction de ceux-ci vers une offre payante apportant une vraie valeur ajoutée.",
+    "difficulty": "Difficile",
+    "investmentMin": 2000,
+    "investmentMax": 25000,
+    "timeToProfitMonths": 14,
+    "marketSizeLabel": "Marché mondial des applications mobiles : plusieurs centaines de milliards de dollars de revenus annuels",
+    "growthRatePercent": 13.5,
+    "marketTrendUnit": "Indice de croissance des dépenses dans les apps mobiles (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 109},
+      {"year": 2023, "value": 121},
+      {"year": 2024, "value": 136},
+      {"year": 2025, "value": 154}
+    ],
+    "targetAudience": "Utilisateurs de smartphones cherchant à résoudre un besoin récurrent (organisation, santé, apprentissage, divertissement) via une app simple et intuitive.",
+    "pros": [
+      "Potentiel de très large audience si l'app se diffuse bien",
+      "Revenus récurrents possibles via abonnements",
+      "Coûts marginaux faibles par utilisateur additionnel",
+      "Données d'usage précieuses pour améliorer le produit"
+    ],
+    "cons": [
+      "Concurrence très forte sur les stores d'applications",
+      "Taux de conversion freemium vers payant souvent faible (quelques %)",
+      "Coût de développement et de maintenance technique significatif",
+      "Acquisition d'utilisateurs coûteuse sans viralité organique"
+    ],
+    "firstSteps": [
+      "Définir un problème précis résolu par l'app, avec une fonctionnalité phare claire",
+      "Concevoir une maquette et tester l'expérience utilisateur auprès de testeurs",
+      "Développer une première version avec les fonctionnalités essentielles",
+      "Lancer auprès d'une petite communauté pour récolter des retours",
+      "Mettre en place le modèle de monétisation après validation de l'usage"
+    ],
+    "skillsNeeded": [
+      "Développement mobile (ou gestion d'un prestataire/équipe)",
+      "UX/UI design",
+      "Acquisition d'utilisateurs (ASO, réseaux sociaux, contenu)",
+      "Analyse de la rétention et des données d'usage"
+    ]
+  },
+  {
+    "id": "coaching_formation",
+    "title": "Formation et coaching en ligne",
+    "category": "Formation",
+    "icon": "school",
+    "pitch": "Transmettre une expertise via des formations vidéo, du coaching individuel ou des programmes en groupe.",
+    "description": "Le marché de la formation en ligne permet à des experts dans un domaine (langues, développement personnel, compétences professionnelles, sport, cuisine...) de créer des programmes accessibles à distance : cours vidéo préenregistrés, sessions de coaching individuel ou collectif en direct, communautés d'accompagnement. Ce modèle permet de générer des revenus en démultipliant son expertise au-delà du temps disponible pour du coaching individuel pur.",
+    "difficulty": "Moyen",
+    "investmentMin": 200,
+    "investmentMax": 5000,
+    "timeToProfitMonths": 6,
+    "marketSizeLabel": "Marché mondial du e-learning : plusieurs centaines de milliards de dollars, en forte croissance",
+    "growthRatePercent": 14.0,
+    "marketTrendUnit": "Indice de croissance du marché e-learning (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 112},
+      {"year": 2023, "value": 127},
+      {"year": 2024, "value": 145},
+      {"year": 2025, "value": 165}
+    ],
+    "targetAudience": "Personnes souhaitant développer une compétence précise (professionnelle ou personnelle) de manière flexible, à leur rythme et souvent à distance.",
+    "pros": [
+      "Démultiplie l'impact d'une expertise existante",
+      "Revenus pouvant devenir récurrents (abonnements, programmes répétés)",
+      "Faible besoin de matériel ou de local",
+      "Possibilité de tester rapidement avec un premier petit groupe"
+    ],
+    "cons": [
+      "Forte concurrence et nécessité de bien se différencier",
+      "Création de contenu de qualité demande du temps",
+      "Crédibilité à construire (preuve sociale, résultats clients)",
+      "Revenus souvent irréguliers au démarrage"
+    ],
+    "firstSteps": [
+      "Définir une promesse claire et un public cible précis",
+      "Tester le contenu avec un petit groupe pilote (gratuit ou à prix réduit)",
+      "Recueillir des témoignages et résultats concrets",
+      "Structurer une offre (cours en ligne, coaching, programme groupé)",
+      "Construire une audience via du contenu gratuit récurrent"
+    ],
+    "skillsNeeded": [
+      "Expertise reconnue dans un domaine précis",
+      "Pédagogie et création de contenu",
+      "Communication et marketing de contenu",
+      "Bases en outils de visioconférence et plateformes de formation"
+    ]
+  },
+  {
+    "id": "agence_digitale",
+    "title": "Agence de services digitaux",
+    "category": "Services",
+    "icon": "design_services",
+    "pitch": "Proposer des services digitaux (web, design, marketing) aux petites entreprises locales.",
+    "description": "De nombreuses petites entreprises (commerces, artisans, professions libérales) manquent de temps ou de compétences pour gérer leur présence digitale : site web, réseaux sociaux, publicité en ligne, référencement. Une agence de services digitaux propose un accompagnement sur ces sujets, souvent sous forme de forfaits mensuels récurrents. Démarrer en solo (freelance) avant de constituer une petite équipe est une trajectoire courante pour ce type d'activité.",
+    "difficulty": "Moyen",
+    "investmentMin": 500,
+    "investmentMax": 5000,
+    "timeToProfitMonths": 3,
+    "marketSizeLabel": "Marché du marketing digital pour PME en France : plusieurs milliards d'euros par an",
+    "growthRatePercent": 10.0,
+    "marketTrendUnit": "Indice de croissance de la dépense marketing digital PME (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 108},
+      {"year": 2023, "value": 119},
+      {"year": 2024, "value": 130},
+      {"year": 2025, "value": 143}
+    ],
+    "targetAudience": "Petites et moyennes entreprises locales (commerces, artisans, professions libérales) souhaitant développer leur visibilité en ligne sans recruter en interne.",
+    "pros": [
+      "Démarrage possible en solo avec peu de capital",
+      "Revenus récurrents via des forfaits mensuels",
+      "Demande forte et constante des petites entreprises",
+      "Possibilité de se spécialiser sur un secteur ou un service précis"
+    ],
+    "cons": [
+      "Dépendance forte aux compétences du ou des fondateurs au démarrage",
+      "Concurrence nombreuse (freelances, agences)",
+      "Gestion de multiples clients en parallèle, organisation exigeante",
+      "Nécessité de prouver des résultats concrets pour fidéliser"
+    ],
+    "firstSteps": [
+      "Choisir 1 à 2 services à fort impact (site web, réseaux sociaux, SEO local)",
+      "Cibler un secteur où vous avez déjà un réseau ou une expertise",
+      "Réaliser quelques missions à tarif réduit pour constituer un portfolio",
+      "Mettre en place une offre packagée avec tarifs clairs",
+      "Développer une stratégie de prospection locale (réseau, recommandations)"
+    ],
+    "skillsNeeded": [
+      "Compétences techniques (web, design, publicité, SEO selon l'offre)",
+      "Gestion de projet et relation client",
+      "Prospection commerciale",
+      "Organisation et gestion du temps"
+    ]
+  },
+  {
+    "id": "food_truck",
+    "title": "Food truck / concept street food",
+    "category": "Food & Boissons",
+    "icon": "lunch_dining",
+    "pitch": "Lancer un concept de restauration mobile autour d'une spécialité différenciante.",
+    "description": "Le food truck permet de lancer un concept de restauration avec un investissement plus limité qu'un restaurant traditionnel, tout en testant un concept culinaire (cuisine du monde, healthy, spécialité régionale...) sur différents emplacements (marchés, zones d'activité, événements). La mobilité permet d'ajuster l'emplacement en fonction de la fréquentation, mais implique aussi une logistique quotidienne (déplacements, autorisations d'emplacement, approvisionnement).",
+    "difficulty": "Moyen",
+    "investmentMin": 15000,
+    "investmentMax": 60000,
+    "timeToProfitMonths": 9,
+    "marketSizeLabel": "Marché de la restauration rapide en France : plus de 60 milliards d'euros par an",
+    "growthRatePercent": 6.5,
+    "marketTrendUnit": "Md€ (restauration rapide France)",
+    "marketTrend": [
+      {"year": 2021, "value": 48},
+      {"year": 2022, "value": 53},
+      {"year": 2023, "value": 57},
+      {"year": 2024, "value": 61},
+      {"year": 2025, "value": 65}
+    ],
+    "targetAudience": "Actifs en pause déjeuner près de zones de bureaux, visiteurs de marchés et événements, amateurs de street food à la recherche de concepts originaux.",
+    "pros": [
+      "Investissement plus faible qu'un restaurant traditionnel",
+      "Flexibilité des emplacements selon la fréquentation",
+      "Visibilité forte sur les réseaux sociaux (effet « food porn »)",
+      "Test possible de plusieurs concepts/menus rapidement"
+    ],
+    "cons": [
+      "Dépendance forte à la météo et à la saisonnalité",
+      "Démarches d'autorisations d'emplacement parfois complexes",
+      "Journées de travail souvent longues et physiques",
+      "Espace de travail réduit limitant la diversité de la carte"
+    ],
+    "firstSteps": [
+      "Définir un concept différenciant avec une carte courte et maîtrisée",
+      "Étudier les emplacements potentiels et leurs autorisations",
+      "Calculer un prévisionnel précis (achat/location du camion, équipement, matières premières)",
+      "Tester le concept lors d'événements ponctuels avant un emplacement fixe",
+      "Mettre en place une présence sur les réseaux sociaux pour annoncer les emplacements"
+    ],
+    "skillsNeeded": [
+      "Compétences culinaires et gestion d'une cuisine",
+      "Gestion des stocks et des coûts matières",
+      "Relation client et service rapide",
+      "Connaissance des normes d'hygiène (HACCP)"
+    ]
+  },
+  {
+    "id": "box_abonnement",
+    "title": "Box d'abonnement thématique",
+    "category": "E-commerce",
+    "icon": "inventory_2",
+    "pitch": "Proposer un abonnement mensuel à une box de produits soigneusement sélectionnés autour d'une thématique.",
+    "description": "Le modèle de la box d'abonnement consiste à envoyer régulièrement (souvent chaque mois) une sélection de produits autour d'une thématique précise : beauté, gourmandise, bien-être, loisirs créatifs, jeux de société, produits locaux... La valeur perçue repose sur la curation (la sélection elle-même), la surprise et l'aspect « cadeau que l'on se fait à soi-même ». Les revenus récurrents par abonnement en font un modèle économiquement attractif si la fidélisation est bonne.",
+    "difficulty": "Moyen",
+    "investmentMin": 2000,
+    "investmentMax": 20000,
+    "timeToProfitMonths": 8,
+    "marketSizeLabel": "Marché mondial des box par abonnement : plusieurs dizaines de milliards de dollars",
+    "growthRatePercent": 12.0,
+    "marketTrendUnit": "Indice de croissance du marché des box par abonnement (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 110},
+      {"year": 2023, "value": 124},
+      {"year": 2024, "value": 138},
+      {"year": 2025, "value": 155}
+    ],
+    "targetAudience": "Consommateurs en quête de découverte et de praticité, attirés par des thématiques précises (beauté, gourmandise, créativité, produits locaux).",
+    "pros": [
+      "Revenus récurrents et prévisibles via les abonnements",
+      "Forte fidélisation si la curation est appréciée",
+      "Effet de communauté autour de la marque",
+      "Possibilité de négocier des prix avantageux auprès des fournisseurs en volume"
+    ],
+    "cons": [
+      "Taux de désabonnement (churn) souvent élevé à surveiller",
+      "Gestion logistique mensuelle (sourcing, emballage, expédition)",
+      "Marges parfois serrées entre coût des produits et prix de l'abonnement",
+      "Renouvellement constant de la sélection pour maintenir l'intérêt"
+    ],
+    "firstSteps": [
+      "Choisir une thématique précise avec une communauté engagée",
+      "Construire des partenariats avec des fournisseurs/marques pour la sélection",
+      "Tester avec une box unique en prévente avant de lancer l'abonnement",
+      "Mettre en place la logistique d'expédition mensuelle",
+      "Suivre le taux de rétention et ajuster la sélection en fonction des retours"
+    ],
+    "skillsNeeded": [
+      "Curation de produits et négociation fournisseurs",
+      "Logistique et gestion des stocks",
+      "Marketing de contenu et communauté",
+      "Gestion d'abonnements et fidélisation"
+    ]
+  },
+  {
+    "id": "location_materiel",
+    "title": "Location de matériel entre particuliers",
+    "category": "Économie collaborative",
+    "icon": "handshake",
+    "pitch": "Mettre en location du matériel (outillage, équipement de loisirs, matériel événementiel) entre particuliers ou professionnels.",
+    "description": "L'économie de la location entre particuliers permet de générer des revenus à partir de biens sous-utilisés : outillage de bricolage, matériel de camping, équipements événementiels, matériel photo/vidéo... Le concept peut démarrer avec son propre matériel, puis évoluer vers une plateforme mettant en relation de nombreux propriétaires et locataires, avec une commission sur chaque transaction. La tendance à la consommation responsable et à la réduction des achats inutiles soutient ce marché.",
+    "difficulty": "Moyen",
+    "investmentMin": 500,
+    "investmentMax": 10000,
+    "timeToProfitMonths": 7,
+    "marketSizeLabel": "Marché de la location entre particuliers en Europe : plusieurs milliards d'euros, en expansion",
+    "growthRatePercent": 15.0,
+    "marketTrendUnit": "Indice de croissance de la location entre particuliers (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 114},
+      {"year": 2023, "value": 131},
+      {"year": 2024, "value": 151},
+      {"year": 2025, "value": 174}
+    ],
+    "targetAudience": "Particuliers et petites entreprises ayant un besoin ponctuel d'équipements (bricolage, événements, loisirs) sans vouloir les acheter.",
+    "pros": [
+      "Possibilité de démarrer avec du matériel déjà possédé",
+      "Modèle scalable si transformation en plateforme avec commission",
+      "Répond à une tendance de consommation responsable",
+      "Revenus additionnels sur des actifs sous-utilisés"
+    ],
+    "cons": [
+      "Risque de dégradation ou de non-restitution du matériel",
+      "Besoin d'assurance et de conditions contractuelles claires",
+      "Logistique de remise/récupération du matériel",
+      "Concurrence de plateformes déjà établies si modèle de marketplace"
+    ],
+    "firstSteps": [
+      "Identifier le matériel à forte demande ponctuelle dans votre zone",
+      "Définir des conditions de location claires (caution, assurance, état des lieux)",
+      "Tester la demande via des plateformes existantes ou réseaux locaux",
+      "Mettre en place un système de réservation et de paiement simple",
+      "Élargir progressivement l'offre selon la demande observée"
+    ],
+    "skillsNeeded": [
+      "Gestion logistique et organisation",
+      "Relation client et gestion des litiges",
+      "Notions de base en assurance et contrats",
+      "Marketing local"
+    ]
+  },
+  {
+    "id": "conciergerie_airbnb",
+    "title": "Conciergerie pour locations courte durée",
+    "category": "Immobilier",
+    "icon": "key",
+    "pitch": "Gérer pour le compte de propriétaires des logements proposés en location courte durée (type Airbnb).",
+    "description": "Une conciergerie pour locations courte durée prend en charge, pour le compte de propriétaires, l'ensemble de la gestion d'un ou plusieurs logements : création et optimisation des annonces, gestion des réservations et de la communication avec les voyageurs, ménage et blanchisserie entre chaque séjour, gestion du linge et des équipements. Le service est rémunéré par une commission sur les revenus locatifs ou un forfait par prestation.",
+    "difficulty": "Moyen",
+    "investmentMin": 1000,
+    "investmentMax": 8000,
+    "timeToProfitMonths": 5,
+    "marketSizeLabel": "Marché de la location courte durée en France : plusieurs milliards d'euros de revenus locatifs annuels",
+    "growthRatePercent": 11.0,
+    "marketTrendUnit": "Indice de croissance des nuitées en location courte durée (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 118},
+      {"year": 2023, "value": 132},
+      {"year": 2024, "value": 145},
+      {"year": 2025, "value": 160}
+    ],
+    "targetAudience": "Propriétaires de logements en location courte durée qui manquent de temps ou résident loin de leur bien et souhaitent déléguer la gestion.",
+    "pros": [
+      "Investissement de départ limité, basé sur du service",
+      "Revenus récurrents via commissions mensuelles",
+      "Marché en forte croissance dans les zones touristiques",
+      "Possibilité de mutualiser le ménage/linge entre plusieurs logements"
+    ],
+    "cons": [
+      "Activité dépendante de la saisonnalité touristique",
+      "Disponibilité requise (urgences, check-in/out tardifs)",
+      "Réglementation locale sur la location courte durée à surveiller",
+      "Qualité de service déterminante pour la réputation (avis en ligne)"
+    ],
+    "firstSteps": [
+      "Étudier la réglementation locale sur la location courte durée",
+      "Démarrer avec 1-2 logements pilotes (le sien ou via un partenariat)",
+      "Mettre en place les process : ménage, linge, gestion des annonces, communication voyageurs",
+      "Optimiser les annonces (photos, tarification dynamique)",
+      "Démarcher progressivement d'autres propriétaires en mettant en avant les résultats obtenus"
+    ],
+    "skillsNeeded": [
+      "Organisation et gestion logistique (ménage, linge, plannings)",
+      "Relation client multicanal et gestion des imprévus",
+      "Notions de tarification dynamique",
+      "Marketing pour les annonces (photo, rédaction)"
+    ]
+  },
+  {
+    "id": "artisanat_etsy",
+    "title": "Atelier de création artisanale en ligne",
+    "category": "Artisanat & Création",
+    "icon": "palette",
+    "pitch": "Créer et vendre des produits artisanaux faits-main via des marketplaces spécialisées et les réseaux sociaux.",
+    "description": "La vente de créations artisanales (bijoux, décoration, papeterie, accessoires textiles, produits personnalisés...) via des marketplaces spécialisées et les réseaux sociaux permet à des créateurs de toucher une audience mondiale depuis leur atelier. La différenciation repose sur le style, la qualité, la personnalisation et l'histoire de la marque. Ce modèle démarre souvent en activité complémentaire avant une éventuelle bascule à temps plein.",
+    "difficulty": "Facile",
+    "investmentMin": 100,
+    "investmentMax": 2000,
+    "timeToProfitMonths": 6,
+    "marketSizeLabel": "Marché mondial de l'artisanat en ligne (« handmade ») : plusieurs dizaines de milliards de dollars",
+    "growthRatePercent": 10.5,
+    "marketTrendUnit": "Indice de croissance du marché handmade en ligne (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 108},
+      {"year": 2023, "value": 119},
+      {"year": 2024, "value": 131},
+      {"year": 2025, "value": 145}
+    ],
+    "targetAudience": "Consommateurs en recherche de produits uniques, personnalisés ou faits-main, sensibles à l'aspect artisanal et à l'histoire derrière chaque création.",
+    "pros": [
+      "Investissement de départ très faible",
+      "Possibilité de démarrer en activité complémentaire",
+      "Forte différenciation possible grâce au style personnel",
+      "Audience potentiellement internationale via les marketplaces"
+    ],
+    "cons": [
+      "Production souvent artisanale donc difficile à industrialiser rapidement",
+      "Temps de fabrication pouvant limiter le volume de ventes",
+      "Concurrence nombreuse, nécessité de se démarquer visuellement",
+      "Marges à surveiller (matières premières, temps de fabrication, frais de plateforme)"
+    ],
+    "firstSteps": [
+      "Définir un style et une gamme de produits cohérente",
+      "Calculer un prix de vente couvrant matières, temps et frais de plateforme",
+      "Créer une boutique sur une marketplace spécialisée et des comptes réseaux sociaux",
+      "Réaliser de belles photos produits, élément clé de conversion",
+      "Recueillir des avis clients dès les premières ventes"
+    ],
+    "skillsNeeded": [
+      "Savoir-faire artisanal / créatif",
+      "Photographie produit",
+      "Marketing sur réseaux sociaux visuels",
+      "Gestion des commandes et expéditions"
+    ]
+  },
+  {
+    "id": "coaching_sportif",
+    "title": "Coaching sportif de quartier",
+    "category": "Bien-être & Sport",
+    "icon": "fitness_center",
+    "pitch": "Proposer des séances de coaching sportif individuel ou en petit groupe, en salle ou en extérieur.",
+    "description": "Le coaching sportif de proximité répond à une demande croissante pour un accompagnement personnalisé, en complément ou en alternative aux salles de sport classiques : séances individuelles, cours collectifs en petit groupe (parcs, salles louées à l'heure), programmes en ligne pour le suivi à distance. Le modèle peut démarrer en solo avec un minimum de matériel et se développer vers une offre hybride (présentiel + suivi digital).",
+    "difficulty": "Moyen",
+    "investmentMin": 500,
+    "investmentMax": 8000,
+    "timeToProfitMonths": 4,
+    "marketSizeLabel": "Marché du fitness et du bien-être en France : plusieurs milliards d'euros par an",
+    "growthRatePercent": 8.0,
+    "marketTrendUnit": "Indice de croissance du marché du fitness/bien-être (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 107},
+      {"year": 2023, "value": 116},
+      {"year": 2024, "value": 125},
+      {"year": 2025, "value": 135}
+    ],
+    "targetAudience": "Particuliers souhaitant un accompagnement personnalisé pour atteindre des objectifs de forme physique, santé ou perte de poids, en présentiel ou à distance.",
+    "pros": [
+      "Démarrage possible avec un investissement très limité",
+      "Relation client forte favorisant la fidélisation",
+      "Possibilité de revenus complémentaires via du contenu en ligne",
+      "Marché soutenu par une tendance de fond (santé, bien-être)"
+    ],
+    "cons": [
+      "Revenus directement liés au temps disponible du coach (sauf offre digitale)",
+      "Nécessite des certifications/diplômes selon la réglementation locale",
+      "Acquisition de clients initiale parfois lente (bouche-à-oreille à construire)",
+      "Activité physique exigeante sur la durée"
+    ],
+    "firstSteps": [
+      "Obtenir les certifications nécessaires pour exercer légalement",
+      "Définir une spécialité ou un public cible (perte de poids, remise en forme, sportifs...)",
+      "Démarrer avec quelques clients pilotes pour construire des témoignages",
+      "Mettre en place une présence locale (réseaux sociaux, partenariats avec salles ou parcs)",
+      "Envisager une offre digitale complémentaire (programmes, suivi à distance)"
+    ],
+    "skillsNeeded": [
+      "Certification et expertise en activité physique",
+      "Pédagogie et motivation client",
+      "Marketing local et réseaux sociaux",
+      "Gestion de planning et de clientèle"
+    ]
+  },
+  {
+    "id": "services_domicile",
+    "title": "Plateforme de services à domicile",
+    "category": "Services locaux",
+    "icon": "home_repair_service",
+    "pitch": "Mettre en relation des particuliers avec des prestataires de services à domicile (ménage, bricolage, jardinage...).",
+    "description": "Les services à domicile (ménage, petit bricolage, jardinage, garde d'enfants ou d'animaux, aide aux personnes âgées...) répondent à une demande croissante liée au manque de temps des ménages et au vieillissement de la population. Un modèle de plateforme de mise en relation permet de capter une commission sur chaque mission, tandis qu'un modèle de service géré directement permet de mieux contrôler la qualité, au prix d'une organisation plus lourde (recrutement, planning, remplacement).",
+    "difficulty": "Moyen",
+    "investmentMin": 1000,
+    "investmentMax": 15000,
+    "timeToProfitMonths": 8,
+    "marketSizeLabel": "Marché des services à la personne en France : plus de 20 milliards d'euros par an",
+    "growthRatePercent": 7.5,
+    "marketTrendUnit": "Md€ (services à la personne France)",
+    "marketTrend": [
+      {"year": 2021, "value": 19.5},
+      {"year": 2022, "value": 20.8},
+      {"year": 2023, "value": 22.2},
+      {"year": 2024, "value": 23.7},
+      {"year": 2025, "value": 25.4}
+    ],
+    "targetAudience": "Particuliers actifs ou personnes âgées ayant besoin d'aide récurrente ou ponctuelle pour des tâches domestiques, et professionnels indépendants cherchant des missions régulières.",
+    "pros": [
+      "Marché porté par des tendances démographiques de fond",
+      "Possibilité de revenus récurrents (abonnements/forfaits réguliers)",
+      "Dispositifs fiscaux existants pour les services à la personne en France",
+      "Multiples segments possibles (ménage, bricolage, jardinage, aide aux séniors)"
+    ],
+    "cons": [
+      "Recrutement et fidélisation des prestataires souvent complexes",
+      "Exigences de qualité et de confiance élevées (accès au domicile)",
+      "Cadre réglementaire spécifique (agréments, déclarations) selon le service",
+      "Marges faibles si modèle de simple mise en relation avec forte concurrence"
+    ],
+    "firstSteps": [
+      "Choisir un ou deux services prioritaires sur une zone géographique précise",
+      "Étudier le cadre réglementaire applicable (agréments, déclarations)",
+      "Recruter et former un premier réseau de prestataires de confiance",
+      "Mettre en place un système de réservation et de paiement simple",
+      "Construire la confiance via avis clients et garanties de qualité"
+    ],
+    "skillsNeeded": [
+      "Recrutement et gestion de prestataires",
+      "Relation client et gestion de la qualité",
+      "Connaissance du cadre réglementaire des services à la personne",
+      "Marketing local"
+    ]
+  },
+  {
+    "id": "cosmetiques_naturels",
+    "title": "Marque de cosmétiques naturels",
+    "category": "Beauté & Bien-être",
+    "icon": "spa",
+    "pitch": "Créer une marque de cosmétiques à base d'ingrédients naturels, vendue en ligne et/ou en circuits courts.",
+    "description": "La demande pour des cosmétiques aux formulations naturelles, transparentes et respectueuses de l'environnement continue de croître. Une marque de cosmétiques naturels peut démarrer avec une gamme restreinte (par exemple un savon, un baume, une huile) fabriquée en petites séries, vendue en ligne, sur les marchés locaux ou en dépôt chez des commerçants partenaires, avant d'élargir la gamme selon la demande.",
+    "difficulty": "Moyen",
+    "investmentMin": 1000,
+    "investmentMax": 12000,
+    "timeToProfitMonths": 9,
+    "marketSizeLabel": "Marché des cosmétiques naturels/bio en Europe : plusieurs milliards d'euros, en croissance continue",
+    "growthRatePercent": 9.0,
+    "marketTrendUnit": "Indice de croissance des cosmétiques naturels en Europe (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 109},
+      {"year": 2023, "value": 119},
+      {"year": 2024, "value": 130},
+      {"year": 2025, "value": 142}
+    ],
+    "targetAudience": "Consommateurs soucieux de la composition de leurs produits de beauté, intéressés par les ingrédients naturels, le local et l'éthique de fabrication.",
+    "pros": [
+      "Marché porté par une tendance de consommation durable",
+      "Possibilité de débuter en petites séries artisanales",
+      "Différenciation forte possible via la formulation et l'histoire de marque",
+      "Multiples canaux de vente possibles (ligne, marchés, dépôt-vente)"
+    ],
+    "cons": [
+      "Réglementation spécifique aux produits cosmétiques (sécurité, étiquetage)",
+      "Durée de vie limitée des produits naturels (conservation)",
+      "Concurrence importante, y compris de grandes marques se positionnant « naturel »",
+      "Marges à surveiller selon les volumes de production"
+    ],
+    "firstSteps": [
+      "Définir une gamme restreinte et une identité de marque claire",
+      "Se renseigner sur la réglementation cosmétique applicable (déclaration, étiquetage)",
+      "Faire tester les produits par un petit groupe avant le lancement",
+      "Choisir les premiers canaux de vente (en ligne, marchés locaux, dépôt-vente)",
+      "Construire une communication centrée sur la transparence des ingrédients"
+    ],
+    "skillsNeeded": [
+      "Formulation cosmétique (ou collaboration avec un laboratoire)",
+      "Connaissance de la réglementation cosmétique",
+      "Branding et storytelling",
+      "Vente directe et e-commerce"
+    ]
+  },
+  {
+    "id": "courtage_immo",
+    "title": "Courtage immobilier digital",
+    "category": "Immobilier",
+    "icon": "real_estate_agent",
+    "pitch": "Accompagner des particuliers dans leurs projets immobiliers (achat, vente, financement) avec un service principalement digital.",
+    "description": "Le courtage immobilier digital consiste à accompagner des particuliers dans la recherche de biens, la négociation, ou la recherche du meilleur financement (courtage en crédit), en s'appuyant sur des outils digitaux (visites virtuelles, signature électronique, comparateurs) pour réduire les coûts par rapport aux agences traditionnelles. La rémunération provient généralement d'une commission sur la transaction ou le financement obtenu.",
+    "difficulty": "Difficile",
+    "investmentMin": 2000,
+    "investmentMax": 20000,
+    "timeToProfitMonths": 10,
+    "marketSizeLabel": "Marché de la transaction immobilière en France : commissions représentant plusieurs milliards d'euros par an",
+    "growthRatePercent": 6.0,
+    "marketTrendUnit": "Indice de croissance du courtage immobilier digital (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 106},
+      {"year": 2023, "value": 111},
+      {"year": 2024, "value": 118},
+      {"year": 2025, "value": 126}
+    ],
+    "targetAudience": "Particuliers en projet d'achat, de vente ou de financement immobilier, recherchant un accompagnement efficace à moindre coût que les acteurs traditionnels.",
+    "pros": [
+      "Marché de fond important (transactions immobilières récurrentes)",
+      "Modèle digital permettant de réduire certains coûts opérationnels",
+      "Commissions potentiellement significatives par dossier",
+      "Possibilité de se spécialiser (primo-accédants, investisseurs, financement)"
+    ],
+    "cons": [
+      "Réglementation encadrée (cartes professionnelles, mandats selon l'activité)",
+      "Cycle de vente long et dépendant du marché immobilier global",
+      "Confiance des clients à construire face à des acteurs établis",
+      "Sensibilité forte aux variations de taux d'intérêt et du marché immobilier"
+    ],
+    "firstSteps": [
+      "Se renseigner sur les obligations réglementaires selon l'activité visée (transaction, courtage en crédit)",
+      "Choisir une spécialisation (type de bien, profil client, zone géographique)",
+      "Construire des outils digitaux simples pour fluidifier le parcours client",
+      "Développer un réseau de partenaires (notaires, banques, diagnostiqueurs)",
+      "Mettre en avant la transparence et la rapidité comme différenciateurs"
+    ],
+    "skillsNeeded": [
+      "Connaissance du marché immobilier et/ou du financement",
+      "Relation client et négociation",
+      "Outils digitaux (CRM, visites virtuelles, signature électronique)",
+      "Réseau professionnel (notaires, banques, agences)"
+    ]
+  },
+  {
+    "id": "studio_contenu",
+    "title": "Studio de production de contenu pour marques",
+    "category": "Marketing & Contenu",
+    "icon": "videocam",
+    "pitch": "Produire du contenu vidéo, podcast ou réseaux sociaux pour des marques et créateurs.",
+    "description": "Face à l'explosion du contenu vidéo et audio sur les réseaux sociaux et les plateformes de streaming, de nombreuses marques et créateurs cherchent des partenaires capables de produire régulièrement du contenu de qualité : vidéos courtes pour réseaux sociaux, podcasts d'entreprise, contenus de marque employeur, formats publicitaires natifs. Un studio peut démarrer avec un équipement modeste et se concentrer sur un format ou un secteur précis avant de se diversifier.",
+    "difficulty": "Moyen",
+    "investmentMin": 1500,
+    "investmentMax": 20000,
+    "timeToProfitMonths": 5,
+    "marketSizeLabel": "Marché mondial du marketing de contenu : plusieurs centaines de milliards de dollars",
+    "growthRatePercent": 12.5,
+    "marketTrendUnit": "Indice de croissance du marketing de contenu (base 100 en 2021)",
+    "marketTrend": [
+      {"year": 2021, "value": 100},
+      {"year": 2022, "value": 113},
+      {"year": 2023, "value": 128},
+      {"year": 2024, "value": 145},
+      {"year": 2025, "value": 164}
+    ],
+    "targetAudience": "PME, marques et créateurs de contenu ayant besoin de production régulière de vidéos, podcasts ou visuels pour leur communication, sans équipe interne dédiée.",
+    "pros": [
+      "Demande croissante et continue pour du contenu vidéo/audio",
+      "Possibilité de revenus récurrents via des contrats mensuels",
+      "Investissement matériel progressif, adaptable aux contrats obtenus",
+      "Diversification possible (vidéo, podcast, photo, formats courts)"
+    ],
+    "cons": [
+      "Concurrence nombreuse, y compris de freelances individuels",
+      "Qualité et créativité déterminantes pour se différencier",
+      "Charge de travail variable selon les contrats en cours",
+      "Évolution rapide des formats et plateformes à suivre"
+    ],
+    "firstSteps": [
+      "Choisir un format ou un secteur de spécialisation",
+      "Constituer un portfolio, y compris via des projets pro bono ou à tarif réduit au démarrage",
+      "Investir progressivement dans l'équipement selon les contrats obtenus",
+      "Démarcher des marques et créateurs via les réseaux sociaux et le réseau professionnel",
+      "Proposer des forfaits mensuels pour sécuriser des revenus récurrents"
+    ],
+    "skillsNeeded": [
+      "Production vidéo/audio (tournage, montage, son)",
+      "Créativité et sens du storytelling",
+      "Prospection commerciale B2B",
+      "Connaissance des formats propres à chaque plateforme"
+    ]
+  }
+]

@@ -1,0 +1,518 @@
+[
+  {
+    "id": "idee",
+    "title": "Trouver et valider une idée",
+    "icon": "lightbulb",
+    "colorKey": "idee",
+    "level": "Débutant",
+    "durationMinutes": 21,
+    "summary": "Apprendre à générer des idées de business solides et à les confronter au marché avant d'investir temps et argent.",
+    "lessons": [
+      {
+        "id": "idee_1",
+        "title": "D'où viennent les bonnes idées ?",
+        "durationMinutes": 7,
+        "content": "Contrairement à une idée répandue, les meilleures idées d'entreprise ne sont presque jamais des « éclairs de génie » totalement inédits. Elles naissent le plus souvent de l'observation attentive de problèmes récurrents, vécus personnellement ou observés chez d'autres.\n\nTrois sources fertiles : votre propre expérience (un problème que vous avez vécu et pour lequel vous n'avez pas trouvé de bonne solution), votre expertise professionnelle (un processus inefficace que vous observez dans votre métier), et les tendances émergentes (nouvelles technologies, évolutions réglementaires, changements de comportements de consommation).\n\nUne bonne idée résout un problème réel pour un groupe de personnes identifiable, qui sont prêtes à payer pour la solution. Plus le problème est douloureux, fréquent et coûteux à ignorer, plus la demande potentielle est forte.\n\nÀ retenir : ne cherchez pas « l'idée parfaite et unique », cherchez un problème réel et une population qui en souffre. L'exécution compte souvent plus que l'originalité de l'idée initiale."
+      },
+      {
+        "id": "idee_2",
+        "title": "Étude de marché : valider la demande",
+        "durationMinutes": 7,
+        "content": "Avant d'investir du temps et de l'argent, il est essentiel de vérifier que votre idée répond à un besoin réel et que des clients sont prêts à payer pour votre solution. C'est l'objectif de l'étude de marché.\n\nUne étude de marché simple peut combiner plusieurs approches : des entretiens avec des clients potentiels (poser des questions ouvertes sur leurs problèmes actuels, sans présenter directement votre solution), une analyse de la concurrence (qui résout déjà ce problème, comment, à quel prix), et une estimation de la taille du marché (combien de personnes sont concernées, quel budget y consacrent-elles).\n\nLes signaux d'une demande réelle incluent : des personnes qui dépensent déjà de l'argent pour résoudre ce problème (même de façon imparfaite), des recherches fréquentes sur le sujet, ou des communautés actives qui en discutent.\n\nÀ retenir : la pire erreur est de construire un produit pendant des mois avant de le confronter au marché. Parlez à au moins 10-20 clients potentiels avant de développer quoi que ce soit : leurs retours façonneront votre offre bien plus efficacement que vos hypothèses initiales."
+      },
+      {
+        "id": "idee_3",
+        "title": "Le MVP : tester avant d'investir",
+        "durationMinutes": 7,
+        "content": "Le MVP (Minimum Viable Product, ou « produit minimum viable ») est la version la plus simple possible de votre offre qui permet de tester votre hypothèse principale auprès de vrais clients, avec un minimum de ressources.\n\nUn MVP n'est pas un produit « bâclé » : c'est un produit volontairement limité en fonctionnalités, conçu pour apprendre rapidement si votre idée répond à un vrai besoin, avant d'investir davantage.\n\nExemples de MVP : une simple page web décrivant l'offre avec un bouton « je suis intéressé » pour mesurer la demande, un service réalisé manuellement avant de l'automatiser, ou une version « basique » d'un produit physique fabriquée en très petite quantité.\n\nÀ retenir : le but du MVP est d'apprendre le plus vite possible, au moindre coût, ce qui fonctionne et ce qui ne fonctionne pas. C'est le principe du « build-measure-learn » : construire une version minimale, mesurer les résultats réels, apprendre, puis ajuster avant d'investir davantage."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "D'où proviennent le plus souvent les bonnes idées d'entreprise ?",
+        "options": [
+          "D'un éclair de génie totalement inédit",
+          "De l'observation de problèmes réels et récurrents",
+          "Uniquement de la copie d'entreprises étrangères",
+          "Du hasard, sans aucune logique"
+        ],
+        "correctIndex": 1,
+        "explanation": "Les meilleures idées naissent généralement de l'observation de problèmes réels, vécus ou observés, plutôt que d'une invention totalement inédite."
+      },
+      {
+        "question": "Quel est l'objectif principal d'une étude de marché avant de se lancer ?",
+        "options": [
+          "Convaincre sa famille que l'idée est bonne",
+          "Vérifier qu'il existe une demande réelle et des clients prêts à payer",
+          "Obtenir un prêt bancaire automatiquement",
+          "Créer un logo professionnel"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'étude de marché sert avant tout à valider qu'il existe une demande réelle, avant d'investir du temps et de l'argent dans le développement."
+      },
+      {
+        "question": "Qu'est-ce qu'un MVP (Minimum Viable Product) ?",
+        "options": [
+          "La version finale et complète du produit",
+          "La version la plus simple permettant de tester l'hypothèse principale auprès de vrais clients",
+          "Un produit destiné uniquement aux investisseurs",
+          "Un document juridique de création d'entreprise"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le MVP est une version volontairement limitée du produit, conçue pour tester rapidement et à moindre coût une hypothèse clé auprès de vrais utilisateurs."
+      },
+      {
+        "question": "Quelle approche est recommandée avant de développer un produit ?",
+        "options": [
+          "Développer le produit complet en secret pendant plusieurs mois",
+          "Parler à plusieurs clients potentiels pour comprendre leurs besoins réels",
+          "Ne jamais parler à des concurrents",
+          "Attendre d'avoir un brevet avant toute discussion"
+        ],
+        "correctIndex": 1,
+        "explanation": "Discuter avec de nombreux clients potentiels avant de développer permet d'orienter l'offre selon de vrais besoins plutôt que des hypothèses."
+      },
+      {
+        "question": "Quel est le principe « build-measure-learn » ?",
+        "options": [
+          "Construire un produit, mesurer les résultats réels, puis apprendre et ajuster",
+          "Construire un plan sur 10 ans sans jamais le modifier",
+          "Mesurer uniquement les bénéfices après 5 ans",
+          "Apprendre la comptabilité avant toute chose"
+        ],
+        "correctIndex": 0,
+        "explanation": "Le cycle « build-measure-learn » consiste à construire une version minimale, mesurer les résultats réels auprès du marché, puis apprendre pour ajuster l'offre."
+      }
+    ]
+  },
+  {
+    "id": "plan",
+    "title": "Business plan & étude de marché",
+    "icon": "description",
+    "colorKey": "plan",
+    "level": "Intermédiaire",
+    "durationMinutes": 24,
+    "summary": "Structurer son projet avec un business plan clair, un business model canvas et un prévisionnel financier de base.",
+    "lessons": [
+      {
+        "id": "plan_1",
+        "title": "Construire un business plan efficace",
+        "durationMinutes": 8,
+        "content": "Un business plan est un document qui présente votre projet, sa stratégie et ses perspectives financières. Il sert à la fois d'outil de pilotage interne et de support de communication, notamment auprès de partenaires financiers (banques, investisseurs).\n\nUn business plan efficace répond généralement à plusieurs questions clés : Quel problème résolvez-vous et pour qui ? Quelle est votre solution et en quoi est-elle différente ? Quel est le marché visé (taille, tendances, concurrence) ? Comment allez-vous générer des revenus (modèle économique) ? De quelles ressources avez-vous besoin (équipe, financement, technologie) ? Quelles sont vos projections financières sur 1 à 3 ans ?\n\nUn piège fréquent est de rédiger un document trop long et trop théorique, déconnecté de la réalité du terrain. Un bon business plan reste un document vivant, mis à jour régulièrement en fonction des apprentissages du terrain.\n\nÀ retenir : le business plan n'est pas une fin en soi mais un outil. Sa valeur réside autant dans le processus de réflexion qu'il impose que dans le document final lui-même."
+      },
+      {
+        "id": "plan_2",
+        "title": "Le business model canvas",
+        "durationMinutes": 8,
+        "content": "Le Business Model Canvas est un outil visuel qui synthétise un modèle économique sur une seule page, à travers 9 blocs : segments de clientèle, proposition de valeur, canaux de distribution, relation client, sources de revenus, ressources clés, activités clés, partenaires clés, et structure de coûts.\n\nCet outil permet de visualiser rapidement la cohérence globale d'un projet : par exemple, est-ce que la proposition de valeur correspond vraiment aux attentes du segment de clientèle ciblé ? Est-ce que la structure de coûts permet de générer un revenu suffisant compte tenu du prix que les clients sont prêts à payer ?\n\nL'un des grands intérêts du canvas est sa flexibilité : il peut être rapidement modifié, comparé à plusieurs alternatives ou « pivots » (changements de stratégie), sans avoir à réécrire un document de plusieurs dizaines de pages.\n\nÀ retenir : le canvas est particulièrement utile en phase de démarrage ou de pivot, pour clarifier rapidement les hypothèses centrales d'un projet et identifier les zones les plus risquées ou les moins définies."
+      },
+      {
+        "id": "plan_3",
+        "title": "Prévisionnel financier : les bases",
+        "durationMinutes": 8,
+        "content": "Le prévisionnel financier traduit votre projet en chiffres : combien allez-vous vendre, à quel prix, quels sont vos coûts (fixes et variables), et à partir de quand votre activité devient-elle rentable.\n\nTrois documents sont au cœur d'un prévisionnel : le compte de résultat prévisionnel (chiffre d'affaires, charges, résultat), le plan de trésorerie (entrées et sorties d'argent mois par mois, essentiel car une entreprise peut être profitable « sur le papier » mais manquer de cash), et le plan de financement (besoins de financement initiaux et ressources pour les couvrir : apport personnel, emprunt, aides...).\n\nUne erreur fréquente des porteurs de projet est d'être trop optimiste sur les délais de montée en activité (le temps nécessaire pour atteindre un niveau de ventes stable) et de sous-estimer le besoin en fonds de roulement (l'argent nécessaire pour financer le décalage entre les dépenses et les encaissements).\n\nÀ retenir : un prévisionnel n'a pas vocation à être exact à l'euro près, mais à démontrer que vous avez réfléchi sérieusement aux ordres de grandeur et identifié les principaux leviers et risques financiers de votre projet. Mieux vaut un scénario prudent qu'un scénario optimiste qui s'effondre au premier imprévu."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "À quoi sert principalement un business plan ?",
+        "options": [
+          "Uniquement à obtenir un prêt bancaire",
+          "À structurer la réflexion stratégique et financière du projet et à communiquer avec des partenaires",
+          "À remplacer l'étude de marché",
+          "À garantir le succès du projet"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le business plan est un outil de pilotage interne et de communication, utile pour structurer la réflexion et présenter le projet à des partenaires."
+      },
+      {
+        "question": "Combien de blocs comporte le Business Model Canvas ?",
+        "options": [
+          "3",
+          "5",
+          "9",
+          "20"
+        ],
+        "correctIndex": 2,
+        "explanation": "Le Business Model Canvas est structuré en 9 blocs couvrant les clients, la proposition de valeur, les canaux, les revenus, les coûts, etc."
+      },
+      {
+        "question": "Pourquoi le plan de trésorerie est-il essentiel, même si l'entreprise est profitable sur le papier ?",
+        "options": [
+          "Parce que la profitabilité comptable ne garantit pas d'avoir assez de cash au bon moment",
+          "Parce que c'est un document obligatoire signé par un notaire",
+          "Parce qu'il remplace le compte de résultat",
+          "Il n'est en réalité pas utile"
+        ],
+        "correctIndex": 0,
+        "explanation": "Une entreprise peut être rentable sur le papier mais se retrouver en difficulté de trésorerie si les décalages entre encaissements et décaissements ne sont pas anticipés."
+      },
+      {
+        "question": "Quelle erreur fréquente est mentionnée concernant le prévisionnel financier ?",
+        "options": [
+          "Être trop pessimiste sur les ventes",
+          "Être trop optimiste sur la montée en activité et sous-estimer le besoin en fonds de roulement",
+          "Ne jamais inclure de chiffres",
+          "Prévoir uniquement sur 10 ans"
+        ],
+        "correctIndex": 1,
+        "explanation": "Les porteurs de projet sous-estiment souvent le temps nécessaire pour atteindre un niveau d'activité stable et le besoin en fonds de roulement associé."
+      },
+      {
+        "question": "Quel est l'un des grands avantages du Business Model Canvas par rapport à un long document écrit ?",
+        "options": [
+          "Il est légalement obligatoire",
+          "Il permet de visualiser rapidement la cohérence globale et de le modifier facilement",
+          "Il ne contient aucune information financière, ce qui le rend inutile",
+          "Il remplace totalement les entretiens clients"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le canvas offre une vue synthétique et flexible, facile à ajuster, particulièrement utile en phase de démarrage ou de pivot."
+      }
+    ]
+  },
+  {
+    "id": "juridique",
+    "title": "Statuts juridiques & création",
+    "icon": "gavel",
+    "colorKey": "juridique",
+    "level": "Intermédiaire",
+    "durationMinutes": 21,
+    "summary": "S'y retrouver parmi les statuts juridiques courants et connaître les grandes étapes de création d'une entreprise.",
+    "lessons": [
+      {
+        "id": "juridique_1",
+        "title": "Auto-entrepreneur, EI, EURL, SASU : quel statut choisir ?",
+        "durationMinutes": 7,
+        "content": "Le statut de micro-entrepreneur (auto-entrepreneur) est souvent le point d'entrée le plus simple : démarches de création rapides, comptabilité allégée, et cotisations sociales calculées en pourcentage du chiffre d'affaires réellement encaissé (donc pas de cotisations si pas de chiffre d'affaires). En contrepartie, le chiffre d'affaires est plafonné et les charges réelles ne sont pas déductibles.\n\nL'EURL (Entreprise Unipersonnelle à Responsabilité Limitée) et la SASU (Société par Actions Simplifiée Unipersonnelle) sont des sociétés unipersonnelles : elles permettent de séparer le patrimoine personnel du patrimoine professionnel (responsabilité limitée aux apports, dans la plupart des cas), et offrent plus de flexibilité sur la déduction des charges réelles, mais impliquent une comptabilité plus complète et des formalités de création et de fonctionnement plus lourdes.\n\nLa SASU offre généralement plus de flexibilité statutaire et un régime social assimilé salarié pour le dirigeant (protection sociale potentiellement plus complète mais cotisations plus élevées), tandis que l'EURL relève par défaut du régime des travailleurs non-salariés (cotisations souvent moins élevées mais protection sociale parfois moins étendue).\n\nÀ retenir : le choix du statut dépend du niveau d'activité prévu, du besoin de déduire des charges importantes, de la volonté de s'associer à terme, et de la couverture sociale souhaitée. Il est recommandé de se faire accompagner (expert-comptable, structures d'aide à la création) pour ce choix qui a des conséquences fiscales et sociales importantes."
+      },
+      {
+        "id": "juridique_2",
+        "title": "Les étapes de création d'une entreprise",
+        "durationMinutes": 7,
+        "content": "La création d'une entreprise suit généralement plusieurs étapes : définir le projet et le statut juridique adapté, rédiger les statuts (pour une société), ouvrir un compte bancaire professionnel et y déposer le capital social si nécessaire, puis effectuer les démarches d'immatriculation via le guichet unique des formalités d'entreprises.\n\nSelon l'activité, des démarches complémentaires peuvent être nécessaires : autorisations spécifiques (activités réglementées comme la restauration, le bâtiment, certaines professions libérales), affiliation à des caisses spécifiques, ou encore souscription d'assurances professionnelles obligatoires (responsabilité civile professionnelle, décennale dans le bâtiment...).\n\nUne fois l'entreprise immatriculée, elle reçoit un numéro SIREN/SIRET qui l'identifie auprès des administrations, et doit ensuite respecter ses obligations déclaratives (TVA selon le régime, cotisations sociales, déclarations de résultats...).\n\nÀ retenir : les démarches administratives, bien que parfois perçues comme un frein, sont aujourd'hui largement dématérialisées et accompagnées par de nombreuses structures (CCI, CMA, réseaux d'accompagnement à la création d'entreprise). L'essentiel est de ne pas négliger les obligations qui suivent la création (déclarations, assurances, comptabilité)."
+      },
+      {
+        "id": "juridique_3",
+        "title": "Protéger son activité : marque et propriété intellectuelle",
+        "durationMinutes": 7,
+        "content": "La propriété intellectuelle regroupe plusieurs outils juridiques permettant de protéger les créations et signes distinctifs d'une entreprise. La marque (nom, logo) peut être déposée auprès d'un organisme officiel (en France, l'INPI) pour une durée renouvelable, ce qui confère un monopole d'exploitation sur les produits/services désignés et le territoire couvert.\n\nLe droit d'auteur protège automatiquement (sans dépôt obligatoire) les créations originales (textes, designs, logiciels, contenus visuels), dès leur création, mais prouver la date de création peut nécessiter des preuves (dépôts, horodatage...).\n\nLes brevets protègent des inventions techniques nouvelles, impliquant une activité inventive et une application industrielle, pour une durée limitée (souvent 20 ans), en échange de la divulgation publique de l'invention.\n\nÀ retenir : protéger sa marque dès le lancement (vérification de disponibilité, dépôt) évite des conflits coûteux ultérieurs, notamment si l'activité se développe et devient visible. Ce n'est pas réservé aux grandes entreprises : c'est un investissement souvent abordable au regard des risques évités."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Quel est l'un des principaux avantages du statut de micro-entrepreneur ?",
+        "options": [
+          "Aucun plafond de chiffre d'affaires",
+          "Des démarches simples et des cotisations calculées en pourcentage du chiffre d'affaires encaissé",
+          "La déduction de toutes les charges réelles",
+          "Une comptabilité obligatoirement tenue par un commissaire aux comptes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le statut de micro-entrepreneur se distingue par sa simplicité administrative et des cotisations proportionnelles au chiffre d'affaires réellement encaissé."
+      },
+      {
+        "question": "Quel est un point commun entre l'EURL et la SASU ?",
+        "options": [
+          "Elles nécessitent obligatoirement au moins 2 associés",
+          "Elles permettent de séparer patrimoine personnel et professionnel via une société unipersonnelle",
+          "Elles sont réservées aux activités agricoles",
+          "Elles interdisent toute déduction de charges"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'EURL et la SASU sont toutes deux des formes de sociétés unipersonnelles permettant de séparer le patrimoine personnel de l'activité professionnelle."
+      },
+      {
+        "question": "Que reçoit une entreprise une fois immatriculée ?",
+        "options": [
+          "Un brevet automatique",
+          "Un numéro SIREN/SIRET",
+          "Une exonération totale d'impôts à vie",
+          "Un compte bancaire personnel"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'immatriculation attribue un numéro SIREN/SIRET qui identifie l'entreprise auprès des administrations."
+      },
+      {
+        "question": "Comment peut-on protéger le nom et le logo d'une entreprise ?",
+        "options": [
+          "En les publiant simplement sur les réseaux sociaux",
+          "En déposant une marque auprès d'un organisme officiel comme l'INPI",
+          "Aucune protection n'est possible",
+          "Uniquement via un brevet"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le dépôt de marque auprès de l'INPI (en France) permet d'obtenir un monopole d'exploitation sur un nom ou un logo pour les produits/services désignés."
+      },
+      {
+        "question": "Le droit d'auteur protège-t-il automatiquement une création originale ?",
+        "options": [
+          "Non, il faut toujours déposer un brevet",
+          "Oui, dès sa création, sans dépôt obligatoire, mais prouver la date peut nécessiter des preuves",
+          "Uniquement si l'œuvre est commercialisée à l'international",
+          "Non, seules les marques sont protégées"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le droit d'auteur protège automatiquement les créations originales dès leur création, même sans dépôt, bien qu'il soit utile de pouvoir prouver la date de création."
+      }
+    ]
+  },
+  {
+    "id": "financement",
+    "title": "Financement & levée de fonds",
+    "icon": "account_balance_wallet",
+    "colorKey": "financement",
+    "level": "Intermédiaire",
+    "durationMinutes": 21,
+    "summary": "Explorer les différentes sources de financement, du love money aux levées de fonds, en passant par le crowdfunding et les aides publiques.",
+    "lessons": [
+      {
+        "id": "financement_1",
+        "title": "Love money, prêts et aides publiques",
+        "durationMinutes": 7,
+        "content": "Le « love money » désigne les fonds apportés par l'entourage (famille, amis) au démarrage d'un projet. C'est souvent la première source de financement, car elle peut intervenir avant même que l'entreprise ait un historique ou des garanties à présenter à une banque.\n\nLes prêts bancaires professionnels nécessitent généralement un dossier solide (business plan, prévisionnel, apport personnel) et parfois des garanties personnelles. Certains dispositifs publics ou parapublics (prêts d'honneur à taux zéro, garanties partielles de prêts) peuvent faciliter l'accès au crédit pour les créateurs d'entreprise.\n\nDe nombreuses aides publiques existent selon le profil du créateur, le secteur d'activité ou la zone géographique : exonérations de charges sociales en début d'activité, subventions régionales, dispositifs d'accompagnement avec financement associé...\n\nÀ retenir : la combinaison de plusieurs sources (apport personnel, love money, prêt bancaire complété par un prêt d'honneur, aides ciblées) est très courante. Se faire accompagner par des structures spécialisées permet souvent d'identifier des dispositifs méconnus mais accessibles."
+      },
+      {
+        "id": "financement_2",
+        "title": "Le crowdfunding : financer par la communauté",
+        "durationMinutes": 7,
+        "content": "Le crowdfunding (financement participatif) permet de lever des fonds auprès d'un grand nombre de particuliers via des plateformes en ligne. On distingue plusieurs formes : le don (avec ou sans contrepartie symbolique), la prévente (les contributeurs financent en échange du futur produit, souvent à prix préférentiel), le prêt (crowdlending, remboursé avec intérêts), et l'investissement en capital (crowdequity, les contributeurs deviennent actionnaires).\n\nAu-delà du financement, une campagne de crowdfunding réussie présente plusieurs avantages indirects : elle valide l'intérêt du marché pour le produit (si les gens sont prêts à payer avant même la production, c'est un signal fort), elle crée une communauté de premiers clients et ambassadeurs, et elle génère de la visibilité médiatique.\n\nÀ l'inverse, une campagne mal préparée (communication insuffisante, objectif mal calibré, absence de communauté avant le lancement) peut échouer et nuire à l'image du projet.\n\nÀ retenir : une campagne de crowdfunding se prépare en amont, souvent plusieurs mois avant le lancement, en construisant une audience (réseaux sociaux, liste d'emails) qui pourra être mobilisée dès le premier jour de la campagne, période cruciale pour créer un effet d'entraînement."
+      },
+      {
+        "id": "financement_3",
+        "title": "Lever des fonds auprès d'investisseurs",
+        "durationMinutes": 7,
+        "content": "La levée de fonds consiste à faire entrer des investisseurs (business angels, fonds de capital-risque) au capital de l'entreprise, en échange de liquidités destinées à financer la croissance. Contrairement à un prêt, il n'y a pas de remboursement : l'investisseur devient actionnaire et espère réaliser une plus-value lors d'une future revente de ses parts.\n\nCette voie est surtout adaptée aux projets à fort potentiel de croissance, qui nécessitent des investissements importants avant d'être profitables (technologie, développement de marché à grande échelle...), et qui acceptent de partager le capital et donc une partie du contrôle de l'entreprise.\n\nLa valorisation de l'entreprise (sa valeur estimée) est un élément central des négociations : elle déterminera le pourcentage du capital cédé en échange des fonds levés. Une valorisation trop élevée au premier tour peut compliquer les levées suivantes si les objectifs ne sont pas atteints (« down round »).\n\nÀ retenir : lever des fonds n'est pas un objectif en soi mais un moyen. Cela engage l'entrepreneur vis-à-vis de nouveaux actionnaires, avec des attentes de croissance et de rentabilité futures. De nombreuses entreprises prospères se développent sans jamais lever de fonds externes, en privilégiant l'autofinancement (« bootstrapping »)."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Qu'est-ce que le « love money » ?",
+        "options": [
+          "Un type de prêt bancaire spécifique aux banques en ligne",
+          "Les fonds apportés par l'entourage (famille, amis) au démarrage du projet",
+          "Une subvention exclusivement européenne",
+          "Un type de crypto-monnaie"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le love money désigne les financements apportés par l'entourage proche, souvent la première source de financement d'un projet."
+      },
+      {
+        "question": "Quelle forme de crowdfunding correspond au fait de devenir actionnaire d'une entreprise ?",
+        "options": [
+          "Le don",
+          "La prévente",
+          "Le crowdequity",
+          "Le crowdlending"
+        ],
+        "correctIndex": 2,
+        "explanation": "Le crowdequity permet aux contributeurs de devenir actionnaires de l'entreprise en échange de leur investissement."
+      },
+      {
+        "question": "Quel avantage indirect peut apporter une campagne de crowdfunding réussie ?",
+        "options": [
+          "Aucun, seul l'argent collecté compte",
+          "Valider l'intérêt du marché et créer une communauté de premiers clients",
+          "Garantir automatiquement un brevet",
+          "Remplacer totalement le besoin de business plan"
+        ],
+        "correctIndex": 1,
+        "explanation": "Une campagne réussie valide la demande, crée une communauté de premiers clients/ambassadeurs et génère de la visibilité."
+      },
+      {
+        "question": "Que devient un investisseur qui participe à une levée de fonds en capital ?",
+        "options": [
+          "Un simple créancier remboursé avec intérêts",
+          "Un actionnaire de l'entreprise",
+          "Un salarié automatique de l'entreprise",
+          "Un fournisseur de l'entreprise"
+        ],
+        "correctIndex": 1,
+        "explanation": "Lors d'une levée de fonds en capital, l'investisseur reçoit des actions/parts et devient actionnaire de l'entreprise."
+      },
+      {
+        "question": "Que signifie le terme « bootstrapping » ?",
+        "options": [
+          "Lever des fonds le plus tôt possible",
+          "Se développer par autofinancement, sans financement externe majeur",
+          "Un type de prêt bancaire à taux zéro",
+          "Une obligation légale pour les SASU"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le bootstrapping désigne le développement d'une entreprise principalement par autofinancement, sans recourir massivement à des financements externes."
+      }
+    ]
+  },
+  {
+    "id": "marketing",
+    "title": "Marketing & acquisition clients",
+    "icon": "campaign",
+    "colorKey": "marketing",
+    "level": "Intermédiaire",
+    "durationMinutes": 21,
+    "summary": "Définir sa cible, choisir les bons canaux d'acquisition et construire une communauté fidèle autour de sa marque.",
+    "lessons": [
+      {
+        "id": "marketing_1",
+        "title": "Définir sa cible et son positionnement",
+        "durationMinutes": 7,
+        "content": "Avant de choisir des canaux marketing, il est essentiel de définir précisément à qui s'adresse votre offre. Le « persona » est une représentation semi-fictive de votre client idéal : ses caractéristiques démographiques, ses besoins, ses freins, où il s'informe, comment il prend ses décisions d'achat.\n\nLe positionnement consiste à définir la place que vous souhaitez occuper dans l'esprit de vos clients par rapport à vos concurrents : êtes-vous l'option la moins chère, la plus premium, la plus rapide, la plus spécialisée sur un segment précis ?\n\nUn positionnement clair facilite toutes les décisions marketing ultérieures : le choix des canaux (où se trouve votre cible), le ton de communication, le niveau de prix, et même les fonctionnalités à prioriser dans votre offre.\n\nÀ retenir : « parler à tout le monde » revient souvent à ne convaincre personne. Un positionnement précis, même s'il semble réduire la taille du marché adressable au premier abord, permet généralement d'être plus efficace et mémorable auprès de la cible réellement intéressée."
+      },
+      {
+        "id": "marketing_2",
+        "title": "Les canaux d'acquisition : SEO, réseaux sociaux, publicité",
+        "durationMinutes": 7,
+        "content": "Il existe de nombreux canaux pour acquérir des clients, chacun avec ses avantages et contraintes. Le référencement naturel (SEO) consiste à optimiser son site pour apparaître dans les résultats de recherche : c'est un travail de fond, aux résultats progressifs mais souvent durables.\n\nLes réseaux sociaux permettent de construire une audience et une communauté, avec un contenu adapté à chaque plateforme (formats courts, visuels, storytelling...). C'est un canal qui demande de la régularité et du temps avant de porter ses fruits.\n\nLa publicité payante (réseaux sociaux, moteurs de recherche) permet d'obtenir des résultats plus rapides et mesurables, mais représente un coût direct et continu : dès que le budget publicitaire s'arrête, le flux de nouveaux clients via ce canal s'arrête généralement aussi.\n\nÀ retenir : un bon mix marketing combine généralement des canaux à effet rapide (publicité) et des canaux à effet durable (SEO, communauté, bouche-à-oreille). Le « coût d'acquisition client » (combien coûte l'obtention d'un nouveau client) doit toujours être comparé à la valeur que ce client apporte sur la durée (« valeur vie client »)."
+      },
+      {
+        "id": "marketing_3",
+        "title": "Fidéliser et créer une communauté",
+        "durationMinutes": 7,
+        "content": "Acquérir un nouveau client coûte généralement bien plus cher que de fidéliser un client existant. La fidélisation passe par la qualité du produit ou service, mais aussi par l'expérience globale : service client, communication régulière, sentiment d'appartenance.\n\nCréer une communauté autour de sa marque (groupe de discussion, newsletter, programme de fidélité, contenu exclusif) transforme des clients en ambassadeurs, qui recommandent spontanément la marque à leur entourage - le bouche-à-oreille reste l'un des canaux d'acquisition les plus puissants et les moins coûteux.\n\nLes avis clients et les témoignages jouent un rôle croissant dans la décision d'achat : encourager les clients satisfaits à laisser un avis, et répondre de manière constructive aux avis négatifs, fait partie intégrante d'une stratégie marketing moderne.\n\nÀ retenir : un client satisfait qui revient régulièrement et qui recommande votre offre a une valeur souvent largement supérieure à son premier achat. Investir dans la satisfaction et la fidélisation est l'un des leviers de croissance les plus rentables sur le long terme."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Qu'est-ce qu'un « persona » en marketing ?",
+        "options": [
+          "Un logo d'entreprise",
+          "Une représentation semi-fictive de son client idéal",
+          "Un document juridique obligatoire",
+          "Un type de statut d'entreprise"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le persona représente le client idéal de manière semi-fictive, en détaillant ses besoins, freins et habitudes, pour orienter les décisions marketing."
+      },
+      {
+        "question": "Quelle est une caractéristique du SEO (référencement naturel) ?",
+        "options": [
+          "Des résultats instantanés sans aucun effort",
+          "Un travail de fond aux résultats progressifs mais souvent durables",
+          "Un coût direct par clic obligatoire",
+          "Il ne fonctionne que sur les réseaux sociaux"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le SEO est un travail de fond : les résultats arrivent progressivement mais ont tendance à être plus durables qu'une campagne publicitaire ponctuelle."
+      },
+      {
+        "question": "Que se passe-t-il généralement lorsque l'on arrête un budget de publicité payante ?",
+        "options": [
+          "Le flux de nouveaux clients via ce canal continue indéfiniment",
+          "Le flux de nouveaux clients via ce canal s'arrête généralement aussi",
+          "Le site web est automatiquement supprimé",
+          "Le SEO devient inutile"
+        ],
+        "correctIndex": 1,
+        "explanation": "La publicité payante génère des résultats tant que le budget est actif ; dès l'arrêt, le flux de clients issu de ce canal cesse généralement aussi."
+      },
+      {
+        "question": "Pourquoi la fidélisation est-elle souvent plus rentable que l'acquisition de nouveaux clients ?",
+        "options": [
+          "Parce qu'acquérir un nouveau client coûte généralement plus cher que fidéliser un client existant",
+          "Parce que les clients existants ne génèrent jamais de revenus",
+          "Parce que la loi l'impose",
+          "Ce n'est jamais le cas"
+        ],
+        "correctIndex": 0,
+        "explanation": "Le coût d'acquisition d'un nouveau client est généralement supérieur au coût de fidélisation, ce qui rend la fidélisation souvent très rentable."
+      },
+      {
+        "question": "Quel est l'un des canaux d'acquisition les plus puissants et les moins coûteux ?",
+        "options": [
+          "Le bouche-à-oreille généré par des clients satisfaits",
+          "Les frais bancaires",
+          "La taxe foncière",
+          "Le statut juridique de l'entreprise"
+        ],
+        "correctIndex": 0,
+        "explanation": "Le bouche-à-oreille, généré par des clients satisfaits devenus ambassadeurs, est l'un des canaux les plus puissants et économiques."
+      }
+    ]
+  },
+  {
+    "id": "gestion",
+    "title": "Gestion financière & comptabilité",
+    "icon": "calculate",
+    "colorKey": "gestion",
+    "level": "Avancé",
+    "durationMinutes": 21,
+    "summary": "Maîtriser les bases de la trésorerie, du compte de résultat et du seuil de rentabilité pour piloter son entreprise.",
+    "lessons": [
+      {
+        "id": "gestion_1",
+        "title": "Suivre sa trésorerie au quotidien",
+        "durationMinutes": 7,
+        "content": "La trésorerie représente l'argent réellement disponible sur les comptes de l'entreprise à un instant donné. Une entreprise peut afficher un bénéfice comptable et pourtant manquer de trésorerie, notamment si ses clients paient avec retard alors qu'elle doit régler ses fournisseurs et salariés rapidement.\n\nSuivre sa trésorerie consiste à anticiper, idéalement sur plusieurs semaines ou mois, les entrées d'argent prévues (encaissements clients, financements) et les sorties (fournisseurs, salaires, charges sociales, impôts, remboursements d'emprunts), pour identifier à l'avance les périodes potentiellement tendues.\n\nLe « décalage de trésorerie » est particulièrement fréquent pour les entreprises qui doivent payer leurs charges (matières premières, salaires) avant d'être payées par leurs clients (délais de paiement de 30, 60, voire 90 jours dans certains secteurs B2B).\n\nÀ retenir : « le chiffre d'affaires est une opinion, la trésorerie est un fait ». De nombreuses entreprises rentables sur le papier ont fait faillite par manque de trésorerie. Un tableau de suivi simple, mis à jour régulièrement, permet d'anticiper et d'agir avant qu'une difficulté ne devienne critique."
+      },
+      {
+        "id": "gestion_2",
+        "title": "Comprendre son compte de résultat",
+        "durationMinutes": 7,
+        "content": "Le compte de résultat est un document comptable qui récapitule, sur une période donnée (généralement un an), l'ensemble des produits (ce que l'entreprise a généré comme revenus) et des charges (ce qu'elle a dépensé), pour aboutir au résultat net (bénéfice ou perte).\n\nOn distingue plusieurs niveaux de marges intermédiaires : la marge brute (chiffre d'affaires moins le coût direct des produits/services vendus), le résultat d'exploitation (marge brute moins les charges de fonctionnement comme les salaires, le loyer, le marketing), et le résultat net (après prise en compte des éléments financiers et exceptionnels, et des impôts).\n\nAnalyser l'évolution de ces marges au fil du temps permet de comprendre la dynamique de l'entreprise : une croissance du chiffre d'affaires accompagnée d'une dégradation de la marge brute peut signaler un problème de pricing ou de coûts de production, par exemple.\n\nÀ retenir : le compte de résultat répond à la question « est-ce que mon activité est structurellement profitable ? », tandis que le suivi de trésorerie répond à la question « ai-je l'argent disponible aujourd'hui pour payer mes factures ? ». Les deux analyses sont complémentaires et indispensables."
+      },
+      {
+        "id": "gestion_3",
+        "title": "Seuil de rentabilité et marges",
+        "durationMinutes": 7,
+        "content": "Le seuil de rentabilité (ou « point mort ») correspond au niveau de chiffre d'affaires à partir duquel l'entreprise couvre l'ensemble de ses charges (fixes et variables), sans faire ni bénéfice ni perte. Au-delà de ce seuil, chaque vente supplémentaire contribue au bénéfice.\n\nPour le calculer, on distingue les charges fixes (qui ne dépendent pas du niveau d'activité : loyer, salaires fixes, abonnements...) et les charges variables (qui évoluent avec le volume d'activité : matières premières, commissions...). La marge sur coûts variables (prix de vente moins coût variable unitaire) permet de déterminer combien d'unités vendre pour couvrir les charges fixes.\n\nConnaître son seuil de rentabilité permet de fixer des objectifs commerciaux réalistes, d'évaluer l'impact d'une variation de prix ou de coûts, et de comprendre à partir de quel niveau d'activité un nouveau projet (ouverture d'un second point de vente, lancement d'un nouveau produit) devient viable.\n\nÀ retenir : le seuil de rentabilité n'est pas figé. Il évolue avec les charges fixes (un nouvel emprunt, une embauche augmente le seuil) et avec la marge unitaire (une hausse de prix ou une baisse des coûts variables abaisse le seuil). C'est un indicateur de pilotage clé, à recalculer régulièrement."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Pourquoi une entreprise rentable sur le papier peut-elle néanmoins rencontrer des difficultés ?",
+        "options": [
+          "Ce n'est jamais possible",
+          "Un manque de trésorerie lié aux décalages entre encaissements et décaissements",
+          "Parce que le résultat net est toujours négatif",
+          "Parce que la comptabilité est interdite"
+        ],
+        "correctIndex": 1,
+        "explanation": "Une entreprise peut être bénéficiaire comptablement tout en manquant de trésorerie disponible si les délais de paiement clients/fournisseurs ne sont pas bien gérés."
+      },
+      {
+        "question": "Comment se calcule la marge brute ?",
+        "options": [
+          "Chiffre d'affaires moins le coût direct des produits/services vendus",
+          "Chiffre d'affaires multiplié par le taux d'imposition",
+          "Charges fixes moins charges variables",
+          "Trésorerie disponible divisée par 12"
+        ],
+        "correctIndex": 0,
+        "explanation": "La marge brute correspond au chiffre d'affaires diminué du coût direct des produits ou services vendus."
+      },
+      {
+        "question": "Qu'est-ce que le seuil de rentabilité (point mort) ?",
+        "options": [
+          "Le niveau de chiffre d'affaires à partir duquel l'entreprise couvre toutes ses charges sans bénéfice ni perte",
+          "Le montant maximum que l'entreprise peut emprunter",
+          "Un impôt spécifique aux PME",
+          "Le salaire minimum du dirigeant"
+        ],
+        "correctIndex": 0,
+        "explanation": "Le seuil de rentabilité est le niveau d'activité à partir duquel l'entreprise couvre l'ensemble de ses charges fixes et variables, sans bénéfice ni perte."
+      },
+      {
+        "question": "Qu'est-ce qu'une charge fixe ?",
+        "options": [
+          "Une charge qui évolue proportionnellement aux ventes",
+          "Une charge qui ne dépend pas du niveau d'activité, comme un loyer",
+          "Un impôt payé uniquement en cas de bénéfice",
+          "Le coût des matières premières"
+        ],
+        "correctIndex": 1,
+        "explanation": "Une charge fixe (loyer, salaires fixes, abonnements) ne varie pas en fonction du volume d'activité, contrairement à une charge variable."
+      },
+      {
+        "question": "Que se passe-t-il pour le seuil de rentabilité si l'entreprise embauche un nouveau salarié (charge fixe supplémentaire) ?",
+        "options": [
+          "Le seuil de rentabilité diminue automatiquement",
+          "Le seuil de rentabilité reste strictement identique",
+          "Le seuil de rentabilité augmente, car les charges fixes augmentent",
+          "Le seuil de rentabilité devient négatif"
+        ],
+        "correctIndex": 2,
+        "explanation": "Une augmentation des charges fixes (comme une nouvelle embauche) augmente le seuil de rentabilité, qu'il faudra atteindre avec un chiffre d'affaires plus élevé."
+      }
+    ]
+  }
+]

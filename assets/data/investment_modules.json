@@ -1,0 +1,690 @@
+[
+  {
+    "id": "actions",
+    "title": "Bourse & Actions",
+    "icon": "trending_up",
+    "colorKey": "actions",
+    "level": "Débutant",
+    "durationMinutes": 24,
+    "summary": "Comprendre ce qu'est une action, comment fonctionne la bourse et comment construire une stratégie d'investissement en actions.",
+    "lessons": [
+      {
+        "id": "actions_1",
+        "title": "Qu'est-ce qu'une action ?",
+        "durationMinutes": 8,
+        "content": "Une action est une part du capital d'une entreprise. En achetant une action, vous devenez copropriétaire de cette entreprise, même pour une infime fraction. Cela vous donne en général deux types de droits : un droit de vote en assemblée générale (selon le nombre d'actions détenues) et un droit aux bénéfices, distribués sous forme de dividendes.\n\nLa valeur d'une action évolue en fonction de l'offre et de la demande sur le marché, elle-même influencée par les résultats de l'entreprise, ses perspectives de croissance, le contexte économique et la psychologie des investisseurs.\n\nIl existe deux façons de gagner de l'argent avec une action : la plus-value (revendre l'action plus cher que son prix d'achat) et le dividende (une partie du bénéfice reversée régulièrement aux actionnaires).\n\nExemple concret : si vous achetez une action à 50 € et que l'entreprise verse un dividende annuel de 1,50 €, votre rendement du dividende est de 3 %. Si en plus l'action monte à 55 € au bout d'un an, vous réalisez également une plus-value latente de 10 %.\n\nÀ retenir : une action n'est pas un simple ticket de loterie, c'est une part d'une activité économique réelle. Plus l'entreprise crée de la valeur sur le long terme, plus l'action a vocation à progresser."
+      },
+      {
+        "id": "actions_2",
+        "title": "Comment fonctionne la bourse",
+        "durationMinutes": 8,
+        "content": "La bourse est un marché organisé où s'échangent des titres financiers (actions, obligations, ETF...). Les principales places boursières sont Euronext Paris, le NYSE et le Nasdaq aux États-Unis, ou encore la Bourse de Tokyo.\n\nQuand vous passez un ordre d'achat ou de vente via votre courtier (broker), celui-ci est transmis au marché et exécuté lorsqu'il rencontre un ordre opposé compatible. Les prix évoluent donc en continu pendant les heures d'ouverture.\n\nLes indices boursiers (CAC 40, S&P 500, MSCI World...) regroupent un panier d'actions représentatif d'un marché ou d'un secteur. Ils servent de baromètres de la santé économique et de référence pour mesurer la performance d'un portefeuille.\n\nDeux types d'ordres sont essentiels à connaître : l'ordre « au marché » (exécuté immédiatement au meilleur prix disponible) et l'ordre « à cours limité » (exécuté seulement si le prix atteint un seuil que vous fixez).\n\nÀ retenir : la bourse n'est pas un casino, c'est une infrastructure qui permet aux entreprises de se financer et aux investisseurs de devenir actionnaires. Sa volatilité de court terme cache une réalité de plus long terme : historiquement, les marchés actions progressent sur des périodes de 10 à 20 ans, malgré des creux parfois violents."
+      },
+      {
+        "id": "actions_3",
+        "title": "Stratégies : dividendes, croissance et diversification",
+        "durationMinutes": 8,
+        "content": "Il existe plusieurs grandes familles de stratégies en actions. L'investissement « croissance » (growth) cible des entreprises dont les bénéfices progressent rapidement, souvent dans la tech, avec un potentiel de plus-value important mais une volatilité élevée.\n\nL'investissement « valeur » (value) ou « dividendes » privilégie des entreprises matures, solides, qui versent des dividendes réguliers. Le rendement est plus stable mais la croissance du cours souvent plus lente.\n\nLa diversification est la règle d'or : ne jamais mettre tous ses œufs dans le même panier. Répartir son capital entre plusieurs secteurs, zones géographiques et tailles d'entreprises réduit fortement le risque global sans nécessairement sacrifier la performance.\n\nLe principal ennemi de l'investisseur particulier reste l'émotion : vendre en panique lors d'une baisse, ou acheter par excès d'enthousiasme lors d'une hausse. Une stratégie d'investissement programmé (verser une somme fixe chaque mois, quel que soit le niveau du marché) permet de lisser le prix d'achat moyen dans le temps.\n\nÀ retenir : il n'existe pas de stratégie « parfaite », mais une stratégie cohérente avec votre horizon de temps, vos objectifs et votre tolérance au risque, appliquée avec discipline sur la durée."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Qu'est-ce qu'une action représente concrètement ?",
+        "options": [
+          "Un prêt accordé à une entreprise",
+          "Une part du capital d'une entreprise",
+          "Un produit d'assurance",
+          "Une garantie de l'État"
+        ],
+        "correctIndex": 1,
+        "explanation": "Une action est une part du capital social d'une entreprise : son détenteur devient copropriétaire de l'entreprise."
+      },
+      {
+        "question": "Comment un actionnaire peut-il gagner de l'argent ?",
+        "options": [
+          "Uniquement via les dividendes",
+          "Uniquement via la plus-value à la revente",
+          "Via les dividendes et/ou la plus-value",
+          "Aucune de ces réponses"
+        ],
+        "correctIndex": 2,
+        "explanation": "Les deux principales sources de gain sont le dividende (revenu régulier) et la plus-value (différence entre prix de vente et prix d'achat)."
+      },
+      {
+        "question": "Qu'est-ce qu'un indice boursier comme le CAC 40 ?",
+        "options": [
+          "Une seule entreprise très puissante",
+          "Un panier représentatif d'actions servant de référence",
+          "Une banque centrale européenne",
+          "Un type d'obligation d'État"
+        ],
+        "correctIndex": 1,
+        "explanation": "Un indice regroupe un panier d'actions représentatif d'un marché et sert de référence pour mesurer la performance globale."
+      },
+      {
+        "question": "Quelle est la principale différence entre un ordre « au marché » et un ordre « à cours limité » ?",
+        "options": [
+          "Aucune différence",
+          "L'ordre au marché s'exécute immédiatement, l'ordre limité fixe un prix maximal ou minimal",
+          "L'ordre limité est réservé aux professionnels",
+          "L'ordre au marché ne concerne que les ETF"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'ordre au marché s'exécute immédiatement au meilleur prix disponible, alors que l'ordre à cours limité ne s'exécute que si le prix atteint le seuil défini."
+      },
+      {
+        "question": "Quelle est la meilleure façon de réduire le risque d'un portefeuille d'actions ?",
+        "options": [
+          "Investir tout son capital sur une seule entreprise prometteuse",
+          "Diversifier entre secteurs, zones géographiques et tailles d'entreprises",
+          "Vendre dès la moindre baisse",
+          "N'investir que pendant les périodes de hausse"
+        ],
+        "correctIndex": 1,
+        "explanation": "La diversification est la règle d'or pour réduire le risque global d'un portefeuille sans nécessairement sacrifier la performance."
+      }
+    ]
+  },
+  {
+    "id": "etf",
+    "title": "ETF & Fonds indiciels",
+    "icon": "donut_large",
+    "colorKey": "etf",
+    "level": "Débutant",
+    "durationMinutes": 21,
+    "summary": "Découvrir les ETF, des outils simples et peu coûteux pour investir en bourse de manière diversifiée.",
+    "lessons": [
+      {
+        "id": "etf_1",
+        "title": "Qu'est-ce qu'un ETF ?",
+        "durationMinutes": 7,
+        "content": "Un ETF (Exchange Traded Fund), ou « tracker » en français, est un fonds d'investissement cotée en bourse qui a pour objectif de répliquer la performance d'un indice (CAC 40, S&P 500, MSCI World, secteur technologique, etc.).\n\nPlutôt que d'acheter une à une les actions d'un indice, un ETF permet d'acheter en une seule fois un panier diversifié de dizaines, centaines, voire milliers d'entreprises. Par exemple, un ETF « MSCI World » donne accès à environ 1 500 entreprises de 23 pays développés en une seule ligne de portefeuille.\n\nLes ETF sont cotés en continu comme des actions classiques : vous pouvez les acheter et les vendre à tout moment pendant les heures de marché, via un compte-titres, un PEA (pour les ETF éligibles) ou une assurance-vie.\n\nÀ retenir : un ETF est un outil de diversification instantanée. C'est souvent le point de départ recommandé pour un investisseur débutant qui souhaite s'exposer aux marchés actions sans avoir à analyser chaque entreprise individuellement."
+      },
+      {
+        "id": "etf_2",
+        "title": "Pourquoi les ETF sont-ils si populaires ?",
+        "durationMinutes": 7,
+        "content": "Les ETF connaissent un succès croissant pour plusieurs raisons. D'abord, leurs frais de gestion sont très faibles (souvent entre 0,05 % et 0,40 % par an), contre 1,5 % à 2,5 % pour de nombreux fonds gérés activement.\n\nEnsuite, de nombreuses études montrent qu'une majorité de fonds gérés activement font moins bien que leur indice de référence sur le long terme, une fois les frais déduits. La gestion passive (suivre l'indice) devient alors souvent plus performante après frais que la gestion active.\n\nLes ETF offrent aussi une grande transparence : on connaît à tout moment la composition exacte du fonds et l'indice qu'il suit. Enfin, ils sont très liquides : on peut les acheter ou les vendre en quelques secondes en bourse.\n\nÀ retenir : un ETF n'est ni « bon » ni « mauvais » en soi, c'est avant tout un véhicule d'investissement efficace et peu coûteux pour s'exposer à un marché ou un thème donné. La performance dépendra avant tout de l'indice choisi et de la durée de détention."
+      },
+      {
+        "id": "etf_3",
+        "title": "Comment choisir un ETF ?",
+        "durationMinutes": 7,
+        "content": "Pour choisir un ETF, plusieurs critères sont à examiner. Le premier est l'indice répliqué : assurez-vous qu'il correspond à votre objectif (large diversification mondiale, marché européen, secteur spécifique...).\n\nLe deuxième critère est le frais de gestion annuel (TER - Total Expense Ratio) : plus il est faible, plus la performance nette pour l'investisseur est élevée sur le long terme, à indice identique.\n\nLe troisième critère est la méthode de réplication : « physique » (l'ETF détient réellement les titres de l'indice) ou « synthétique » (l'ETF utilise des produits dérivés pour répliquer la performance). La réplication physique est souvent privilégiée pour sa simplicité de compréhension.\n\nEnfin, vérifiez la politique de distribution : un ETF « de capitalisation » réinvestit automatiquement les dividendes (intéressant pour la croissance à long terme et la fiscalité en PEA/assurance-vie), tandis qu'un ETF « de distribution » verse les dividendes périodiquement sur votre compte.\n\nÀ retenir : un bon ETF pour un débutant est souvent un ETF « monde » ou « actions internationales », à faible frais, en capitalisation, et éligible au PEA si vous résidez en France pour bénéficier d'une fiscalité avantageuse."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Que fait un ETF qui suit le MSCI World ?",
+        "options": [
+          "Il investit uniquement dans une entreprise",
+          "Il réplique la performance d'environ 1 500 grandes entreprises mondiales",
+          "Il garantit un capital fixe",
+          "Il ne peut être acheté qu'une fois par an"
+        ],
+        "correctIndex": 1,
+        "explanation": "Un ETF MSCI World réplique la performance d'environ 1 500 entreprises de pays développés, offrant une diversification mondiale instantanée."
+      },
+      {
+        "question": "Quel est l'un des principaux atouts des ETF par rapport aux fonds gérés activement ?",
+        "options": [
+          "Des frais de gestion généralement beaucoup plus faibles",
+          "Une garantie de gain assurée par l'État",
+          "L'impossibilité de perdre de l'argent",
+          "Un accès réservé aux professionnels"
+        ],
+        "correctIndex": 0,
+        "explanation": "Les ETV ont en général des frais de gestion très faibles (0,05% à 0,40%), bien inférieurs à ceux des fonds actifs traditionnels."
+      },
+      {
+        "question": "Que signifie un ETF dit « de capitalisation » ?",
+        "options": [
+          "Il distribue les dividendes en cash chaque mois",
+          "Il réinvestit automatiquement les dividendes perçus",
+          "Il ne contient que des obligations",
+          "Il est réservé aux institutionnels"
+        ],
+        "correctIndex": 1,
+        "explanation": "Un ETF de capitalisation réinvestit automatiquement les dividendes dans le fonds, ce qui favorise l'effet boule de neige des intérêts composés."
+      },
+      {
+        "question": "Quelle est la différence entre réplication physique et synthétique ?",
+        "options": [
+          "Aucune, c'est la même chose",
+          "La réplication physique détient réellement les titres, la synthétique utilise des produits dérivés",
+          "La réplication synthétique est interdite en Europe",
+          "La réplication physique est toujours plus chère"
+        ],
+        "correctIndex": 1,
+        "explanation": "La réplication physique consiste à détenir réellement les titres de l'indice, tandis que la réplication synthétique utilise des instruments dérivés (swaps) pour reproduire la performance."
+      },
+      {
+        "question": "Pourquoi un ETF est-il souvent recommandé à un investisseur débutant ?",
+        "options": [
+          "Parce qu'il garantit un rendement de 10% par an",
+          "Parce qu'il offre une diversification instantanée à faible coût",
+          "Parce qu'il ne peut jamais perdre de valeur",
+          "Parce qu'il faut un capital minimum d'un million d'euros"
+        ],
+        "correctIndex": 1,
+        "explanation": "Les ETF permettent d'obtenir une diversification large et immédiate avec un budget modeste et des frais très réduits, ce qui en fait un excellent point de départ."
+      }
+    ]
+  },
+  {
+    "id": "obligations",
+    "title": "Obligations",
+    "icon": "account_balance",
+    "colorKey": "obligations",
+    "level": "Intermédiaire",
+    "durationMinutes": 21,
+    "summary": "Comprendre le fonctionnement des obligations, leur rôle dans un portefeuille équilibré et les risques associés.",
+    "lessons": [
+      {
+        "id": "obligations_1",
+        "title": "Qu'est-ce qu'une obligation ?",
+        "durationMinutes": 7,
+        "content": "Une obligation est un titre de créance : en l'achetant, vous prêtez de l'argent à un émetteur (un État, une collectivité ou une entreprise) pour une durée déterminée, en échange d'un intérêt appelé « coupon », versé périodiquement (souvent annuellement).\n\nÀ l'échéance, l'émetteur vous rembourse la valeur nominale de l'obligation (le montant initialement prêté), sauf en cas de défaut de paiement. C'est pourquoi on dit que l'obligataire est créancier de l'entreprise, alors que l'actionnaire en est propriétaire.\n\nLe prix d'une obligation évolue sur le marché secondaire en fonction des taux d'intérêt : lorsque les taux montent, le prix des obligations existantes (à taux fixe plus faible) baisse, et inversement. C'est la fameuse relation inverse entre taux et prix obligataire.\n\nÀ retenir : une obligation est généralement perçue comme moins risquée qu'une action, mais elle n'est pas sans risque : risque de défaut de l'émetteur, risque de taux, et risque d'inflation qui peut éroder le pouvoir d'achat des coupons fixes."
+      },
+      {
+        "id": "obligations_2",
+        "title": "Risque et rendement obligataire",
+        "durationMinutes": 7,
+        "content": "Le rendement d'une obligation dépend principalement de deux facteurs : la qualité de crédit de l'émetteur et la durée jusqu'à l'échéance. Plus l'émetteur est jugé risqué (par des agences de notation comme Moody's ou S&P), plus le taux d'intérêt proposé doit être élevé pour compenser ce risque.\n\nOn distingue les obligations « investment grade » (émetteurs solides, notés BBB- et plus) des obligations « high yield » ou « junk bonds » (rendement élevé mais risque de défaut plus important).\n\nLa durée joue aussi un rôle : une obligation à 10 ans est généralement plus sensible aux variations de taux qu'une obligation à 2 ans (on parle de « duration »). En période de hausse des taux, les obligations longues perdent davantage de valeur que les obligations courtes.\n\nÀ retenir : « pas de rendement sans risque ». Une obligation qui propose un taux nettement supérieur à la moyenne du marché signale presque toujours un risque de crédit plus élevé qu'il ne faut pas ignorer."
+      },
+      {
+        "id": "obligations_3",
+        "title": "Le rôle des obligations dans un portefeuille",
+        "durationMinutes": 7,
+        "content": "Historiquement, les obligations jouent un rôle d'amortisseur dans un portefeuille diversifié : leur valeur évolue souvent (mais pas systématiquement) de manière différente de celle des actions, ce qui peut réduire la volatilité globale.\n\nUn portefeuille « 60/40 » (60 % actions, 40 % obligations) est un grand classique de la gestion de patrimoine : il vise à conserver un potentiel de croissance tout en limitant l'ampleur des baisses lors des phases de stress sur les marchés actions.\n\nPour un particulier, l'accès aux obligations se fait le plus souvent via des fonds obligataires ou des ETF obligataires, qui permettent de diversifier entre de nombreux émetteurs et échéances sans avoir à acheter des obligations individuelles (souvent peu accessibles avec de petits montants).\n\nÀ retenir : la part d'obligations dans un portefeuille dépend de l'horizon de placement et de la tolérance au risque. Plus l'horizon est court ou plus la tolérance au risque est faible, plus la part obligataire (ou monétaire) tend à être importante."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Quand vous achetez une obligation, quelle est votre relation avec l'émetteur ?",
+        "options": [
+          "Vous devenez propriétaire de l'entreprise",
+          "Vous devenez créancier : vous lui prêtez de l'argent",
+          "Vous devenez salarié de l'entreprise",
+          "Aucune relation particulière"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'obligataire est un créancier : il prête de l'argent à l'émetteur en échange d'intérêts (coupons) et du remboursement à l'échéance."
+      },
+      {
+        "question": "Que se passe-t-il généralement pour le prix des obligations existantes quand les taux d'intérêt montent ?",
+        "options": [
+          "Leur prix monte également",
+          "Leur prix baisse",
+          "Leur prix reste strictement identique",
+          "Elles sont automatiquement remboursées"
+        ],
+        "correctIndex": 1,
+        "explanation": "Il existe une relation inverse entre les taux d'intérêt et le prix des obligations à taux fixe déjà émises : quand les taux montent, leur prix baisse."
+      },
+      {
+        "question": "Que signifie le terme « high yield » pour une obligation ?",
+        "options": [
+          "Une obligation garantie par l'État",
+          "Une obligation à haut rendement mais avec un risque de crédit plus élevé",
+          "Une obligation sans aucun risque",
+          "Une obligation réservée aux fonctionnaires"
+        ],
+        "correctIndex": 1,
+        "explanation": "Les obligations « high yield » offrent un rendement plus élevé pour compenser un risque de défaut de l'émetteur plus important."
+      },
+      {
+        "question": "Quel est l'intérêt principal d'intégrer des obligations dans un portefeuille diversifié ?",
+        "options": [
+          "Garantir un doublement du capital",
+          "Réduire la volatilité globale du portefeuille",
+          "Éliminer totalement le risque",
+          "Augmenter systématiquement la performance des actions"
+        ],
+        "correctIndex": 1,
+        "explanation": "Les obligations peuvent jouer un rôle d'amortisseur et réduire la volatilité globale d'un portefeuille, notamment lors des baisses sur les marchés actions."
+      },
+      {
+        "question": "Pourquoi une obligation à 10 ans est-elle généralement plus sensible aux variations de taux qu'une obligation à 2 ans ?",
+        "options": [
+          "Parce qu'elle a une duration plus élevée",
+          "Parce qu'elle est toujours émise par des États en difficulté",
+          "Parce qu'elle ne verse pas de coupon",
+          "Ce n'est jamais le cas"
+        ],
+        "correctIndex": 0,
+        "explanation": "Plus l'échéance est longue, plus la duration est élevée, et plus le prix de l'obligation est sensible aux variations de taux d'intérêt."
+      }
+    ]
+  },
+  {
+    "id": "immobilier",
+    "title": "Immobilier & SCPI",
+    "icon": "home_work",
+    "colorKey": "immobilier",
+    "level": "Intermédiaire",
+    "durationMinutes": 24,
+    "summary": "Explorer les différentes façons d'investir dans l'immobilier, du locatif direct aux SCPI, et comprendre l'effet de levier.",
+    "lessons": [
+      {
+        "id": "immobilier_1",
+        "title": "Investir dans l'immobilier locatif",
+        "durationMinutes": 8,
+        "content": "L'immobilier locatif consiste à acheter un bien (appartement, maison, local) pour le louer et percevoir des loyers. C'est l'un des investissements préférés des Français, notamment grâce à l'accès au crédit immobilier.\n\nLa rentabilité brute se calcule simplement : (loyers annuels / prix d'achat total, frais inclus) x 100. Par exemple, un bien acheté 200 000 € (frais inclus) qui génère 9 600 € de loyers annuels offre une rentabilité brute de 4,8 %.\n\nMais il faut aussi prendre en compte les charges : taxe foncière, charges de copropriété non récupérables, assurance, frais de gestion, travaux d'entretien, et la vacance locative (périodes sans locataire). La rentabilité nette est toujours inférieure à la rentabilité brute, parfois de 1 à 2 points.\n\nÀ retenir : l'immobilier locatif demande du temps (recherche du bien, gestion locative, travaux) et un capital ou une capacité d'emprunt significative. C'est un investissement « concentré » : tout votre capital repose souvent sur un seul bien, dans une seule ville."
+      },
+      {
+        "id": "immobilier_2",
+        "title": "Les SCPI : l'immobilier sans la gestion",
+        "durationMinutes": 8,
+        "content": "Une SCPI (Société Civile de Placement Immobilier) collecte de l'argent auprès de nombreux investisseurs pour acheter et gérer un parc immobilier diversifié (bureaux, commerces, entrepôts, santé, résidentiel...). En échange, les investisseurs perçoivent des loyers proportionnellement à leurs parts, après déduction des frais de gestion.\n\nL'un des grands avantages de la SCPI est la mutualisation : avec quelques centaines ou milliers d'euros, vous accédez à un patrimoine composé de dizaines, voire de centaines d'immeubles répartis dans plusieurs villes ou pays, ce qui dilue fortement le risque locatif.\n\nLes SCPI versent généralement des revenus trimestriels, avec un rendement historique souvent compris entre 4 % et 6 % par an (non garanti). Elles peuvent être détenues en direct, à crédit, ou via certains contrats d'assurance-vie.\n\nÀ retenir : la SCPI est un placement de long terme (8-10 ans minimum recommandés), peu liquide (la revente des parts peut prendre du temps), avec des frais d'entrée souvent significatifs (autour de 8-10 %), à bien comparer avant d'investir."
+      },
+      {
+        "id": "immobilier_3",
+        "title": "Effet de levier et financement",
+        "durationMinutes": 8,
+        "content": "L'effet de levier consiste à utiliser l'emprunt pour augmenter la capacité d'investissement. Si vous achetez un bien à crédit et que sa rentabilité est supérieure au coût du crédit, l'opération peut s'auto-financer partiellement ou totalement grâce aux loyers perçus.\n\nL'effet de levier amplifie aussi bien les gains que les pertes potentielles : c'est un outil puissant mais à manier avec prudence, en s'assurant de pouvoir faire face aux échéances même en cas de vacance locative temporaire.\n\nLa banque évalue votre capacité d'emprunt en fonction de vos revenus, de votre taux d'endettement (généralement plafonné autour de 35 % en France), de votre apport et de la qualité du projet (emplacement, type de bien, rentabilité prévisionnelle).\n\nÀ retenir : l'immobilier est l'une des rares classes d'actifs où un particulier peut facilement emprunter pour investir. Bien utilisé, l'effet de levier peut considérablement accélérer la constitution de patrimoine, mais il augmente aussi le risque en cas de retournement du marché ou de difficultés de remboursement."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Comment calcule-t-on la rentabilité brute d'un investissement locatif ?",
+        "options": [
+          "(Loyers annuels / prix d'achat total) x 100",
+          "(Prix d'achat / loyers annuels) x 100",
+          "Loyers mensuels x 12 uniquement",
+          "Il est impossible de la calculer"
+        ],
+        "correctIndex": 0,
+        "explanation": "La rentabilité brute se calcule en divisant les loyers annuels par le prix d'achat total (frais inclus), multiplié par 100."
+      },
+      {
+        "question": "Quel est l'un des principaux avantages d'une SCPI par rapport à l'immobilier locatif direct ?",
+        "options": [
+          "Aucune gestion à assurer et mutualisation du risque sur de nombreux biens",
+          "Une garantie de capital à 100% par l'État",
+          "Un remboursement immédiat possible à tout moment",
+          "L'absence totale de frais"
+        ],
+        "correctIndex": 0,
+        "explanation": "La SCPI permet d'investir dans un parc immobilier diversifié géré par une société de gestion, sans avoir à s'occuper soi-même de la gestion locative."
+      },
+      {
+        "question": "Qu'est-ce que l'effet de levier en immobilier ?",
+        "options": [
+          "Investir uniquement avec son épargne personnelle",
+          "Utiliser l'emprunt pour augmenter sa capacité d'investissement",
+          "Une taxe sur les plus-values immobilières",
+          "Un type de SCPI spécifique"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'effet de levier consiste à utiliser le crédit pour financer un investissement, ce qui peut amplifier le rendement sur fonds propres, mais aussi le risque."
+      },
+      {
+        "question": "Quel élément n'est PAS pris en compte dans la rentabilité nette d'un bien locatif ?",
+        "options": [
+          "La taxe foncière",
+          "Les charges de copropriété non récupérables",
+          "La vacance locative",
+          "Le prix d'un café acheté par le propriétaire"
+        ],
+        "correctIndex": 3,
+        "explanation": "La rentabilité nette prend en compte les charges réelles liées au bien (taxes, charges, vacance, entretien), mais pas les dépenses personnelles sans lien avec l'investissement."
+      },
+      {
+        "question": "Quel est un inconvénient typique des parts de SCPI ?",
+        "options": [
+          "Elles sont très liquides et se revendent en quelques secondes",
+          "Elles n'offrent jamais de revenus",
+          "Elles sont peu liquides et comportent souvent des frais d'entrée significatifs",
+          "Elles sont interdites en assurance-vie"
+        ],
+        "correctIndex": 2,
+        "explanation": "Les parts de SCPI sont des placements de long terme, peu liquides, avec des frais d'entrée souvent compris entre 8% et 10%."
+      }
+    ]
+  },
+  {
+    "id": "crypto",
+    "title": "Crypto-monnaies",
+    "icon": "currency_bitcoin",
+    "colorKey": "crypto",
+    "level": "Avancé",
+    "durationMinutes": 21,
+    "summary": "Comprendre les bases de la blockchain, la volatilité des crypto-actifs et les bonnes pratiques de sécurité.",
+    "lessons": [
+      {
+        "id": "crypto_1",
+        "title": "Comprendre Bitcoin et la blockchain",
+        "durationMinutes": 7,
+        "content": "Bitcoin, lancé en 2009, est la première monnaie numérique décentralisée. Elle repose sur la blockchain, un registre numérique public, partagé et infalsifiable, qui enregistre toutes les transactions sans avoir besoin d'une autorité centrale (banque, État).\n\nLe nombre total de bitcoins est plafonné à 21 millions d'unités, ce qui en fait un actif à offre limitée, souvent comparé à une « réserve de valeur numérique » par ses partisans.\n\nÀ côté de Bitcoin, des milliers d'autres crypto-actifs (Ethereum, et bien d'autres) proposent des fonctionnalités différentes : contrats intelligents (smart contracts), applications décentralisées, jetons d'utilité, etc.\n\nÀ retenir : la blockchain est avant tout une technologie de registre distribué. Les crypto-actifs qui s'appuient sur elle représentent une classe d'actifs récente, encore en cours de structuration réglementaire, et dont la valeur repose largement sur l'adoption future et la confiance des utilisateurs."
+      },
+      {
+        "id": "crypto_2",
+        "title": "Volatilité et gestion du risque",
+        "durationMinutes": 7,
+        "content": "Les crypto-actifs sont réputés pour leur très forte volatilité : des variations de plusieurs dizaines de pourcents en quelques jours ou semaines ne sont pas rares, dans un sens comme dans l'autre.\n\nCette volatilité s'explique par plusieurs facteurs : un marché encore relativement jeune et moins liquide que les marchés actions traditionnels, une forte sensibilité aux annonces réglementaires, et une part importante de spéculation à court terme.\n\nDu fait de ce profil de risque, la plupart des experts recommandent de ne consacrer aux crypto-actifs qu'une part limitée de son patrimoine global (souvent évoquée entre 1 % et 5 % pour un profil prudent à modéré), de l'argent que l'on est prêt à voir baisser fortement, voire perdre, sans impact sur son niveau de vie.\n\nÀ retenir : la règle de base reste la même qu'ailleurs : ne jamais investir plus que ce que l'on peut se permettre de perdre, et éviter de s'endetter pour investir dans un actif aussi volatil."
+      },
+      {
+        "id": "crypto_3",
+        "title": "Sécuriser ses actifs numériques",
+        "durationMinutes": 7,
+        "content": "La sécurité est un enjeu central dans l'univers des crypto-actifs, car les transactions sont irréversibles et il n'existe pas de service client capable d'annuler une erreur ou un piratage comme dans le système bancaire traditionnel.\n\nOn distingue les « wallets chauds » (connectés à internet, pratiques pour les transactions fréquentes mais plus exposés aux piratages) et les « wallets froids » ou « cold storage » (clés privées stockées hors ligne, sur un support physique dédié), recommandés pour conserver des montants importants sur le long terme.\n\nLa règle d'or est de ne jamais partager sa « clé privée » ou sa phrase de récupération (seed phrase) avec qui que ce soit, et de se méfier des promesses de rendements garantis très élevés, souvent signe d'arnaques.\n\nÀ retenir : « not your keys, not your coins » - si vous laissez vos crypto-actifs sur une plateforme d'échange, vous dépendez de la sécurité et de la solvabilité de cette plateforme. Pour une détention long terme, le transfert vers un portefeuille dont vous contrôlez les clés est une pratique largement recommandée par les utilisateurs expérimentés."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Qu'est-ce que la blockchain ?",
+        "options": [
+          "Une banque centrale numérique",
+          "Un registre numérique distribué et infalsifiable des transactions",
+          "Une application de messagerie",
+          "Un type d'action cotée en bourse"
+        ],
+        "correctIndex": 1,
+        "explanation": "La blockchain est un registre numérique public, partagé entre de nombreux participants, qui enregistre les transactions de manière infalsifiable."
+      },
+      {
+        "question": "Combien de bitcoins pourront être créés au maximum ?",
+        "options": [
+          "Un nombre illimité",
+          "21 millions",
+          "1 milliard",
+          "Cela dépend de chaque banque centrale"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le protocole Bitcoin plafonne l'offre totale à 21 millions d'unités, ce qui en fait un actif à offre fixe."
+      },
+      {
+        "question": "Pourquoi les crypto-actifs sont-ils considérés comme très volatils ?",
+        "options": [
+          "Parce qu'ils sont garantis par l'État",
+          "Marché jeune, moins liquide et forte sensibilité aux annonces réglementaires",
+          "Parce que leur prix est fixé chaque matin par une banque",
+          "Ils ne sont en réalité pas volatils"
+        ],
+        "correctIndex": 1,
+        "explanation": "La jeunesse du marché, sa liquidité parfois plus faible et sa sensibilité aux annonces expliquent en grande partie la forte volatilité des crypto-actifs."
+      },
+      {
+        "question": "Qu'est-ce qu'un « cold storage » (wallet froid) ?",
+        "options": [
+          "Un portefeuille connecté permanent à internet",
+          "Un stockage des clés privées hors ligne, plus sécurisé pour le long terme",
+          "Un compte bancaire classique",
+          "Une carte bancaire prépayée"
+        ],
+        "correctIndex": 1,
+        "explanation": "Un wallet froid conserve les clés privées hors ligne, ce qui réduit fortement les risques de piratage pour une détention longue durée."
+      },
+      {
+        "question": "Quelle proportion du patrimoine est généralement évoquée par les experts pour un profil prudent à modéré souhaitant s'exposer aux crypto-actifs ?",
+        "options": [
+          "Entre 50% et 70%",
+          "100% du patrimoine",
+          "Une part limitée, souvent entre 1% et 5%",
+          "Il est interdit d'en détenir"
+        ],
+        "correctIndex": 2,
+        "explanation": "En raison de leur volatilité, une part limitée du patrimoine (souvent évoquée entre 1% et 5% pour un profil prudent à modéré) est généralement recommandée."
+      }
+    ]
+  },
+  {
+    "id": "epargne",
+    "title": "Épargne & Livrets",
+    "icon": "savings",
+    "colorKey": "epargne",
+    "level": "Débutant",
+    "durationMinutes": 18,
+    "summary": "Construire une épargne de précaution solide, comprendre les livrets réglementés et le pouvoir des intérêts composés.",
+    "lessons": [
+      {
+        "id": "epargne_1",
+        "title": "Construire son épargne de précaution",
+        "durationMinutes": 6,
+        "content": "Avant de se lancer dans l'investissement, il est recommandé de constituer une épargne de précaution : une somme disponible immédiatement, destinée à faire face aux imprévus (perte d'emploi, panne de voiture, frais médicaux...) sans avoir à vendre ses investissements en urgence, parfois à perte.\n\nLe montant souvent évoqué correspond à 3 à 6 mois de dépenses courantes, à ajuster selon votre situation (stabilité de l'emploi, charges de famille, statut professionnel).\n\nCette épargne doit être placée sur des supports sûrs et disponibles immédiatement (livrets réglementés), même si leur rendement est modeste, car leur rôle n'est pas de faire fructifier le capital mais de sécuriser le quotidien.\n\nÀ retenir : investir sans épargne de précaution, c'est prendre le risque de devoir vendre au mauvais moment. Cette « assurance » personnelle est la première brique d'une stratégie financière saine, avant même de penser aux placements plus dynamiques."
+      },
+      {
+        "id": "epargne_2",
+        "title": "Livret A, LDDS, LEP : panorama",
+        "durationMinutes": 6,
+        "content": "En France, plusieurs livrets d'épargne réglementés offrent un cadre simple, sans risque de perte en capital et exonéré d'impôts et de prélèvements sociaux sur les intérêts.\n\nLe Livret A est le plus connu : accessible à tous, plafonné (environ 22 950 € pour une personne physique), avec un taux fixé par les pouvoirs publics et révisé périodiquement. Le LDDS (Livret de Développement Durable et Solidaire) fonctionne de manière similaire avec un plafond plus bas (environ 12 000 €).\n\nLe LEP (Livret d'Épargne Populaire) est réservé aux personnes dont les revenus sont inférieurs à un certain plafond, et offre généralement un taux plus avantageux que le Livret A, en contrepartie de conditions de ressources.\n\nÀ retenir : ces livrets sont parfaits pour l'épargne de précaution et les projets à court terme, grâce à leur disponibilité immédiate et leur sécurité totale. Cependant, leur rendement, une fois l'inflation prise en compte, peut s'avérer faible voire négatif en termes réels sur longue période - ils ne sont donc pas adaptés pour faire fructifier un capital sur le long terme."
+      },
+      {
+        "id": "epargne_3",
+        "title": "Les intérêts composés : la 8e merveille du monde",
+        "durationMinutes": 6,
+        "content": "Les intérêts composés désignent le fait que les intérêts générés par un placement produisent eux-mêmes des intérêts au fil du temps, créant un effet « boule de neige ».\n\nExemple : 1 000 € placés à 7 % par an deviennent environ 1 070 € après 1 an, puis environ 1 145 € après 2 ans (les intérêts de la 2e année portent aussi sur les 70 € d'intérêts de la 1ère année), et ainsi de suite. Sur 30 ans, cette même somme atteindrait environ 7 600 €, sans aucun versement supplémentaire.\n\nCe mécanisme explique pourquoi le temps est le facteur le plus puissant en investissement : commencer tôt, même avec de petites sommes, peut avoir un impact considérable sur le capital final, bien plus que d'attendre d'avoir « plus d'argent » pour commencer.\n\nÀ retenir : la régularité (versements programmés) combinée au temps et à un rendement raisonnable est la formule la plus simple et la plus puissante pour construire un capital sur le long terme. C'est la base de toute stratégie d'épargne et d'investissement efficace."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Quel est le rôle principal de l'épargne de précaution ?",
+        "options": [
+          "Maximiser le rendement à long terme",
+          "Faire face aux imprévus sans avoir à vendre ses investissements en urgence",
+          "Payer moins d'impôts",
+          "Remplacer totalement les investissements"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'épargne de précaution sert à couvrir les imprévus sans devoir liquider ses placements dans de mauvaises conditions."
+      },
+      {
+        "question": "Quelle est une caractéristique commune au Livret A et au LDDS ?",
+        "options": [
+          "Ils sont risqués et peuvent perdre de la valeur",
+          "Les intérêts sont exonérés d'impôt et de prélèvements sociaux",
+          "Ils sont réservés aux entreprises",
+          "Ils ne sont disponibles qu'après 10 ans"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le Livret A et le LDDS offrent tous deux des intérêts exonérés d'impôt sur le revenu et de prélèvements sociaux, avec disponibilité immédiate."
+      },
+      {
+        "question": "Qui peut ouvrir un LEP (Livret d'Épargne Populaire) ?",
+        "options": [
+          "Tout le monde sans condition",
+          "Uniquement les personnes de plus de 65 ans",
+          "Les personnes dont les revenus sont inférieurs à un certain plafond",
+          "Uniquement les entreprises"
+        ],
+        "correctIndex": 2,
+        "explanation": "Le LEP est soumis à une condition de ressources : il est réservé aux personnes dont les revenus n'excèdent pas un certain plafond."
+      },
+      {
+        "question": "Que désignent les « intérêts composés » ?",
+        "options": [
+          "Des intérêts qui ne changent jamais",
+          "Le fait que les intérêts générés produisent eux-mêmes des intérêts",
+          "Une taxe sur l'épargne",
+          "Un type de livret réglementé"
+        ],
+        "correctIndex": 1,
+        "explanation": "Les intérêts composés correspondent au phénomène où les gains générés par un placement génèrent à leur tour des gains, créant un effet cumulatif."
+      },
+      {
+        "question": "Pourquoi est-il avantageux de commencer à épargner et investir tôt ?",
+        "options": [
+          "Cela n'a aucun impact sur le capital final",
+          "Le temps amplifie fortement l'effet des intérêts composés",
+          "Les livrets réglementés ne sont accessibles qu'après 40 ans",
+          "Pour payer plus d'impôts"
+        ],
+        "correctIndex": 1,
+        "explanation": "Plus la durée de placement est longue, plus l'effet des intérêts composés est important, ce qui rend le temps un facteur clé de la constitution d'un capital."
+      }
+    ]
+  },
+  {
+    "id": "or",
+    "title": "Or & Matières premières",
+    "icon": "diamond",
+    "colorKey": "or",
+    "level": "Intermédiaire",
+    "durationMinutes": 16,
+    "summary": "Comprendre le rôle de l'or comme valeur refuge et les différentes façons d'investir dans les matières premières.",
+    "lessons": [
+      {
+        "id": "or_1",
+        "title": "L'or comme valeur refuge",
+        "durationMinutes": 5,
+        "content": "L'or occupe une place particulière dans l'histoire monétaire : pendant des siècles, il a servi de monnaie ou de garantie aux monnaies (étalon-or). Aujourd'hui, il est surtout perçu comme une « valeur refuge », c'est-à-dire un actif vers lequel les investisseurs se tournent en période d'incertitude économique, géopolitique ou d'inflation élevée.\n\nContrairement aux actions ou obligations, l'or ne génère ni dividende ni coupon : sa performance dépend uniquement de l'évolution de son prix, déterminé par l'offre et la demande mondiale (banques centrales, bijouterie, industrie, investisseurs).\n\nHistoriquement, l'or a souvent (mais pas toujours) bien résisté lors de crises majeures, ce qui en fait un actif de diversification apprécié, sans pour autant être une garantie absolue contre toutes les baisses de marché.\n\nÀ retenir : l'or peut jouer un rôle de « police d'assurance » dans un portefeuille diversifié, généralement à hauteur de quelques pourcents, plutôt qu'un moteur principal de performance."
+      },
+      {
+        "id": "or_2",
+        "title": "Comment investir dans l'or ?",
+        "durationMinutes": 5,
+        "content": "Il existe plusieurs façons d'investir dans l'or. L'or physique (pièces, lingots) offre une détention directe et tangible, mais implique des questions de stockage, d'assurance et des frais d'achat/vente (spread) qui peuvent être significatifs, notamment sur les petites quantités.\n\nLes ETF adossés à l'or physique permettent d'obtenir une exposition au prix de l'or sans détention physique, avec une grande liquidité et des frais de gestion réduits, mais sans possibilité de récupérer le métal physique dans la plupart des cas pour un particulier.\n\nLes actions de sociétés minières aurifères offrent une exposition indirecte : leur performance dépend du prix de l'or, mais aussi de la gestion de l'entreprise, de ses coûts de production et de ses réserves, ce qui ajoute une couche de risque supplémentaire (et potentiellement de rendement).\n\nÀ retenir : chaque méthode a ses avantages et inconvénients en termes de liquidité, de frais, de fiscalité et de simplicité. Le choix dépend de vos objectifs : détention patrimoniale tangible, exposition financière simple, ou pari sur le secteur minier."
+      },
+      {
+        "id": "or_3",
+        "title": "Les autres matières premières",
+        "durationMinutes": 6,
+        "content": "Au-delà de l'or, les matières premières regroupent une grande variété d'actifs : énergie (pétrole, gaz naturel), métaux industriels (cuivre, aluminium), et matières agricoles (blé, café, coton...).\n\nCes actifs sont souvent utilisés comme protection contre l'inflation, car leurs prix tendent à augmenter lorsque le niveau général des prix dans l'économie augmente. Ils sont aussi très sensibles à l'offre et la demande physique : conditions météorologiques, décisions de production (cartels comme l'OPEP pour le pétrole), tensions géopolitiques.\n\nL'investissement en matières premières par un particulier se fait généralement via des ETF spécialisés ou des actions de sociétés du secteur (énergie, mines, agriculture), plutôt que par l'achat physique, souvent impraticable pour le pétrole ou le blé par exemple.\n\nÀ retenir : les matières premières sont des actifs cycliques et volatils, qui peuvent apporter une diversification supplémentaire à un portefeuille, mais qui demandent une bonne compréhension des facteurs économiques et géopolitiques qui les influencent."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Pourquoi l'or est-il souvent qualifié de « valeur refuge » ?",
+        "options": [
+          "Parce qu'il verse des dividendes élevés",
+          "Parce que les investisseurs s'y tournent souvent en période d'incertitude",
+          "Parce qu'il est garanti par une banque centrale unique",
+          "Parce qu'il ne peut jamais être vendu"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'or est perçu comme une valeur refuge car les investisseurs s'y réfugient souvent en période d'incertitude économique ou géopolitique."
+      },
+      {
+        "question": "Quelle est une caractéristique de l'or par rapport à une action ?",
+        "options": [
+          "Il verse un dividende trimestriel",
+          "Il ne génère ni dividende ni coupon",
+          "Il garantit toujours une hausse",
+          "Il est émis par des entreprises"
+        ],
+        "correctIndex": 1,
+        "explanation": "Contrairement à une action, l'or ne génère aucun revenu périodique (ni dividende ni coupon) : sa performance dépend uniquement de l'évolution de son prix."
+      },
+      {
+        "question": "Quel est un inconvénient de l'or physique (pièces, lingots) ?",
+        "options": [
+          "Il est impossible à acheter",
+          "Le stockage, l'assurance et les frais d'achat/vente peuvent être significatifs",
+          "Il ne peut pas être détenu par des particuliers",
+          "Il génère systématiquement des intérêts"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'or physique implique des coûts de stockage, d'assurance et un écart (spread) entre prix d'achat et de vente, surtout sur les petites quantités."
+      },
+      {
+        "question": "Pourquoi les matières premières sont-elles parfois utilisées comme protection contre l'inflation ?",
+        "options": [
+          "Leur prix tend à augmenter avec le niveau général des prix",
+          "Elles sont garanties par les banques centrales",
+          "Elles ne fluctuent jamais",
+          "Elles sont exonérées d'impôt"
+        ],
+        "correctIndex": 0,
+        "explanation": "Les prix des matières premières ont tendance à suivre, voire anticiper, la hausse générale des prix, ce qui en fait une protection partielle contre l'inflation."
+      },
+      {
+        "question": "Comment un particulier investit-il le plus souvent dans le pétrole ou le blé ?",
+        "options": [
+          "En stockant physiquement des barils ou des sacs de blé chez lui",
+          "Via des ETF spécialisés ou des actions de sociétés du secteur",
+          "Ce n'est légalement pas possible",
+          "Uniquement via un compte bancaire classique"
+        ],
+        "correctIndex": 1,
+        "explanation": "L'achat physique de pétrole ou de blé étant impraticable pour un particulier, l'exposition se fait généralement via des ETF spécialisés ou des actions du secteur."
+      }
+    ]
+  },
+  {
+    "id": "fiscalite",
+    "title": "Fiscalité de l'investissement",
+    "icon": "receipt_long",
+    "colorKey": "fiscalite",
+    "level": "Avancé",
+    "durationMinutes": 24,
+    "summary": "Découvrir les principales enveloppes fiscales françaises : PEA, assurance-vie et PER, pour optimiser la fiscalité de vos investissements.",
+    "lessons": [
+      {
+        "id": "fiscalite_1",
+        "title": "Le PEA : le plan d'épargne en actions",
+        "durationMinutes": 8,
+        "content": "Le PEA (Plan d'Épargne en Actions) est une enveloppe fiscale française qui permet d'investir dans des actions européennes (et certains ETF éligibles) avec un avantage fiscal majeur : après 5 ans de détention, les gains (plus-values et dividendes) ne sont soumis qu'aux prélèvements sociaux (environ 17,2 %), et non à l'impôt sur le revenu.\n\nLe plafond de versement d'un PEA classique est de 150 000 €. Tout retrait avant 5 ans entraîne en principe la clôture du plan (avec quelques exceptions) et la perte de l'avantage fiscal sur les gains.\n\nLe PEA est donc particulièrement adapté à une stratégie d'investissement de long terme en actions et ETF actions, dans une optique de constitution de patrimoine sur 10, 20 ou 30 ans.\n\nÀ retenir : ouvrir un PEA tôt, même avec un petit montant, permet de faire courir le délai de 5 ans le plus rapidement possible, et ainsi de bénéficier de l'avantage fiscal dès que vous augmentez vos versements par la suite."
+      },
+      {
+        "id": "fiscalite_2",
+        "title": "L'assurance-vie : l'enveloppe préférée des Français",
+        "durationMinutes": 8,
+        "content": "L'assurance-vie est un contrat qui permet d'investir sur des supports variés : fonds en euros (capital garanti, rendement modeste) et unités de compte (actions, obligations, ETF, immobilier via SCPI...), sans capital garanti sur ces dernières mais avec un potentiel de performance plus élevé.\n\nSon principal avantage fiscal porte sur les retraits (rachats) : après 8 ans de détention, chaque année, un abattement s'applique sur les gains retirés (environ 4 600 € pour une personne seule, 9 200 € pour un couple), au-delà duquel un prélèvement forfaitaire réduit s'applique.\n\nL'assurance-vie est également réputée pour son cadre avantageux en matière de transmission : en cas de décès, les capitaux transmis aux bénéficiaires désignés bénéficient, sous certaines conditions et limites, d'un cadre fiscal souvent plus favorable que la succession classique.\n\nÀ retenir : l'assurance-vie est une enveloppe extrêmement flexible (vous pouvez retirer de l'argent à tout moment, contrairement à une idée reçue), mais ses avantages fiscaux les plus significatifs se révèlent surtout après 8 ans de détention."
+      },
+      {
+        "id": "fiscalite_3",
+        "title": "Le PER et la flat tax : optimiser sa fiscalité",
+        "durationMinutes": 8,
+        "content": "Le PER (Plan d'Épargne Retraite) permet, sous conditions, de déduire les versements volontaires de son revenu imposable, ce qui réduit l'impôt sur le revenu de l'année du versement. En contrepartie, les sommes sont en principe bloquées jusqu'à la retraite (sauf cas de déblocage anticipé prévus par la loi, comme l'achat de la résidence principale).\n\nÀ la sortie, le capital ou la rente perçue est fiscalisée selon des règles spécifiques, qui dépendent notamment du fait que les versements aient été déduits ou non à l'entrée. Le PER est donc surtout intéressant pour les personnes fortement imposées pendant leur vie active et qui anticipent une imposition plus faible à la retraite.\n\nPour les placements hors enveloppes fiscales dédiées (comme un compte-titres ordinaire), s'applique par défaut la « flat tax » ou Prélèvement Forfaitaire Unique (PFU) de 30 %, qui regroupe impôt sur le revenu (12,8 %) et prélèvements sociaux (17,2 %) sur les plus-values et revenus de placement.\n\nÀ retenir : le choix de l'enveloppe (PEA, assurance-vie, PER, compte-titres) dépend de votre horizon, de vos objectifs (retraite, transmission, projets à moyen terme) et de votre situation fiscale actuelle et future. Il n'existe pas une enveloppe « meilleure » dans l'absolu, mais une combinaison adaptée à chaque profil."
+      }
+    ],
+    "quiz": [
+      {
+        "question": "Quel est l'un des principaux avantages fiscaux du PEA après 5 ans de détention ?",
+        "options": [
+          "Une exonération totale de tout prélèvement",
+          "Les gains ne sont soumis qu'aux prélèvements sociaux, sans impôt sur le revenu",
+          "Un remboursement automatique du capital investi",
+          "Un doublement automatique des versements par l'État"
+        ],
+        "correctIndex": 1,
+        "explanation": "Après 5 ans, les gains du PEA échappent à l'impôt sur le revenu et ne supportent que les prélèvements sociaux (environ 17,2%)."
+      },
+      {
+        "question": "À partir de combien d'années de détention l'assurance-vie offre-t-elle son cadre fiscal le plus avantageux sur les rachats ?",
+        "options": [
+          "1 an",
+          "4 ans",
+          "8 ans",
+          "Jamais"
+        ],
+        "correctIndex": 2,
+        "explanation": "C'est après 8 ans de détention qu'un abattement annuel s'applique sur les gains retirés d'une assurance-vie, rendant la fiscalité plus avantageuse."
+      },
+      {
+        "question": "Quel est le principe de base du PER (Plan d'Épargne Retraite) à l'entrée ?",
+        "options": [
+          "Les versements augmentent l'impôt sur le revenu",
+          "Les versements volontaires peuvent être déduits du revenu imposable, sous conditions",
+          "Le PER est totalement disponible à tout moment sans condition",
+          "Le PER est réservé aux personnes de moins de 25 ans"
+        ],
+        "correctIndex": 1,
+        "explanation": "Le PER permet, sous conditions, de déduire les versements volontaires du revenu imposable, réduisant ainsi l'impôt de l'année concernée, en contrepartie d'un blocage jusqu'à la retraite (avec exceptions)."
+      },
+      {
+        "question": "Que désigne la « flat tax » ou PFU appliquée par défaut sur un compte-titres ordinaire ?",
+        "options": [
+          "Un taux de 30% regroupant impôt sur le revenu et prélèvements sociaux",
+          "Une exonération totale d'impôt",
+          "Un taux variable selon l'âge de l'investisseur uniquement",
+          "Une taxe applicable uniquement aux non-résidents"
+        ],
+        "correctIndex": 0,
+        "explanation": "La flat tax (PFU) s'élève à 30%, soit 12,8% d'impôt sur le revenu et 17,2% de prélèvements sociaux, appliquée par défaut sur les gains des comptes-titres."
+      },
+      {
+        "question": "Quel est le plafond de versement d'un PEA classique ?",
+        "options": [
+          "10 000 €",
+          "50 000 €",
+          "150 000 €",
+          "Il n'y a pas de plafond"
+        ],
+        "correctIndex": 2,
+        "explanation": "Le plafond de versement d'un PEA classique est fixé à 150 000 € par titulaire."
+      }
+    ]
+  }
+]
