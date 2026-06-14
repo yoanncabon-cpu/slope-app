@@ -29,3 +29,10 @@ workflows:
           find . -name "Podfile" -execdir pod install \;
       - name: Build iOS (no code signing)
         script: flutter build ios --debug --no-codesign
+      - name: Package .ipa (non signé, pour Sideloadly)
+        script: |
+          mkdir -p build/ios/iphoneos/Payload
+          cp -r build/ios/iphoneos/Runner.app build/ios/iphoneos/Payload/
+          cd build/ios/iphoneos && zip -r Runner.ipa Payload
+    artifacts:
+      - build/ios/iphoneos/Runner.ipa
