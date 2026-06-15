@@ -73,6 +73,18 @@ IconData mapIcon(String key) {
       return Icons.quiz;
     case 'menu_book':
       return Icons.menu_book;
+    case 'pie_chart':
+      return Icons.pie_chart;
+    case 'error_outline':
+      return Icons.error_outline;
+    case 'rocket_launch':
+      return Icons.rocket_launch;
+    case 'request_quote':
+      return Icons.request_quote;
+    case 'mic':
+      return Icons.mic;
+    case 'security':
+      return Icons.security;
     default:
       return Icons.circle;
   }

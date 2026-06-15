@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260">
+  <!-- Sol -->
+  <ellipse cx="240" cy="232" rx="190" ry="18" fill="#4338CA" opacity="0.10"/>
+
+  <!-- Pile de pièces -->
+  <g>
+    <ellipse cx="90" cy="212" rx="40" ry="14" fill="#B45309"/>
+    <ellipse cx="90" cy="205" rx="40" ry="14" fill="#F59E0B"/>
+    <ellipse cx="90" cy="190" rx="40" ry="14" fill="#B45309"/>
+    <ellipse cx="90" cy="183" rx="40" ry="14" fill="#FCD34D"/>
+    <ellipse cx="90" cy="168" rx="40" ry="14" fill="#B45309"/>
+    <ellipse cx="90" cy="161" rx="40" ry="14" fill="#F59E0B"/>
+    <text x="90" y="167" font-family="Manrope, sans-serif" font-size="18" font-weight="700" fill="#92400E" text-anchor="middle">€</text>
+  </g>
+
+  <!-- Barres de croissance -->
+  <polygon points="170,210 206,210 220,200 184,200" fill="#A5B4FC"/>
+  <polygon points="206,210 220,200 220,236 206,236" fill="#4F46E5"/>
+  <polygon points="170,210 206,210 206,236 170,236" fill="#818CF8"/>
+
+  <polygon points="226,180 262,180 276,170 240,170" fill="#5EEAF7"/>
+  <polygon points="262,180 276,170 276,236 262,236" fill="#047A91"/>
+  <polygon points="226,180 262,180 262,236 226,236" fill="#06B6D4"/>
+
+  <polygon points="282,140 318,140 332,130 296,130" fill="#FCD34D"/>
+  <polygon points="318,140 332,130 332,236 318,236" fill="#B45309"/>
+  <polygon points="282,140 318,140 318,236 282,236" fill="#F59E0B"/>
+
+  <!-- Ligne de tendance -->
+  <path d="M150,205 C200,170 250,150 300,90 L370,40" stroke="#06B6D4" stroke-width="6" fill="none" stroke-linecap="round" stroke-dasharray="2 14"/>
+  <path d="M355,30 L378,38 L368,60 Z" fill="#06B6D4"/>
+
+  <!-- Fusée en envol -->
+  <g transform="rotate(28 400 70)">
+    <path d="M400,20 C416,33 420,58 416,80 L384,80 C380,58 384,33 400,20 Z" fill="#4338CA"/>
+    <circle cx="400" cy="48" r="9" fill="#5EEAF7"/>
+    <path d="M384,72 L366,88 L384,84 Z" fill="#06B6D4"/>
+    <path d="M416,72 L434,88 L416,84 Z" fill="#06B6D4"/>
+    <path d="M390,80 L410,80 L405,100 L395,100 Z" fill="#FCD34D"/>
+    <ellipse cx="400" cy="106" rx="10" ry="18" fill="#F59E0B" opacity="0.7"/>
+  </g>
+
+  <!-- Étincelles -->
+  <circle cx="60" cy="60" r="5" fill="#4338CA" opacity="0.5"/>
+  <circle cx="250" cy="50" r="4" fill="#06B6D4" opacity="0.55"/>
+  <circle cx="440" cy="160" r="6" fill="#F59E0B" opacity="0.5"/>
+</svg>

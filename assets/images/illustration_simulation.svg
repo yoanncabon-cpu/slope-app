@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260">
+  <!-- Sol -->
+  <ellipse cx="240" cy="232" rx="190" ry="18" fill="#4338CA" opacity="0.10"/>
+
+  <!-- Écran de simulation (effet 2.5D) -->
+  <polygon points="50,80 250,80 278,64 78,64" fill="#6D5FE0"/>
+  <polygon points="250,80 278,64 278,206 250,222" fill="#332E8F"/>
+  <polygon points="50,80 250,80 250,222 50,222" fill="#4338CA"/>
+
+  <!-- Écran : courbe de simulation -->
+  <rect x="68" y="96" width="164" height="110" rx="6" fill="#0B0E14"/>
+  <polyline points="80,180 104,160 128,188 152,140 176,166 200,108 220,128"
+            fill="none" stroke="#06B6D4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="80,170 104,176 128,150 152,168 176,130 200,150 220,96"
+            fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.7" stroke-dasharray="2 6"/>
+  <circle cx="220" cy="128" r="5" fill="#06B6D4"/>
+
+  <!-- Dés de hasard -->
+  <g transform="rotate(-12 340 150)">
+    <polygon points="316,150 360,150 378,138 334,138" fill="#FCD34D"/>
+    <polygon points="360,150 378,138 378,182 360,194" fill="#B45309"/>
+    <polygon points="316,150 360,150 360,194 316,194" fill="#F59E0B"/>
+    <circle cx="338" cy="172" r="5" fill="#92400E"/>
+    <circle cx="345" cy="166" r="4" fill="#FFFBEB"/>
+    <circle cx="352" cy="178" r="4" fill="#FFFBEB"/>
+    <circle cx="330" cy="180" r="4" fill="#FFFBEB"/>
+  </g>
+  <g transform="rotate(10 400 100)">
+    <polygon points="380,104 416,104 432,94 396,94" fill="#5EEAF7"/>
+    <polygon points="416,104 432,94 432,130 416,140" fill="#047A91"/>
+    <polygon points="380,104 416,104 416,140 380,140" fill="#06B6D4"/>
+    <circle cx="398" cy="122" r="5" fill="#06343D"/>
+  </g>
+
+  <!-- Pièces -->
+  <g>
+    <ellipse cx="60" cy="222" rx="34" ry="12" fill="#B45309"/>
+    <ellipse cx="60" cy="216" rx="34" ry="12" fill="#F59E0B"/>
+    <ellipse cx="60" cy="204" rx="34" ry="12" fill="#B45309"/>
+    <ellipse cx="60" cy="198" rx="34" ry="12" fill="#FCD34D"/>
+    <text x="60" y="203" font-family="Manrope, sans-serif" font-size="15" font-weight="700" fill="#92400E" text-anchor="middle">€</text>
+  </g>
+
+  <!-- Étincelles -->
+  <circle cx="450" cy="170" r="6" fill="#4338CA" opacity="0.45"/>
+  <circle cx="270" cy="40" r="5" fill="#06B6D4" opacity="0.5"/>
+  <circle cx="160" cy="50" r="4" fill="#F59E0B" opacity="0.55"/>
+</svg>

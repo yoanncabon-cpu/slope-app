@@ -57,18 +57,17 @@ class AppTheme {
       ),
     );
 
-    final scaffoldBackground =
-        isDark ? AppColors.darkBackground : AppColors.lightBackground;
-
     return ThemeData(
       useMaterial3: true,
       brightness: brightness,
       colorScheme: colorScheme,
-      scaffoldBackgroundColor: scaffoldBackground,
+      // Transparent : le dégradé + halos de DepthBackground (cf. app.dart)
+      // sont visibles derrière chaque écran pour donner de la profondeur.
+      scaffoldBackgroundColor: Colors.transparent,
       textTheme: textTheme,
       fontFamily: 'Manrope',
       appBarTheme: AppBarTheme(
-        backgroundColor: scaffoldBackground,
+        backgroundColor: Colors.transparent,
         foregroundColor:
             isDark ? AppColors.darkTextPrimary : AppColors.lightTextPrimary,
         elevation: 0,
@@ -177,7 +176,16 @@ class AppTheme {
       ),
       progressIndicatorTheme: const ProgressIndicatorThemeData(
         color: AppColors.primary,
-        linearTrackColor: Color(0x1A4F46E5),
+        linearTrackColor: Color(0x1A4338CA),
+      ),
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.android: FadeForwardsPageTransitionsBuilder(),
+          TargetPlatform.iOS: FadeForwardsPageTransitionsBuilder(),
+          TargetPlatform.macOS: FadeForwardsPageTransitionsBuilder(),
+          TargetPlatform.windows: FadeForwardsPageTransitionsBuilder(),
+          TargetPlatform.linux: FadeForwardsPageTransitionsBuilder(),
+        },
       ),
     );
   }

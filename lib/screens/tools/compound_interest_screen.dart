@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
@@ -76,9 +77,27 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
-          ResultTile(label: 'Capital final', value: formatEuro(finalBalance), color: color, highlight: true),
-          ResultTile(label: 'Total versé', value: formatEuro(totalInvested)),
-          ResultTile(label: 'Intérêts générés', value: formatEuro(interestEarned), color: AppColors.success),
+          ResultTile(
+            label: 'Capital final',
+            value: formatEuro(finalBalance),
+            numericValue: finalBalance,
+            formatter: formatEuro,
+            color: color,
+            highlight: true,
+          ),
+          ResultTile(
+            label: 'Total versé',
+            value: formatEuro(totalInvested),
+            numericValue: totalInvested,
+            formatter: formatEuro,
+          ),
+          ResultTile(
+            label: 'Intérêts générés',
+            value: formatEuro(interestEarned),
+            numericValue: interestEarned,
+            formatter: formatEuro,
+            color: AppColors.success,
+          ),
           const SizedBox(height: 16),
           Text('Évolution annuelle', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
@@ -87,6 +106,8 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
             child: yearlyData.isEmpty
                 ? const SizedBox.shrink()
                 : BarChart(
+                    duration: const Duration(milliseconds: 350),
+                    curve: Curves.easeOutCubic,
                     BarChartData(
                       gridData: const FlGridData(show: false),
                       borderData: FlBorderData(show: false),
@@ -127,7 +148,7 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
                       }).toList(),
                     ),
                   ),
-          ),
+          ).animate().fadeIn(duration: 450.ms).slideY(begin: 0.08, end: 0, curve: Curves.easeOutCubic),
           const SizedBox(height: 12),
           Row(
             children: [

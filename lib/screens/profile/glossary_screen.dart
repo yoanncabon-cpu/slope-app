@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../../models/glossary_term.dart';
 import '../../providers/content_provider.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/animations/animations.dart';
 
 class GlossaryScreen extends StatefulWidget {
   const GlossaryScreen({super.key});
@@ -95,7 +96,10 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
                     padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
                     itemCount: terms.length,
                     separatorBuilder: (_, _) => const SizedBox(height: 10),
-                    itemBuilder: (context, index) => _TermCard(term: terms[index]),
+                    itemBuilder: (context, index) => StaggerFadeSlide(
+                      index: index,
+                      child: _TermCard(term: terms[index]),
+                    ),
                   ),
           ),
         ],

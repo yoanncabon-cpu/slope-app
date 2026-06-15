@@ -4,6 +4,7 @@ import '../models/business_idea.dart';
 import '../theme/app_colors.dart';
 import '../utils/formatters.dart';
 import '../utils/icon_mapper.dart';
+import 'animations/animations.dart';
 
 class IdeaCard extends StatelessWidget {
   final BusinessIdea idea;
@@ -23,7 +24,8 @@ class IdeaCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final color = AppColors.categoryColor('idee');
 
-    return Card(
+    return TapTilt(
+      child: Card(
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: onTap,
@@ -68,9 +70,15 @@ class IdeaCard extends StatelessWidget {
                   ),
                   IconButton(
                     onPressed: onToggleFavorite,
-                    icon: Icon(
-                      isFavorite ? Icons.favorite : Icons.favorite_border,
-                      color: isFavorite ? AppColors.danger : null,
+                    icon: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 200),
+                      transitionBuilder: (child, animation) =>
+                          ScaleTransition(scale: animation, child: child),
+                      child: Icon(
+                        isFavorite ? Icons.favorite : Icons.favorite_border,
+                        key: ValueKey(isFavorite),
+                        color: isFavorite ? AppColors.danger : null,
+                      ),
                     ),
                   ),
                 ],
@@ -108,6 +116,7 @@ class IdeaCard extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }

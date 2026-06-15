@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:provider/provider.dart';
 
 import '../../models/business_idea.dart';
@@ -8,6 +9,7 @@ import '../../providers/progress_provider.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
 import '../../utils/icon_mapper.dart';
+import '../../widgets/animations/animations.dart';
 
 class BusinessIdeaDetailScreen extends StatelessWidget {
   final String ideaId;
@@ -80,27 +82,39 @@ class BusinessIdeaDetailScreen extends StatelessWidget {
             spacing: 10,
             runSpacing: 10,
             children: [
-              _StatCard(
-                icon: Icons.bar_chart,
-                label: 'Difficulté',
-                value: idea.difficulty,
-                color: _difficultyColor(idea.difficulty),
+              StaggerFadeSlide(
+                index: 0,
+                child: _StatCard(
+                  icon: Icons.bar_chart,
+                  label: 'Difficulté',
+                  value: idea.difficulty,
+                  color: _difficultyColor(idea.difficulty),
+                ),
               ),
-              _StatCard(
-                icon: Icons.savings_outlined,
-                label: 'Investissement initial',
-                value: '${formatEuro(idea.investmentMin)} - ${formatEuro(idea.investmentMax)}',
+              StaggerFadeSlide(
+                index: 1,
+                child: _StatCard(
+                  icon: Icons.savings_outlined,
+                  label: 'Investissement initial',
+                  value: '${formatEuro(idea.investmentMin)} - ${formatEuro(idea.investmentMax)}',
+                ),
               ),
-              _StatCard(
-                icon: Icons.schedule,
-                label: 'Rentabilité estimée',
-                value: '${idea.timeToProfitMonths} mois',
+              StaggerFadeSlide(
+                index: 2,
+                child: _StatCard(
+                  icon: Icons.schedule,
+                  label: 'Rentabilité estimée',
+                  value: '${idea.timeToProfitMonths} mois',
+                ),
               ),
-              _StatCard(
-                icon: Icons.trending_up,
-                label: 'Croissance annuelle',
-                value: '+${idea.growthRatePercent.toStringAsFixed(1)} %',
-                color: AppColors.success,
+              StaggerFadeSlide(
+                index: 3,
+                child: _StatCard(
+                  icon: Icons.trending_up,
+                  label: 'Croissance annuelle',
+                  value: '+${idea.growthRatePercent.toStringAsFixed(1)} %',
+                  color: AppColors.success,
+                ),
               ),
             ],
           ),
@@ -142,13 +156,23 @@ class BusinessIdeaDetailScreen extends StatelessWidget {
           SizedBox(
             height: 200,
             child: _MarketTrendChart(idea: idea, color: color),
-          ),
+          ).animate().fadeIn(duration: 450.ms, delay: 100.ms).slideY(begin: 0.08, end: 0, curve: Curves.easeOutCubic),
           const SizedBox(height: 28),
           Row(
             children: [
-              Expanded(child: _ProsConsCard(title: 'Avantages', items: idea.pros, color: AppColors.success, icon: Icons.add_circle_outline)),
+              Expanded(
+                child: StaggerFadeSlide(
+                  index: 4,
+                  child: _ProsConsCard(title: 'Avantages', items: idea.pros, color: AppColors.success, icon: Icons.add_circle_outline),
+                ),
+              ),
               const SizedBox(width: 12),
-              Expanded(child: _ProsConsCard(title: 'Limites', items: idea.cons, color: AppColors.danger, icon: Icons.remove_circle_outline)),
+              Expanded(
+                child: StaggerFadeSlide(
+                  index: 5,
+                  child: _ProsConsCard(title: 'Limites', items: idea.cons, color: AppColors.danger, icon: Icons.remove_circle_outline),
+                ),
+              ),
             ],
           ),
           const SizedBox(height: 24),
@@ -356,6 +380,8 @@ class _MarketTrendChart extends StatelessWidget {
           ),
         ),
       ),
+      duration: const Duration(milliseconds: 400),
+      curve: Curves.easeOut,
     );
   }
 }

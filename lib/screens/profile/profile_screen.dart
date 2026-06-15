@@ -5,6 +5,8 @@ import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
 import '../../providers/theme_provider.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/animations/animations.dart';
+import '../../widgets/illustration_banner.dart';
 import 'glossary_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -27,8 +29,12 @@ class ProfileScreen extends StatelessWidget {
 
     return SafeArea(
       child: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 24, 20, 32),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
         children: [
+          const IllustrationBanner(
+            asset: 'assets/images/illustration_profile.svg',
+            horizontalPadding: 0,
+          ),
           Row(
             children: [
               Container(
@@ -63,48 +69,58 @@ class ProfileScreen extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 24),
-          Row(
-            children: [
-              Expanded(
-                child: _StatBlock(
-                  icon: Icons.donut_large,
-                  label: 'Progression globale',
-                  value: '${(overall * 100).round()} %',
-                  color: AppColors.primary,
+          StaggerFadeSlide(
+            index: 0,
+            child: Row(
+              children: [
+                Expanded(
+                  child: _StatBlock(
+                    icon: Icons.donut_large,
+                    label: 'Progression globale',
+                    value: '${(overall * 100).round()} %',
+                    numericValue: overall * 100,
+                    formatter: (v) => '${v.round()} %',
+                    color: AppColors.primary,
+                  ),
                 ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _StatBlock(
-                  icon: Icons.menu_book,
-                  label: 'Modules terminés',
-                  value: '$completedModules / ${allModules.length}',
-                  color: AppColors.secondary,
+                const SizedBox(width: 12),
+                Expanded(
+                  child: _StatBlock(
+                    icon: Icons.menu_book,
+                    label: 'Modules terminés',
+                    value: '$completedModules / ${allModules.length}',
+                    color: AppColors.secondary,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           const SizedBox(height: 12),
-          Row(
-            children: [
-              Expanded(
-                child: _StatBlock(
-                  icon: Icons.check_circle_outline,
-                  label: 'Leçons terminées',
-                  value: '$completedLessons / ${content.totalLessons}',
-                  color: AppColors.success,
+          StaggerFadeSlide(
+            index: 1,
+            child: Row(
+              children: [
+                Expanded(
+                  child: _StatBlock(
+                    icon: Icons.check_circle_outline,
+                    label: 'Leçons terminées',
+                    value: '$completedLessons / ${content.totalLessons}',
+                    color: AppColors.success,
+                  ),
                 ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _StatBlock(
-                  icon: Icons.favorite,
-                  label: 'Idées favorites',
-                  value: '$favoritesCount',
-                  color: AppColors.danger,
+                const SizedBox(width: 12),
+                Expanded(
+                  child: _StatBlock(
+                    icon: Icons.favorite,
+                    label: 'Idées favorites',
+                    value: '$favoritesCount',
+                    numericValue: favoritesCount.toDouble(),
+                    formatter: (v) => '${v.round()}',
+                    color: AppColors.danger,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           const SizedBox(height: 28),
           Text('Apparence', style: Theme.of(context).textTheme.titleLarge),
@@ -180,11 +196,28 @@ class _StatBlock extends StatelessWidget {
   final String label;
   final String value;
   final Color color;
+  final double? numericValue;
+  final String Function(double value)? formatter;
 
-  const _StatBlock({required this.icon, required this.label, required this.value, required this.color});
+  const _StatBlock({
+    required this.icon,
+    required this.label,
+    required this.value,
+    required this.color,
+    this.numericValue,
+    this.formatter,
+  }) : assert(
+          numericValue == null || formatter != null,
+          'formatter est requis quand numericValue est fourni',
+        );
 
   @override
   Widget build(BuildContext context) {
+    final valueStyle = Theme.of(context).textTheme.titleLarge;
+    final valueWidget = (numericValue != null && formatter != null)
+        ? AnimatedCount(value: numericValue!, formatter: formatter!, style: valueStyle)
+        : Text(value, style: valueStyle);
+
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -196,10 +229,7 @@ class _StatBlock extends StatelessWidget {
         children: [
           Icon(icon, color: color),
           const SizedBox(height: 10),
-          Text(
-            value,
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
+          valueWidget,
           const SizedBox(height: 2),
           Text(
             label,

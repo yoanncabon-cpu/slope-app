@@ -7,6 +7,7 @@ import 'providers/theme_provider.dart';
 import 'screens/shell/main_shell.dart';
 import 'screens/shell/splash_screen.dart';
 import 'theme/app_theme.dart';
+import 'widgets/depth_background.dart';
 
 class SlopeApp extends StatelessWidget {
   const SlopeApp({super.key});
@@ -54,6 +55,7 @@ class _AppRootState extends State<_AppRoot> {
       themeMode: themeMode,
       theme: AppTheme.light,
       darkTheme: AppTheme.dark,
+      builder: (context, child) => DepthBackground(child: child!),
       home: FutureBuilder(
         future: _initFuture,
         builder: (context, snapshot) {

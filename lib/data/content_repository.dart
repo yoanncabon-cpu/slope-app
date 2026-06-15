@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 
+import '../models/blog_article.dart';
 import '../models/business_idea.dart';
 import '../models/glossary_term.dart';
 import '../models/learning_module.dart';
@@ -47,6 +48,14 @@ class ContentRepository {
     final list = json.decode(raw) as List;
     return list
         .map((e) => GlossaryTerm.fromJson(e as Map<String, dynamic>))
+        .toList();
+  }
+
+  Future<List<BlogArticle>> loadBlogArticles() async {
+    final raw = await rootBundle.loadString('assets/data/blog_articles.json');
+    final list = json.decode(raw) as List;
+    return list
+        .map((e) => BlogArticle.fromJson(e as Map<String, dynamic>))
         .toList();
   }
 }

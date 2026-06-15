@@ -5,7 +5,9 @@ import '../../models/learning_module.dart';
 import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/animations/animations.dart';
 import '../../widgets/idea_card.dart';
+import '../../widgets/illustration_banner.dart';
 import '../../widgets/module_card.dart';
 import '../../widgets/section_header.dart';
 import '../ideas/business_idea_detail_screen.dart';
@@ -55,11 +57,18 @@ class HomeScreen extends StatelessWidget {
                   color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.65),
                 ),
           ),
-          const SizedBox(height: 24),
-          _ProgressCard(
-            overall: overall,
-            completedCount: completedCount,
-            totalCount: allModules.length,
+          const IllustrationBanner(
+            asset: 'assets/images/illustration_growth.svg',
+            height: 160,
+            horizontalPadding: 0,
+          ),
+          StaggerFadeSlide(
+            index: 0,
+            child: _ProgressCard(
+              overall: overall,
+              completedCount: completedCount,
+              totalCount: allModules.length,
+            ),
           ),
           const SizedBox(height: 28),
           SectionHeader(
@@ -68,54 +77,63 @@ class HomeScreen extends StatelessWidget {
             onAction: () => _openLearn(context),
           ),
           const SizedBox(height: 12),
-          ModuleCard(
-            module: nextModule,
-            progress: progress.moduleProgress(nextModule),
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(builder: (_) => ModuleDetailScreen(moduleId: nextModule.id)),
+          StaggerFadeSlide(
+            index: 1,
+            child: ModuleCard(
+              module: nextModule,
+              progress: progress.moduleProgress(nextModule),
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => ModuleDetailScreen(moduleId: nextModule.id)),
+              ),
             ),
           ),
           const SizedBox(height: 28),
           Text('Catégories', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
-          Row(
-            children: [
-              Expanded(
-                child: _CategoryCard(
-                  title: 'Investissement',
-                  subtitle: '${content.investmentModules.length} modules',
-                  icon: Icons.trending_up,
-                  color: AppColors.categoryColor('actions'),
-                  onTap: () => _openLearn(context, track: LearningTrack.investment),
+          StaggerFadeSlide(
+            index: 2,
+            child: Row(
+              children: [
+                Expanded(
+                  child: _CategoryCard(
+                    title: 'Investissement',
+                    subtitle: '${content.investmentModules.length} modules',
+                    icon: Icons.trending_up,
+                    color: AppColors.categoryColor('actions'),
+                    onTap: () => _openLearn(context, track: LearningTrack.investment),
+                  ),
                 ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: _CategoryCard(
-                  title: 'Entrepreneuriat',
-                  subtitle: '${content.entrepreneurshipModules.length} modules',
-                  icon: Icons.rocket_launch,
-                  color: AppColors.categoryColor('idee'),
-                  onTap: () => _openLearn(context, track: LearningTrack.entrepreneurship),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: _CategoryCard(
+                    title: 'Entrepreneuriat',
+                    subtitle: '${content.entrepreneurshipModules.length} modules',
+                    icon: Icons.rocket_launch,
+                    color: AppColors.categoryColor('idee'),
+                    onTap: () => _openLearn(context, track: LearningTrack.entrepreneurship),
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           if (ideaOfTheDay != null) ...[
             const SizedBox(height: 28),
             SectionHeader(title: 'Idée business du jour'),
             const SizedBox(height: 12),
-            IdeaCard(
-              idea: ideaOfTheDay,
-              isFavorite: progress.isFavoriteIdea(ideaOfTheDay.id),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (_) => BusinessIdeaDetailScreen(ideaId: ideaOfTheDay.id),
+            StaggerFadeSlide(
+              index: 3,
+              child: IdeaCard(
+                idea: ideaOfTheDay,
+                isFavorite: progress.isFavoriteIdea(ideaOfTheDay.id),
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => BusinessIdeaDetailScreen(ideaId: ideaOfTheDay.id),
+                  ),
                 ),
+                onToggleFavorite: () => progress.toggleFavoriteIdea(ideaOfTheDay.id),
               ),
-              onToggleFavorite: () => progress.toggleFavoriteIdea(ideaOfTheDay.id),
             ),
           ],
         ],
@@ -172,21 +190,19 @@ class _ProgressCard extends StatelessWidget {
                       ),
                 ),
                 const SizedBox(height: 14),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
-                  child: LinearProgressIndicator(
-                    value: overall,
-                    minHeight: 8,
-                    backgroundColor: Colors.white.withValues(alpha: 0.25),
-                    valueColor: const AlwaysStoppedAnimation(Colors.white),
-                  ),
+                AnimatedProgressBar(
+                  value: overall,
+                  minHeight: 8,
+                  backgroundColor: Colors.white.withValues(alpha: 0.25),
+                  color: Colors.white,
                 ),
               ],
             ),
           ),
           const SizedBox(width: 16),
-          Text(
-            '${(overall * 100).round()}%',
+          AnimatedCount(
+            value: overall * 100,
+            formatter: (v) => '${v.round()}%',
             style: Theme.of(context).textTheme.headlineMedium?.copyWith(color: Colors.white),
           ),
         ],
@@ -212,7 +228,8 @@ class _CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return TapTilt(
+      child: Card(
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: onTap,
@@ -242,6 +259,7 @@ class _CategoryCard extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }

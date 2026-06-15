@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260">
+  <!-- Sol -->
+  <ellipse cx="240" cy="232" rx="190" ry="18" fill="#4338CA" opacity="0.10"/>
+
+  <!-- Trophée -->
+  <g>
+    <!-- Anses -->
+    <path d="M120,70 C95,70 95,108 124,112" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M196,70 C221,70 221,108 192,112" stroke="#F59E0B" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <!-- Coupe -->
+    <polygon points="112,64 204,64 190,124 126,124" fill="#FCD34D"/>
+    <polygon points="112,64 204,64 204,76 112,76" fill="#FFFBEB" opacity="0.7"/>
+    <!-- Pied -->
+    <rect x="148" y="124" width="20" height="22" fill="#F59E0B"/>
+    <!-- Base 2.5D -->
+    <polygon points="110,150 206,150 224,138 128,138" fill="#FCD34D"/>
+    <polygon points="206,150 224,138 224,160 206,172" fill="#B45309"/>
+    <polygon points="110,150 206,150 206,172 110,172" fill="#F59E0B"/>
+    <!-- Étoile -->
+    <path d="M158,82 L163,94 L176,95 L166,103 L169,116 L158,109 L147,116 L150,103 L140,95 L153,94 Z" fill="#F59E0B"/>
+  </g>
+
+  <!-- Badge de progression circulaire -->
+  <g transform="translate(330,90)">
+    <circle r="46" fill="none" stroke="#E5E7EB" stroke-width="10" opacity="0.25"/>
+    <circle r="46" fill="none" stroke="#4338CA" stroke-width="10" stroke-linecap="round"
+      stroke-dasharray="217 72" transform="rotate(-90)"/>
+    <path d="M-14,2 L-4,12 L16,-10" stroke="#06B6D4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- Graphique en barres -->
+  <polygon points="60,210 92,210 104,202 72,202" fill="#A5B4FC"/>
+  <polygon points="92,210 104,202 104,170 92,178" fill="#4F46E5"/>
+  <polygon points="60,210 92,210 92,178 60,178" fill="#818CF8"/>
+
+  <polygon points="112,210 144,210 156,202 124,202" fill="#5EEAF7"/>
+  <polygon points="144,210 156,202 156,150 144,158" fill="#047A91"/>
+  <polygon points="112,210 144,210 144,158 112,158" fill="#06B6D4"/>
+
+  <polygon points="164,210 196,210 208,202 176,202" fill="#FCD34D"/>
+  <polygon points="196,210 208,202 208,130 196,138" fill="#B45309"/>
+  <polygon points="164,210 196,210 196,138 164,138" fill="#F59E0B"/>
+
+  <!-- Étincelles -->
+  <circle cx="400" cy="180" r="6" fill="#F59E0B" opacity="0.5"/>
+  <circle cx="420" cy="50" r="5" fill="#06B6D4" opacity="0.5"/>
+  <circle cx="250" cy="40" r="4" fill="#4338CA" opacity="0.5"/>
+</svg>

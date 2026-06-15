@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260">
+  <!-- Sol -->
+  <ellipse cx="240" cy="232" rx="190" ry="18" fill="#4338CA" opacity="0.10"/>
+
+  <!-- Calculatrice (effet 2.5D) -->
+  <polygon points="60,90 220,90 248,74 88,74" fill="#6D5FE0"/>
+  <polygon points="220,90 248,74 248,210 220,226" fill="#332E8F"/>
+  <polygon points="60,90 220,90 220,226 60,226" fill="#4338CA"/>
+
+  <!-- Écran -->
+  <rect x="78" y="106" width="124" height="34" rx="4" fill="#5EEAF7"/>
+  <text x="190" y="130" font-family="monospace" font-size="18" fill="#06343D" text-anchor="end">128.42</text>
+
+  <!-- Grille de boutons -->
+  <g fill="#A5B4FC">
+    <rect x="78" y="152" width="26" height="22" rx="3"/>
+    <rect x="112" y="152" width="26" height="22" rx="3"/>
+    <rect x="146" y="152" width="26" height="22" rx="3"/>
+    <rect x="180" y="152" width="26" height="22" rx="3"/>
+    <rect x="78" y="182" width="26" height="22" rx="3"/>
+    <rect x="112" y="182" width="26" height="22" rx="3"/>
+    <rect x="146" y="182" width="26" height="22" rx="3"/>
+  </g>
+  <rect x="180" y="182" width="26" height="22" rx="3" fill="#F59E0B"/>
+
+  <!-- Pile de pièces -->
+  <g>
+    <ellipse cx="330" cy="200" rx="46" ry="16" fill="#B45309"/>
+    <ellipse cx="330" cy="192" rx="46" ry="16" fill="#F59E0B"/>
+    <ellipse cx="330" cy="192" rx="46" ry="16" fill="none" stroke="#FCD34D" stroke-width="3" opacity="0.6"/>
+
+    <ellipse cx="330" cy="174" rx="46" ry="16" fill="#B45309"/>
+    <ellipse cx="330" cy="166" rx="46" ry="16" fill="#FCD34D"/>
+    <ellipse cx="330" cy="166" rx="46" ry="16" fill="none" stroke="#FFFBEB" stroke-width="3" opacity="0.6"/>
+
+    <ellipse cx="330" cy="148" rx="46" ry="16" fill="#B45309"/>
+    <ellipse cx="330" cy="140" rx="46" ry="16" fill="#F59E0B"/>
+    <text x="330" y="146" font-family="Manrope, sans-serif" font-size="20" font-weight="700" fill="#92400E" text-anchor="middle">€</text>
+  </g>
+
+  <!-- Camembert flottant -->
+  <g transform="translate(350,60)">
+    <circle cx="0" cy="0" r="34" fill="#E5E7EB" opacity="0.25"/>
+    <path d="M0,0 L0,-34 A34,34 0 0 1 29,17 Z" fill="#4338CA"/>
+    <path d="M0,0 L29,17 A34,34 0 0 1 -29,17 Z" fill="#06B6D4"/>
+    <path d="M0,0 L-29,17 A34,34 0 0 1 0,-34 Z" fill="#F59E0B"/>
+    <circle cx="0" cy="0" r="14" fill="#FFFFFF" opacity="0.92"/>
+  </g>
+
+  <!-- Étincelles -->
+  <circle cx="40" cy="50" r="5" fill="#06B6D4" opacity="0.5"/>
+  <circle cx="430" cy="170" r="6" fill="#4338CA" opacity="0.45"/>
+  <circle cx="270" cy="40" r="4" fill="#F59E0B" opacity="0.6"/>
+</svg>

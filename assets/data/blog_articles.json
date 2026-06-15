@@ -1,0 +1,95 @@
+[
+  {
+    "id": "diversification",
+    "title": "Diversifier son portefeuille : pourquoi et comment",
+    "category": "Investissement",
+    "icon": "pie_chart",
+    "excerpt": "Ne pas mettre tous ses œufs dans le même panier : un principe simple, mais essentiel pour limiter les risques sans sacrifier la performance.",
+    "readTimeMinutes": 6,
+    "content": [
+      "La diversification consiste à répartir son capital entre plusieurs classes d'actifs (actions, obligations, immobilier, liquidités...), plusieurs secteurs et plusieurs zones géographiques. L'objectif n'est pas d'éliminer le risque, mais de lisser les variations : quand une classe d'actifs baisse, une autre peut compenser.",
+      "Concrètement, un portefeuille 100 % actions technologiques françaises est très exposé à un seul secteur et à un seul pays. À l'inverse, un portefeuille mêlant actions internationales, obligations d'État, un peu d'immobilier et une poche de liquidités traverse les cycles économiques de façon beaucoup plus stable.",
+      "Les ETF (fonds indiciels cotés) sont un outil particulièrement efficace pour diversifier à moindre coût : un seul ETF \"monde\" peut donner une exposition à plusieurs milliers d'entreprises réparties sur tous les continents, avec des frais de gestion très faibles.",
+      "La diversification ne se limite pas aux actifs financiers. L'horizon de placement compte aussi : un capital dont vous aurez besoin dans deux ans ne devrait pas être investi de la même façon qu'une épargne retraite à trente ans. Plus l'horizon est long, plus la part d'actifs risqués (actions) peut généralement être élevée.",
+      "Enfin, diversifier ne veut pas dire multiplier les lignes à l'infini : posséder vingt ETF qui répliquent tous les mêmes grands indices n'apporte rien de plus qu'en posséder un ou deux, mais complexifie le suivi. Quelques lignes complémentaires et bien choisies suffisent largement.",
+      "Dans l'app, le simulateur de portefeuille de l'espace Outils permet de tester différentes répartitions entre classes d'actifs et d'observer leur effet sur l'évolution simulée du capital dans le temps."
+    ]
+  },
+  {
+    "id": "erreurs-debutants",
+    "title": "5 erreurs fréquentes des investisseurs débutants",
+    "category": "Investissement",
+    "icon": "error_outline",
+    "excerpt": "Paniquer en cas de baisse, vouloir tout miser sur un coup gagnant, négliger les frais... petit tour des pièges classiques et comment les éviter.",
+    "readTimeMinutes": 5,
+    "content": [
+      "1. Vendre en panique lors d'une baisse. Les marchés financiers évoluent par cycles : des phases de hausse alternent avec des phases de correction, parfois brutales. Vendre au plus bas pour \"limiter les pertes\" transforme une baisse temporaire (sur papier) en perte définitive. Mieux vaut définir une stratégie à l'avance et s'y tenir.",
+      "2. Vouloir investir uniquement sur la valeur \"qui va exploser\". Concentrer son épargne sur un seul titre ou une seule cryptomonnaie parce qu'on a entendu une success story est l'inverse de la diversification. Le potentiel de gain élevé s'accompagne toujours d'un risque de perte tout aussi élevé.",
+      "3. Négliger l'impact des frais. Des frais de gestion qui semblent faibles (1 % ou 2 % par an) peuvent représenter, cumulés sur vingt ou trente ans avec l'effet des intérêts composés, une part très importante du capital final. Comparer les frais est aussi important que comparer les performances passées.",
+      "4. Ne pas avoir d'épargne de précaution avant d'investir. Investir de l'argent dont on pourrait avoir besoin dans les mois qui suivent, pour une dépense imprévue, oblige parfois à vendre au mauvais moment. Une épargne de sécurité, facilement disponible, doit être constituée avant de placer le reste sur des supports plus volatils.",
+      "5. Ne pas se former avant d'agir. Comprendre le fonctionnement d'un produit (actions, ETF, assurance-vie, SCPI...), sa fiscalité et son niveau de risque avant d'y placer de l'argent permet d'éviter de nombreuses désillusions. Les modules de l'app et le glossaire sont justement là pour ça."
+    ]
+  },
+  {
+    "id": "lancer-micro-entreprise",
+    "title": "Lancer sa micro-entreprise : le guide pas-à-pas",
+    "category": "Entrepreneuriat",
+    "icon": "rocket_launch",
+    "excerpt": "De l'idée à la première facture : les étapes concrètes pour démarrer une activité en micro-entreprise sans se perdre dans les démarches.",
+    "readTimeMinutes": 8,
+    "content": [
+      "Étape 1 — Vérifier que l'activité est compatible avec le régime de la micro-entreprise. La plupart des activités commerciales, artisanales et libérales sont éligibles, sous réserve de ne pas dépasser certains seuils de chiffre d'affaires annuel, différents selon le type d'activité (vente de marchandises ou prestations de services).",
+      "Étape 2 — Choisir son adresse de domiciliation et son activité principale. L'adresse peut être le domicile du créateur dans de nombreux cas. Le code d'activité (APE) déclaré conditionne notamment le taux de cotisations sociales applicable.",
+      "Étape 3 — Effectuer la déclaration de création d'activité en ligne. Cette démarche, gratuite, permet d'obtenir un numéro SIRET, indispensable pour facturer légalement. Le délai d'obtention varie généralement de quelques jours à quelques semaines.",
+      "Étape 4 — Ouvrir un compte bancaire dédié à l'activité (obligatoire au-delà d'un certain chiffre d'affaires, mais recommandé dès le début pour suivre clairement ses flux), et choisir un outil simple de facturation et de suivi comptable.",
+      "Étape 5 — Comprendre le mécanisme des cotisations sociales et de l'impôt. En micro-entreprise, les cotisations sont calculées en pourcentage du chiffre d'affaires encaissé, et non du bénéfice : il est important de mettre de côté une partie de chaque encaissement pour pouvoir les régler.",
+      "Étape 6 — Émettre sa première facture, avec les mentions obligatoires (numéro SIRET, mention de franchise de TVA si applicable, coordonnées complètes). À partir de là, le plus important commence : trouver ses premiers clients et ajuster son offre en fonction de leurs retours."
+    ]
+  },
+  {
+    "id": "effet-frais",
+    "title": "Comprendre l'effet des frais sur le long terme",
+    "category": "Investissement",
+    "icon": "request_quote",
+    "excerpt": "1 % de frais par an, ça paraît anodin. Sur vingt ou trente ans, l'écart peut représenter des dizaines de milliers d'euros. Décryptage.",
+    "readTimeMinutes": 5,
+    "content": [
+      "Lorsqu'on investit sur le long terme, les frais prélevés chaque année (frais de gestion d'un fonds, frais de courtage, frais de contrat d'assurance-vie...) ne s'additionnent pas simplement : ils se cumulent avec l'effet des intérêts composés, et donc se multiplient avec le temps.",
+      "Prenons un exemple simple : un capital de 10 000 € qui rapporte 6 % par an pendant 30 ans, sans aucun frais, atteint environ 57 000 €. Le même capital, avec 1 % de frais annuels (donc un rendement net de 5 %), atteint environ 43 000 €. La différence, 14 000 €, provient uniquement de ce point de pourcentage prélevé chaque année.",
+      "Cet écart s'explique par le fait que les frais ne réduisent pas seulement le gain de l'année où ils sont prélevés : ils réduisent aussi la base sur laquelle les rendements futurs vont se calculer, année après année. C'est l'effet des intérêts composés qui joue, mais en défaveur de l'épargnant.",
+      "Cela ne signifie pas que tous les frais sont à éviter : un accompagnement, une gestion active ou des garanties spécifiques peuvent avoir une réelle valeur. Mais cela justifie de toujours comparer les frais totaux (frais d'entrée, frais de gestion annuels, frais d'arbitrage) entre plusieurs solutions avant de choisir.",
+      "Les ETF indiciels, qui répliquent un indice sans gestion active, affichent généralement des frais annuels très inférieurs (souvent entre 0,1 % et 0,5 %) à ceux des fonds gérés activement (souvent entre 1 % et 2,5 %), ce qui explique en partie leur popularité croissante auprès des particuliers."
+    ]
+  },
+  {
+    "id": "pitch-investisseur",
+    "title": "Pitch investisseur : les fondamentaux",
+    "category": "Entrepreneuriat",
+    "icon": "mic",
+    "excerpt": "Convaincre un investisseur en quelques minutes demande de la clarté, pas de la complexité. Voici la structure qui fonctionne, et les pièges à éviter.",
+    "readTimeMinutes": 7,
+    "content": [
+      "Un bon pitch répond, dans l'ordre, à trois questions : quel problème résolvez-vous, pour qui, et pourquoi votre solution est-elle la meilleure réponse possible aujourd'hui ? Tout le reste (équipe, marché, finances) vient à l'appui de ces trois réponses.",
+      "Le problème doit être présenté de façon concrète, idéalement incarné par un exemple ou un témoignage. Un investisseur retient beaucoup mieux \"60 % des artisans de notre échantillon perdent plus de 5 heures par semaine en facturation manuelle\" que \"la facturation est compliquée pour les artisans\".",
+      "La taille du marché doit être réaliste et justifiée, pas seulement impressionnante. Mieux vaut un marché plus modeste mais clairement quantifié et accessible, qu'un chiffre énorme sans méthodologie derrière.",
+      "Le modèle économique doit être expliqué simplement : comment l'entreprise génère-t-elle (ou générera-t-elle) du revenu, quel est le coût d'acquisition d'un client, et à partir de quand un client devient-il profitable ? Ces questions reviennent systématiquement.",
+      "L'équipe compte autant que l'idée, parfois plus : pourquoi cette équipe en particulier est-elle légitime pour exécuter ce projet ? Une complémentarité claire des compétences (technique, commercial, opérationnel) rassure sur la capacité d'exécution.",
+      "Enfin, terminez toujours par une demande précise : montant recherché, utilisation prévue des fonds, et ce que cela permettrait d'atteindre. Un pitch qui se termine sans demande claire laisse l'investisseur sans savoir comment réagir."
+    ]
+  },
+  {
+    "id": "epargne-precaution",
+    "title": "Épargne de précaution : combien et où la placer ?",
+    "category": "Investissement",
+    "icon": "security",
+    "excerpt": "Avant d'investir, un coussin de sécurité disponible à tout moment. Combien prévoir, et sur quels supports le conserver ?",
+    "readTimeMinutes": 5,
+    "content": [
+      "L'épargne de précaution est une somme mise de côté pour faire face aux imprévus (panne, perte de revenu temporaire, dépense de santé...) sans avoir à vendre des placements au mauvais moment ou à recourir au crédit dans l'urgence.",
+      "Le montant recommandé varie selon la situation, mais une fourchette courante est l'équivalent de trois à six mois de dépenses courantes. Une personne avec des revenus irréguliers (indépendant, intermittent) ou des charges fixes élevées peut viser le haut de cette fourchette, voire au-delà.",
+      "Le critère principal pour choisir où la placer est la disponibilité : cette épargne doit pouvoir être récupérée rapidement, sans perte de valeur. Les livrets réglementés (type livret A) répondent bien à ce besoin : capital garanti, disponibilité immédiate, et une rémunération qui, si elle reste modeste, est généralement sans fiscalité ni frais.",
+      "Il est tentant de vouloir faire \"travailler\" cette épargne sur des supports plus rémunérateurs comme les actions. C'est une erreur : ces supports peuvent perdre de la valeur sur de courtes périodes, et l'épargne de précaution doit justement être disponible à un instant donné, pas seulement \"en moyenne sur le long terme\".",
+      "Une fois ce coussin constitué, l'épargne supplémentaire peut être orientée vers des placements avec un horizon plus long et donc un potentiel de rendement plus élevé, en cohérence avec les objectifs et le niveau de risque acceptable de chacun."
+    ]
+  }
+]

@@ -1,5 +1,6 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
@@ -78,8 +79,10 @@ class _BudgetCalculatorScreenState extends State<BudgetCalculatorScreen> {
                     ),
                   ],
                 ),
+                duration: const Duration(milliseconds: 350),
+                curve: Curves.easeOutCubic,
               ),
-            ),
+            ).animate().fadeIn(duration: 450.ms).slideY(begin: 0.08, end: 0, curve: Curves.easeOutCubic),
             const SizedBox(height: 16),
           ],
           Text('Répartition mensuelle', style: Theme.of(context).textTheme.titleLarge),
@@ -87,18 +90,24 @@ class _BudgetCalculatorScreenState extends State<BudgetCalculatorScreen> {
           ResultTile(
             label: 'Besoins essentiels (50 %) — logement, factures, alimentation',
             value: formatEuro(needs, decimals: true),
+            numericValue: needs,
+            formatter: (v) => formatEuro(v, decimals: true),
             color: AppColors.primary,
             highlight: true,
           ),
           ResultTile(
             label: 'Envies (30 %) — loisirs, sorties, plaisirs',
             value: formatEuro(wants, decimals: true),
+            numericValue: wants,
+            formatter: (v) => formatEuro(v, decimals: true),
             color: AppColors.accent,
             highlight: true,
           ),
           ResultTile(
             label: 'Épargne & investissement (20 %)',
             value: formatEuro(savings, decimals: true),
+            numericValue: savings,
+            formatter: (v) => formatEuro(v, decimals: true),
             color: AppColors.secondary,
             highlight: true,
           ),

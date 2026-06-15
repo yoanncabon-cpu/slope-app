@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260">
+  <!-- Sol -->
+  <ellipse cx="240" cy="232" rx="190" ry="18" fill="#4338CA" opacity="0.10"/>
+
+  <!-- Plateforme iso -->
+  <polygon points="60,180 200,140 340,180 200,220" fill="#06B6D4" opacity="0.08"/>
+
+  <!-- Pot + plante qui pousse -->
+  <polygon points="150,196 210,196 200,224 160,224" fill="#332E8F"/>
+  <polygon points="150,196 210,196 205,206 155,206" fill="#4338CA"/>
+  <path d="M180,196 C180,170 160,160 150,150" stroke="#06B6D4" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M180,196 C180,165 200,150 215,138" stroke="#06B6D4" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="148" cy="146" rx="18" ry="11" fill="#5EEAF7" transform="rotate(-30 148 146)"/>
+  <ellipse cx="218" cy="134" rx="20" ry="12" fill="#5EEAF7" transform="rotate(20 218 134)"/>
+  <ellipse cx="180" cy="190" rx="14" ry="9" fill="#67E8F9" transform="rotate(-10 180 190)"/>
+
+  <!-- Ampoule d'idée -->
+  <circle cx="335" cy="95" r="44" fill="#F59E0B"/>
+  <circle cx="335" cy="95" r="44" fill="#FCD34D" opacity="0.35"/>
+  <path d="M320,118 L350,118 L346,134 L324,134 Z" fill="#B45309"/>
+  <rect x="324" y="132" width="22" height="6" rx="2" fill="#92400E"/>
+  <path d="M322,100 C322,85 348,85 348,100 C348,110 338,112 338,120 L332,120 C332,112 322,110 322,100 Z" fill="#FFFBEB" opacity="0.9"/>
+  <!-- Rayons -->
+  <g stroke="#F59E0B" stroke-width="4" stroke-linecap="round" opacity="0.55">
+    <line x1="335" y1="30" x2="335" y2="16"/>
+    <line x1="385" y1="50" x2="397" y2="40"/>
+    <line x1="405" y1="95" x2="420" y2="95"/>
+    <line x1="285" y1="50" x2="273" y2="40"/>
+    <line x1="265" y1="95" x2="250" y2="95"/>
+  </g>
+
+  <!-- Fusée -->
+  <g transform="rotate(-18 90 90)">
+    <path d="M90,30 C108,45 112,75 108,100 L72,100 C68,75 72,45 90,30 Z" fill="#4338CA"/>
+    <circle cx="90" cy="62" r="11" fill="#5EEAF7"/>
+    <path d="M72,90 L52,108 L72,104 Z" fill="#06B6D4"/>
+    <path d="M108,90 L128,108 L108,104 Z" fill="#06B6D4"/>
+    <path d="M78,100 L102,100 L96,124 L84,124 Z" fill="#FCD34D"/>
+    <ellipse cx="90" cy="132" rx="12" ry="20" fill="#F59E0B" opacity="0.7"/>
+  </g>
+
+  <!-- Étincelles -->
+  <circle cx="430" cy="190" r="6" fill="#06B6D4" opacity="0.5"/>
+  <circle cx="30" cy="50" r="5" fill="#4338CA" opacity="0.5"/>
+  <circle cx="250" cy="210" r="4" fill="#F59E0B" opacity="0.6"/>
+</svg>

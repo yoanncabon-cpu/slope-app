@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/app_colors.dart';
+import '../../widgets/animations/animations.dart';
+import '../../widgets/illustration_banner.dart';
 import 'breakeven_calculator_screen.dart';
 import 'budget_calculator_screen.dart';
 import 'compound_interest_screen.dart';
 import 'loan_calculator_screen.dart';
+import 'portfolio_simulation_screen.dart';
 import 'rental_yield_screen.dart';
 
 class ToolsScreen extends StatelessWidget {
@@ -53,25 +56,36 @@ class ToolsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Outils')),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 24),
+        padding: const EdgeInsets.fromLTRB(0, 0, 0, 24),
         children: [
-          Text(
-            'Simulateurs financiers',
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
-          const SizedBox(height: 4),
-          Text(
-            'Mettez en pratique ce que vous apprenez avec ces calculatrices.',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.65),
+          const IllustrationBanner(asset: 'assets/images/illustration_tools.svg'),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const StaggerFadeSlide(index: 0, child: _FeaturedSimulationCard()),
+                const SizedBox(height: 20),
+                Text(
+                  'Simulateurs financiers',
+                  style: Theme.of(context).textTheme.titleLarge,
                 ),
-          ),
-          const SizedBox(height: 16),
-          for (final tool in tools)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: _ToolCard(item: tool),
+                const SizedBox(height: 4),
+                Text(
+                  'Mettez en pratique ce que vous apprenez avec ces calculatrices.',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.65),
+                      ),
+                ),
+                const SizedBox(height: 16),
+                for (final entry in tools.asMap().entries)
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 12),
+                    child: StaggerFadeSlide(index: entry.key + 1, child: _ToolCard(item: entry.value)),
+                  ),
+              ],
             ),
+          ),
         ],
       ),
     );
@@ -94,6 +108,80 @@ class _ToolItem {
   });
 }
 
+class _FeaturedSimulationCard extends StatelessWidget {
+  const _FeaturedSimulationCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return TapTilt(
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [AppColors.primary, AppColors.secondary],
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Material(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(20),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(20),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const PortfolioSimulationScreen()),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(18),
+              child: Row(
+                children: [
+                  Container(
+                    width: 52,
+                    height: 52,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.18),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: const Icon(Icons.auto_graph, color: Colors.white, size: 28),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Simulateur de portefeuille',
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Testez une allocation et visualisez son évolution simulée',
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: Colors.white.withValues(alpha: 0.9),
+                              ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Icon(Icons.chevron_right, color: Colors.white),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class _ToolCard extends StatelessWidget {
   final _ToolItem item;
 
@@ -102,7 +190,8 @@ class _ToolCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final color = AppColors.categoryColor(item.colorKey);
-    return Card(
+    return TapTilt(
+      child: Card(
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: () => Navigator.push(context, MaterialPageRoute(builder: item.builder)),
@@ -139,6 +228,7 @@ class _ToolCard extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }

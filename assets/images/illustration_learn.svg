@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 260">
+  <!-- Sol -->
+  <ellipse cx="240" cy="232" rx="190" ry="18" fill="#4338CA" opacity="0.10"/>
+
+  <!-- Pile de livres (effet 2.5D) -->
+  <!-- Livre 1 (bas, indigo) -->
+  <polygon points="60,180 210,180 228,168 78,168" fill="#6D5FE0"/>
+  <polygon points="210,180 228,168 228,196 210,208" fill="#332E8F"/>
+  <polygon points="60,180 210,180 210,208 60,208" fill="#4338CA"/>
+
+  <!-- Livre 2 (milieu, cyan) -->
+  <polygon points="75,156 205,156 223,144 93,144" fill="#5EEAF7"/>
+  <polygon points="205,156 223,144 223,170 205,182" fill="#047A91"/>
+  <polygon points="75,156 205,156 205,182 75,182" fill="#06B6D4"/>
+
+  <!-- Livre 3 (haut, amber) -->
+  <polygon points="70,132 190,132 208,120 88,120" fill="#FCD34D"/>
+  <polygon points="190,132 208,120 208,146 190,158" fill="#B45309"/>
+  <polygon points="70,132 190,132 190,158 70,158" fill="#F59E0B"/>
+  <!-- marque-page -->
+  <polygon points="150,120 150,150 158,143 166,150 166,120" fill="#FFFFFF" opacity="0.85"/>
+
+  <!-- Graphique de progression (barres montantes) -->
+  <polygon points="290,170 330,170 344,160 304,160" fill="#A5B4FC"/>
+  <polygon points="330,170 344,160 344,210 330,210" fill="#4F46E5"/>
+  <polygon points="290,170 330,170 330,210 290,210" fill="#818CF8"/>
+
+  <polygon points="345,145 385,145 399,135 359,135" fill="#5EEAF7"/>
+  <polygon points="385,145 399,135 399,210 385,210" fill="#047A91"/>
+  <polygon points="345,145 385,145 385,210 345,210" fill="#06B6D4"/>
+
+  <polygon points="400,115 440,115 454,105 414,105" fill="#FCD34D"/>
+  <polygon points="440,115 454,105 454,210 440,210" fill="#B45309"/>
+  <polygon points="400,115 440,115 440,210 400,210" fill="#F59E0B"/>
+
+  <!-- Badge succès -->
+  <circle cx="410" cy="48" r="26" fill="#10B981"/>
+  <path d="M398,49 L407,58 L424,39" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Étincelles -->
+  <circle cx="250" cy="40" r="6" fill="#06B6D4" opacity="0.6"/>
+  <circle cx="270" cy="70" r="4" fill="#F59E0B" opacity="0.6"/>
+  <circle cx="40" cy="90" r="5" fill="#4338CA" opacity="0.5"/>
+</svg>

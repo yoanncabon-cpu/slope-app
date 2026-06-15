@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/learning_module.dart';
 import '../theme/app_colors.dart';
 import '../utils/icon_mapper.dart';
+import 'animations/animations.dart';
 
 /// Carte représentant un module d'apprentissage, avec sa progression.
 class ModuleCard extends StatelessWidget {
@@ -22,7 +23,8 @@ class ModuleCard extends StatelessWidget {
     final color = AppColors.categoryColor(module.colorKey);
     final isDone = progress >= 1.0;
 
-    return Card(
+    return TapTilt(
+      child: Card(
       child: InkWell(
         borderRadius: BorderRadius.circular(20),
         onTap: onTap,
@@ -73,8 +75,9 @@ class ModuleCard extends StatelessWidget {
                         const SizedBox(width: 8),
                         _Tag(label: '${module.durationMinutes} min'),
                         const Spacer(),
-                        Text(
-                          '${(progress * 100).round()} %',
+                        AnimatedCount(
+                          value: progress * 100,
+                          formatter: (v) => '${v.round()} %',
                           style: Theme.of(context).textTheme.bodySmall?.copyWith(
                                 fontWeight: FontWeight.w700,
                                 color: color,
@@ -83,14 +86,11 @@ class ModuleCard extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 6),
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(100),
-                      child: LinearProgressIndicator(
-                        value: progress,
-                        minHeight: 6,
-                        backgroundColor: color.withValues(alpha: 0.12),
-                        valueColor: AlwaysStoppedAnimation(color),
-                      ),
+                    AnimatedProgressBar(
+                      value: progress,
+                      minHeight: 6,
+                      backgroundColor: color.withValues(alpha: 0.12),
+                      color: color,
                     ),
                   ],
                 ),
@@ -98,6 +98,7 @@ class ModuleCard extends StatelessWidget {
             ],
           ),
         ),
+      ),
       ),
     );
   }

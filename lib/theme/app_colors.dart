@@ -5,10 +5,10 @@ class AppColors {
   AppColors._();
 
   // Couleurs de marque
-  static const Color primary = Color(0xFF4F46E5); // Indigo - apprentissage
+  static const Color primary = Color(0xFF4338CA); // Indigo profond - apprentissage
   static const Color primaryLight = Color(0xFF818CF8);
-  static const Color secondary = Color(0xFF10B981); // Emerald - croissance/finance
-  static const Color secondaryLight = Color(0xFF6EE7B7);
+  static const Color secondary = Color(0xFF06B6D4); // Cyan électrique - tech/finance
+  static const Color secondaryLight = Color(0xFF67E8F9);
   static const Color accent = Color(0xFFF59E0B); // Amber - idées business
 
   // États
@@ -33,9 +33,13 @@ class AppColors {
   static const Color darkTextPrimary = Color(0xFFF3F4F6);
   static const Color darkTextSecondary = Color(0xFF9CA3AF);
 
+  // Fond "profondeur" (dégradé + halos) derrière le contenu
+  static const Color darkBgGradientMid = Color(0xFF1B1340);
+  static const Color lightBgGradientMid = Color(0xFFEDEFFB);
+
   // Couleurs des catégories d'investissement
   static const Map<String, Color> categoryColors = {
-    'actions': Color(0xFF4F46E5),
+    'actions': Color(0xFF4338CA),
     'etf': Color(0xFF3B82F6),
     'obligations': Color(0xFF06B6D4),
     'immobilier': Color(0xFFF59E0B),

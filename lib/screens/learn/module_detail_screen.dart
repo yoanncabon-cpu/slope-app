@@ -5,6 +5,7 @@ import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/icon_mapper.dart';
+import '../../widgets/animations/animations.dart';
 import 'lesson_screen.dart';
 import 'quiz_screen.dart';
 
@@ -73,26 +74,31 @@ class ModuleDetailScreen extends StatelessWidget {
             final i = entry.key;
             final lesson = entry.value;
             final done = progress.isLessonCompleted(lesson.id);
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Card(
-                child: ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-                  leading: CircleAvatar(
-                    backgroundColor: done
-                        ? AppColors.success.withValues(alpha: 0.15)
-                        : color.withValues(alpha: 0.12),
-                    child: done
-                        ? const Icon(Icons.check, color: AppColors.success)
-                        : Text('${i + 1}', style: TextStyle(color: color, fontWeight: FontWeight.w700)),
-                  ),
-                  title: Text(lesson.title),
-                  subtitle: Text('${lesson.durationMinutes} min de lecture'),
-                  trailing: const Icon(Icons.chevron_right),
-                  onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => LessonScreen(moduleId: module.id, lessonId: lesson.id),
+            return StaggerFadeSlide(
+              index: i,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 10),
+                child: TapTilt(
+                  child: Card(
+                    child: ListTile(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                      leading: CircleAvatar(
+                        backgroundColor: done
+                            ? AppColors.success.withValues(alpha: 0.15)
+                            : color.withValues(alpha: 0.12),
+                        child: done
+                            ? const Icon(Icons.check, color: AppColors.success)
+                            : Text('${i + 1}', style: TextStyle(color: color, fontWeight: FontWeight.w700)),
+                      ),
+                      title: Text(lesson.title),
+                      subtitle: Text('${lesson.durationMinutes} min de lecture'),
+                      trailing: const Icon(Icons.chevron_right),
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => LessonScreen(moduleId: module.id, lessonId: lesson.id),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -100,24 +106,29 @@ class ModuleDetailScreen extends StatelessWidget {
             );
           }),
           const SizedBox(height: 12),
-          Card(
-            color: color.withValues(alpha: 0.08),
-            child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-              leading: CircleAvatar(
-                backgroundColor: color.withValues(alpha: 0.15),
-                child: Icon(Icons.quiz, color: color),
-              ),
-              title: const Text('Quiz du module'),
-              subtitle: Text(
-                quizScore != null
-                    ? 'Meilleur score : $quizScore %'
-                    : '${module.quiz.length} questions',
-              ),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => QuizScreen(moduleId: module.id)),
+          StaggerFadeSlide(
+            index: module.lessons.length,
+            child: TapTilt(
+              child: Card(
+                color: color.withValues(alpha: 0.08),
+                child: ListTile(
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                  leading: CircleAvatar(
+                    backgroundColor: color.withValues(alpha: 0.15),
+                    child: Icon(Icons.quiz, color: color),
+                  ),
+                  title: const Text('Quiz du module'),
+                  subtitle: Text(
+                    quizScore != null
+                        ? 'Meilleur score : $quizScore %'
+                        : '${module.quiz.length} questions',
+                  ),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => QuizScreen(moduleId: module.id)),
+                  ),
+                ),
               ),
             ),
           ),

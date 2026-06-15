@@ -18,7 +18,7 @@ void main() {
     // runAsync, puis on rafraîchit l'arbre de widgets.
     await tester.runAsync(() => Future<void>.delayed(const Duration(milliseconds: 300)));
     await tester.pump();
-    await tester.pump();
+    await tester.pump(const Duration(seconds: 1));
 
     // Une fois chargé, la navigation principale est visible.
     expect(find.text('Bienvenue sur Slope'), findsOneWidget);

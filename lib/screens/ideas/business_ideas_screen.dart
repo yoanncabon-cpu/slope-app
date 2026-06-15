@@ -4,7 +4,9 @@ import 'package:provider/provider.dart';
 import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/animations/animations.dart';
 import '../../widgets/idea_card.dart';
+import '../../widgets/illustration_banner.dart';
 import 'business_idea_detail_screen.dart';
 
 class BusinessIdeasScreen extends StatefulWidget {
@@ -63,6 +65,7 @@ class _BusinessIdeasScreenState extends State<BusinessIdeasScreen> {
       ),
       body: Column(
         children: [
+          const IllustrationBanner(asset: 'assets/images/illustration_ideas.svg'),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
             child: TextField(
@@ -116,14 +119,17 @@ class _BusinessIdeasScreenState extends State<BusinessIdeasScreen> {
                     separatorBuilder: (_, _) => const SizedBox(height: 12),
                     itemBuilder: (context, index) {
                       final idea = ideas[index];
-                      return IdeaCard(
-                        idea: idea,
-                        isFavorite: progress.isFavoriteIdea(idea.id),
-                        onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (_) => BusinessIdeaDetailScreen(ideaId: idea.id)),
+                      return StaggerFadeSlide(
+                        index: index,
+                        child: IdeaCard(
+                          idea: idea,
+                          isFavorite: progress.isFavoriteIdea(idea.id),
+                          onTap: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (_) => BusinessIdeaDetailScreen(ideaId: idea.id)),
+                          ),
+                          onToggleFavorite: () => progress.toggleFavoriteIdea(idea.id),
                         ),
-                        onToggleFavorite: () => progress.toggleFavoriteIdea(idea.id),
                       );
                     },
                   ),

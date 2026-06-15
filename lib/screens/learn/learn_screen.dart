@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import '../../models/learning_module.dart';
 import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
+import '../../widgets/animations/animations.dart';
+import '../../widgets/illustration_banner.dart';
 import '../../widgets/module_card.dart';
 import 'module_detail_screen.dart';
 
@@ -51,11 +53,18 @@ class _LearnScreenState extends State<LearnScreen> with SingleTickerProviderStat
           ],
         ),
       ),
-      body: TabBarView(
-        controller: _tabController,
+      body: Column(
         children: [
-          _ModuleList(modules: content.investmentModules, progress: progress),
-          _ModuleList(modules: content.entrepreneurshipModules, progress: progress),
+          const IllustrationBanner(asset: 'assets/images/illustration_learn.svg'),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                _ModuleList(modules: content.investmentModules, progress: progress),
+                _ModuleList(modules: content.entrepreneurshipModules, progress: progress),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -76,12 +85,15 @@ class _ModuleList extends StatelessWidget {
       separatorBuilder: (_, _) => const SizedBox(height: 12),
       itemBuilder: (context, index) {
         final module = modules[index];
-        return ModuleCard(
-          module: module,
-          progress: progress.moduleProgress(module),
-          onTap: () => Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => ModuleDetailScreen(moduleId: module.id)),
+        return StaggerFadeSlide(
+          index: index,
+          child: ModuleCard(
+            module: module,
+            progress: progress.moduleProgress(module),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => ModuleDetailScreen(moduleId: module.id)),
+            ),
           ),
         );
       },

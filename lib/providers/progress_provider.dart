@@ -11,18 +11,21 @@ class ProgressProvider extends ChangeNotifier {
   static const _keyCompletedLessons = 'completed_lessons';
   static const _keyQuizScores = 'quiz_scores';
   static const _keyFavoriteIdeas = 'favorite_ideas';
+  static const _keyFavoriteArticles = 'favorite_articles';
 
   SharedPreferences? _prefs;
 
   final Set<String> _completedLessons = {};
   final Map<String, int> _quizScores = {}; // moduleId -> pourcentage 0-100
   final Set<String> _favoriteIdeas = {};
+  final Set<String> _favoriteArticles = {};
 
   bool _isReady = false;
   bool get isReady => _isReady;
 
   Set<String> get completedLessons => _completedLessons;
   Set<String> get favoriteIdeas => _favoriteIdeas;
+  Set<String> get favoriteArticles => _favoriteArticles;
 
   Future<void> init() async {
     _prefs = await SharedPreferences.getInstance();
@@ -32,6 +35,9 @@ class ProgressProvider extends ChangeNotifier {
     );
     _favoriteIdeas.addAll(
       _prefs?.getStringList(_keyFavoriteIdeas) ?? [],
+    );
+    _favoriteArticles.addAll(
+      _prefs?.getStringList(_keyFavoriteArticles) ?? [],
     );
 
     final rawScores = _prefs?.getString(_keyQuizScores);
@@ -88,6 +94,18 @@ class ProgressProvider extends ChangeNotifier {
       _favoriteIdeas.add(ideaId);
     }
     await _prefs?.setStringList(_keyFavoriteIdeas, _favoriteIdeas.toList());
+    notifyListeners();
+  }
+
+  bool isFavoriteArticle(String articleId) => _favoriteArticles.contains(articleId);
+
+  Future<void> toggleFavoriteArticle(String articleId) async {
+    if (_favoriteArticles.contains(articleId)) {
+      _favoriteArticles.remove(articleId);
+    } else {
+      _favoriteArticles.add(articleId);
+    }
+    await _prefs?.setStringList(_keyFavoriteArticles, _favoriteArticles.toList());
     notifyListeners();
   }
 

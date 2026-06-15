@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import '../data/content_repository.dart';
+import '../models/blog_article.dart';
 import '../models/business_idea.dart';
 import '../models/glossary_term.dart';
 import '../models/learning_module.dart';
@@ -20,11 +21,13 @@ class ContentProvider extends ChangeNotifier {
   List<LearningModule> _entrepreneurshipModules = [];
   List<BusinessIdea> _businessIdeas = [];
   List<GlossaryTerm> _glossary = [];
+  List<BlogArticle> _blogArticles = [];
 
   List<LearningModule> get investmentModules => _investmentModules;
   List<LearningModule> get entrepreneurshipModules => _entrepreneurshipModules;
   List<BusinessIdea> get businessIdeas => _businessIdeas;
   List<GlossaryTerm> get glossary => _glossary;
+  List<BlogArticle> get blogArticles => _blogArticles;
 
   List<LearningModule> get allModules => [
         ..._investmentModules,
@@ -37,12 +40,14 @@ class ContentProvider extends ChangeNotifier {
       _repository.loadEntrepreneurshipModules(),
       _repository.loadBusinessIdeas(),
       _repository.loadGlossary(),
+      _repository.loadBlogArticles(),
     ]);
 
     _investmentModules = results[0] as List<LearningModule>;
     _entrepreneurshipModules = results[1] as List<LearningModule>;
     _businessIdeas = results[2] as List<BusinessIdea>;
     _glossary = results[3] as List<GlossaryTerm>;
+    _blogArticles = results[4] as List<BlogArticle>;
 
     _isLoading = false;
     notifyListeners();
@@ -58,6 +63,13 @@ class ContentProvider extends ChangeNotifier {
   BusinessIdea? findBusinessIdea(String id) {
     for (final idea in _businessIdeas) {
       if (idea.id == id) return idea;
+    }
+    return null;
+  }
+
+  BlogArticle? findBlogArticle(String id) {
+    for (final article in _blogArticles) {
+      if (article.id == id) return article;
     }
     return null;
   }

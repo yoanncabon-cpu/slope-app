@@ -1,10 +1,14 @@
+import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 import '../../models/quiz_question.dart';
 import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
 import '../../theme/app_colors.dart';
+import '../../widgets/animations/animations.dart';
 
 class QuizScreen extends StatefulWidget {
   final String moduleId;
@@ -21,6 +25,19 @@ class _QuizScreenState extends State<QuizScreen> {
   bool _answered = false;
   int _score = 0;
   bool _finished = false;
+  late final ConfettiController _confettiController;
+
+  @override
+  void initState() {
+    super.initState();
+    _confettiController = ConfettiController(duration: const Duration(milliseconds: 1200));
+  }
+
+  @override
+  void dispose() {
+    _confettiController.dispose();
+    super.dispose();
+  }
 
   void _selectOption(List<QuizQuestion> questions, int optionIndex) {
     if (_answered) return;
@@ -38,6 +55,9 @@ class _QuizScreenState extends State<QuizScreen> {
       final percent = ((_score / questions.length) * 100).round();
       context.read<ProgressProvider>().recordQuizScore(widget.moduleId, percent);
       setState(() => _finished = true);
+      if (percent >= 60) {
+        _confettiController.play();
+      }
       return;
     }
     setState(() {
@@ -73,62 +93,97 @@ class _QuizScreenState extends State<QuizScreen> {
       final success = percent >= 60;
       return Scaffold(
         appBar: AppBar(title: const Text('Résultat du quiz')),
-        body: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  width: 96,
-                  height: 96,
-                  decoration: BoxDecoration(
-                    color: (success ? AppColors.success : AppColors.warning).withValues(alpha: 0.12),
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(
-                    success ? Icons.emoji_events : Icons.refresh,
-                    size: 48,
-                    color: success ? AppColors.success : AppColors.warning,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                Text('$percent %', style: Theme.of(context).textTheme.headlineLarge),
-                const SizedBox(height: 8),
-                Text(
-                  '$_score bonnes réponses sur ${questions.length}',
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  success
-                      ? 'Bravo, vous maîtrisez bien ce module !'
-                      : 'Continuez à réviser, vous progressez.',
-                  textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.65),
+        body: Stack(
+          children: [
+            Center(
+              child: Padding(
+                padding: const EdgeInsets.all(24),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    success
+                        ? SizedBox(
+                            width: 140,
+                            height: 140,
+                            child: Lottie.asset(
+                              'assets/lottie/quiz_success.json',
+                              repeat: false,
+                            ),
+                          )
+                        : Container(
+                            width: 96,
+                            height: 96,
+                            decoration: BoxDecoration(
+                              color: AppColors.warning.withValues(alpha: 0.12),
+                              shape: BoxShape.circle,
+                            ),
+                            child: const Icon(
+                              Icons.refresh,
+                              size: 48,
+                              color: AppColors.warning,
+                            ),
+                          ).animate().scale(
+                              begin: const Offset(0.6, 0.6),
+                              curve: Curves.easeOutBack,
+                              duration: 450.ms,
+                            ).fadeIn(),
+                    const SizedBox(height: 20),
+                    AnimatedCount(
+                      value: percent.toDouble(),
+                      formatter: (v) => '${v.round()} %',
+                      style: Theme.of(context).textTheme.headlineLarge,
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      '$_score bonnes réponses sur ${questions.length}',
+                      style: Theme.of(context).textTheme.bodyLarge,
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      success
+                          ? 'Bravo, vous maîtrisez bien ce module !'
+                          : 'Continuez à réviser, vous progressez.',
+                      textAlign: TextAlign.center,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                            color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.65),
+                          ),
+                    ),
+                    const SizedBox(height: 28),
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        onPressed: _restart,
+                        icon: const Icon(Icons.replay),
+                        label: const Text('Refaire le quiz'),
                       ),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () => Navigator.pop(context),
+                        child: const Text('Retour au module'),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 28),
-                SizedBox(
-                  width: double.infinity,
-                  child: OutlinedButton.icon(
-                    onPressed: _restart,
-                    icon: const Icon(Icons.replay),
-                    label: const Text('Refaire le quiz'),
-                  ),
-                ),
-                const SizedBox(height: 12),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: const Text('Retour au module'),
-                  ),
-                ),
-              ],
+              ),
             ),
-          ),
+            if (success)
+              Align(
+                alignment: Alignment.topCenter,
+                child: ConfettiWidget(
+                  confettiController: _confettiController,
+                  blastDirectionality: BlastDirectionality.explosive,
+                  shouldLoop: false,
+                  numberOfParticles: 22,
+                  maxBlastForce: 12,
+                  minBlastForce: 4,
+                  gravity: 0.25,
+                  colors: const [AppColors.primary, AppColors.secondary, AppColors.success, AppColors.accent],
+                ),
+              ),
+          ],
         ),
       );
     }
@@ -246,12 +301,16 @@ class _OptionTile extends StatelessWidget {
       case _OptionState.correct:
         borderColor = AppColors.success;
         backgroundColor = AppColors.success.withValues(alpha: 0.10);
-        trailing = const Icon(Icons.check_circle, color: AppColors.success);
+        trailing = const Icon(Icons.check_circle, color: AppColors.success)
+            .animate()
+            .scale(begin: const Offset(0.5, 0.5), curve: Curves.easeOutBack);
         break;
       case _OptionState.incorrect:
         borderColor = AppColors.danger;
         backgroundColor = AppColors.danger.withValues(alpha: 0.10);
-        trailing = const Icon(Icons.cancel, color: AppColors.danger);
+        trailing = const Icon(Icons.cancel, color: AppColors.danger)
+            .animate()
+            .scale(begin: const Offset(0.5, 0.5), curve: Curves.easeOutBack);
         break;
       case _OptionState.disabled:
         borderColor = Theme.of(context).colorScheme.outline.withValues(alpha: 0.2);
@@ -261,7 +320,9 @@ class _OptionTile extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       borderRadius: BorderRadius.circular(14),
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 200),
+        curve: Curves.easeOut,
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         decoration: BoxDecoration(
           border: Border.all(color: borderColor, width: 1.5),
