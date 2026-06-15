@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-
-import '../../theme/app_colors.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -13,22 +12,10 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Container(
+            SvgPicture.asset(
+              'assets/images/logo_slope.svg',
               width: 88,
               height: 88,
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [AppColors.primary, AppColors.secondary],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(24),
-              ),
-              child: const Icon(
-                Icons.trending_up,
-                color: Colors.white,
-                size: 44,
-              ),
             )
                 .animate()
                 .fadeIn(duration: 400.ms)

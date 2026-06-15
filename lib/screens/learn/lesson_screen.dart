@@ -5,6 +5,7 @@ import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/animations/animations.dart';
+import '../../widgets/module_completed_dialog.dart';
 import 'quiz_screen.dart';
 
 class LessonScreen extends StatelessWidget {
@@ -125,7 +126,16 @@ class LessonScreen extends StatelessWidget {
                               label: const Text('Leçon terminée'),
                             )
                           : ElevatedButton.icon(
-                              onPressed: () => progress.setLessonCompleted(lesson.id, true),
+                              onPressed: () {
+                                final wasModuleCompleted = progress.isModuleCompleted(module);
+                                progress.setLessonCompleted(lesson.id, true);
+                                if (!wasModuleCompleted && progress.isModuleCompleted(module)) {
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) => ModuleCompletedDialog(moduleTitle: module.title),
+                                  );
+                                }
+                              },
                               icon: const Icon(Icons.check),
                               label: const Text('Marquer comme terminée'),
                             ),

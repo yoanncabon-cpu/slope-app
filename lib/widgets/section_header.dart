@@ -17,7 +17,13 @@ class SectionHeader extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(title, style: Theme.of(context).textTheme.titleLarge),
+        Expanded(
+          child: Text(
+            title,
+            style: Theme.of(context).textTheme.titleLarge,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
         if (actionLabel != null)
           TextButton(
             onPressed: onAction,

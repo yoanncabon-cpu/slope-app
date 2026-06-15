@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) {
           final isWide = constraints.maxWidth >= 768;
-          final content = ListView(
+          final listView = ListView(
             padding: const EdgeInsets.fromLTRB(20, 24, 20, 32),
             children: [
           Text(
@@ -139,7 +139,18 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ],
-        ],
+            ],
+          );
+
+          if (!isWide) return listView;
+
+          return Center(
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 720),
+              child: listView,
+            ),
+          );
+        },
       ),
     );
   }
