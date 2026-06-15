@@ -2,12 +2,14 @@ import 'dart:math';
 
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../models/simulation_asset_class.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
+import '../../widgets/alert_banner.dart';
+import '../../widgets/animations/animations.dart';
 import '../../widgets/calculator_field.dart';
+import '../../widgets/illustration_banner.dart';
 import '../../widgets/result_tile.dart';
 
 class PortfolioSimulationScreen extends StatefulWidget {
@@ -123,8 +125,12 @@ class _PortfolioSimulationScreenState extends State<PortfolioSimulationScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Simulateur de portefeuille')),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
         children: [
+          const IllustrationBanner(
+            asset: 'assets/images/illustration_simulation.svg',
+            horizontalPadding: 0,
+          ),
           Text(
             'Testez une répartition virtuelle entre plusieurs classes d\'actifs et '
             'observez une évolution simulée, intégrant rendement moyen et volatilité '
@@ -178,41 +184,51 @@ class _PortfolioSimulationScreenState extends State<PortfolioSimulationScreen> {
             const SizedBox(height: 24),
             Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 12),
-            ResultTile(
-              label: 'Capital final simulé',
-              value: formatEuro(finalValue!),
-              numericValue: finalValue,
-              formatter: formatEuro,
-              color: AppColors.primary,
-              highlight: true,
-            ),
-            ResultTile(
-              label: 'Total versé',
-              value: formatEuro(totalInvested!),
-              numericValue: totalInvested,
-              formatter: formatEuro,
-            ),
-            ResultTile(
-              label: gain! >= 0 ? 'Gain simulé' : 'Perte simulée',
-              value: formatEuro(gain),
-              numericValue: gain,
-              formatter: formatEuro,
-              color: gain >= 0 ? AppColors.success : AppColors.danger,
-            ),
-            ResultTile(
-              label: 'Rendement annuel moyen estimé',
-              value: formatPercent((annualizedReturn ?? 0) * 100),
-              numericValue: (annualizedReturn ?? 0) * 100,
-              formatter: (v) => formatPercent(v),
-              color: (annualizedReturn ?? 0) >= 0 ? AppColors.success : AppColors.danger,
+            StaggerFadeSlide(
+              index: 0,
+              child: Column(
+                children: [
+                  ResultTile(
+                    label: 'Capital final simulé',
+                    value: formatEuro(finalValue!),
+                    numericValue: finalValue,
+                    formatter: formatEuro,
+                    color: AppColors.primary,
+                    highlight: true,
+                  ),
+                  ResultTile(
+                    label: 'Total versé',
+                    value: formatEuro(totalInvested!),
+                    numericValue: totalInvested,
+                    formatter: formatEuro,
+                  ),
+                  ResultTile(
+                    label: gain! >= 0 ? 'Gain simulé' : 'Perte simulée',
+                    value: formatEuro(gain),
+                    numericValue: gain,
+                    formatter: formatEuro,
+                    color: gain >= 0 ? AppColors.success : AppColors.danger,
+                  ),
+                  ResultTile(
+                    label: 'Rendement annuel moyen estimé',
+                    value: formatPercent((annualizedReturn ?? 0) * 100),
+                    numericValue: (annualizedReturn ?? 0) * 100,
+                    formatter: (v) => formatPercent(v),
+                    color: (annualizedReturn ?? 0) >= 0 ? AppColors.success : AppColors.danger,
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: 16),
             Text('Évolution simulée', style: Theme.of(context).textTheme.titleLarge),
             const SizedBox(height: 12),
-            SizedBox(
-              height: 220,
-              child: _SimulationChart(portfolioValues: portfolioValues, investedValues: investedValues),
-            ).animate().fadeIn(duration: 450.ms).slideY(begin: 0.08, end: 0, curve: Curves.easeOutCubic),
+            StaggerFadeSlide(
+              index: 1,
+              child: SizedBox(
+                height: 220,
+                child: _SimulationChart(portfolioValues: portfolioValues, investedValues: investedValues),
+              ),
+            ),
             const SizedBox(height: 12),
             Row(
               children: [
@@ -222,27 +238,12 @@ class _PortfolioSimulationScreenState extends State<PortfolioSimulationScreen> {
               ],
             ),
             const SizedBox(height: 16),
-            Container(
-              padding: const EdgeInsets.all(14),
-              decoration: BoxDecoration(
-                color: AppColors.info.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(14),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(Icons.info_outline, color: AppColors.info),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      'Simulation pédagogique basée sur des hypothèses de rendement et de '
-                      'volatilité par classe d\'actif. Chaque relance génère un nouveau '
-                      'tirage aléatoire : les résultats varient, comme sur de vrais marchés.',
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ),
-                ],
-              ),
+            const AlertBanner(
+              type: AlertType.info,
+              message:
+                  'Simulation pédagogique basée sur des hypothèses de rendement et de '
+                  'volatilité par classe d\'actif. Chaque relance génère un nouveau '
+                  'tirage aléatoire : les résultats varient, comme sur de vrais marchés.',
             ),
           ],
         ],

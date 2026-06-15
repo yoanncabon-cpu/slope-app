@@ -52,7 +52,7 @@ class ResultTile extends StatelessWidget {
         color: highlight
             ? accent.withValues(alpha: 0.10)
             : Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
-        borderRadius: BorderRadius.circular(14),
+        borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

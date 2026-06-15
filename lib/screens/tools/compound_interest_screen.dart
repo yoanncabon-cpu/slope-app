@@ -1,10 +1,11 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
+import '../../widgets/animations/animations.dart';
 import '../../widgets/calculator_field.dart';
+import '../../widgets/illustration_banner.dart';
 import '../../widgets/result_tile.dart';
 
 class CompoundInterestScreen extends StatefulWidget {
@@ -61,8 +62,12 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Intérêts composés')),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
         children: [
+          const IllustrationBanner(
+            asset: 'assets/images/illustration_tools.svg',
+            horizontalPadding: 0,
+          ),
           Text(
             'Estimez la valeur future de votre épargne en tenant compte des intérêts composés et de vos versements réguliers.',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -77,31 +82,40 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
-          ResultTile(
-            label: 'Capital final',
-            value: formatEuro(finalBalance),
-            numericValue: finalBalance,
-            formatter: formatEuro,
-            color: color,
-            highlight: true,
-          ),
-          ResultTile(
-            label: 'Total versé',
-            value: formatEuro(totalInvested),
-            numericValue: totalInvested,
-            formatter: formatEuro,
-          ),
-          ResultTile(
-            label: 'Intérêts générés',
-            value: formatEuro(interestEarned),
-            numericValue: interestEarned,
-            formatter: formatEuro,
-            color: AppColors.success,
+          StaggerFadeSlide(
+            index: 0,
+            child: Column(
+              children: [
+                ResultTile(
+                  label: 'Capital final',
+                  value: formatEuro(finalBalance),
+                  numericValue: finalBalance,
+                  formatter: formatEuro,
+                  color: color,
+                  highlight: true,
+                ),
+                ResultTile(
+                  label: 'Total versé',
+                  value: formatEuro(totalInvested),
+                  numericValue: totalInvested,
+                  formatter: formatEuro,
+                ),
+                ResultTile(
+                  label: 'Intérêts générés',
+                  value: formatEuro(interestEarned),
+                  numericValue: interestEarned,
+                  formatter: formatEuro,
+                  color: AppColors.success,
+                ),
+              ],
+            ),
           ),
           const SizedBox(height: 16),
           Text('Évolution annuelle', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
-          SizedBox(
+          StaggerFadeSlide(
+            index: 1,
+            child: SizedBox(
             height: 220,
             child: yearlyData.isEmpty
                 ? const SizedBox.shrink()
@@ -148,7 +162,8 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
                       }).toList(),
                     ),
                   ),
-          ).animate().fadeIn(duration: 450.ms).slideY(begin: 0.08, end: 0, curve: Curves.easeOutCubic),
+            ),
+          ),
           const SizedBox(height: 12),
           Row(
             children: [

@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
+import '../../widgets/alert_banner.dart';
+import '../../widgets/animations/animations.dart';
 import '../../widgets/calculator_field.dart';
+import '../../widgets/illustration_banner.dart';
 import '../../widgets/result_tile.dart';
 
 class BreakevenCalculatorScreen extends StatefulWidget {
@@ -46,8 +49,12 @@ class _BreakevenCalculatorScreenState extends State<BreakevenCalculatorScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Seuil de rentabilité')),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
         children: [
+          const IllustrationBanner(
+            asset: 'assets/images/illustration_tools.svg',
+            horizontalPadding: 0,
+          ),
           Text(
             'Déterminez le volume de ventes mensuel nécessaire pour couvrir vos charges fixes.',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -62,54 +69,48 @@ class _BreakevenCalculatorScreenState extends State<BreakevenCalculatorScreen> {
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
           if (!isViable)
-            Container(
-              padding: const EdgeInsets.all(14),
-              margin: const EdgeInsets.only(bottom: 10),
-              decoration: BoxDecoration(
-                color: AppColors.danger.withValues(alpha: 0.08),
-                borderRadius: BorderRadius.circular(14),
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(Icons.error_outline, color: AppColors.danger),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      'Votre prix de vente est inférieur ou égal à votre coût variable : aucun seuil de rentabilité n\'est atteignable en l\'état.',
-                      style: Theme.of(context).textTheme.bodySmall,
-                    ),
-                  ),
-                ],
+            const Padding(
+              padding: EdgeInsets.only(bottom: 10),
+              child: AlertBanner(
+                type: AlertType.danger,
+                message:
+                    'Votre prix de vente est inférieur ou égal à votre coût variable : aucun seuil de rentabilité n\'est atteignable en l\'état.',
               ),
             ),
-          ResultTile(
-            label: 'Marge unitaire',
-            value: formatEuro(unitMargin, decimals: true),
-            numericValue: unitMargin,
-            formatter: (v) => formatEuro(v, decimals: true),
-          ),
-          ResultTile(
-            label: 'Taux de marge',
-            value: formatPercent(marginRate),
-            numericValue: marginRate,
-            formatter: formatPercent,
-          ),
-          ResultTile(
-            label: 'Quantité à vendre / mois',
-            value: '${breakevenUnits.ceil()} unités',
-            numericValue: breakevenUnits,
-            formatter: (v) => '${v.ceil()} unités',
-            color: color,
-            highlight: true,
-          ),
-          ResultTile(
-            label: 'Chiffre d\'affaires à atteindre / mois',
-            value: formatEuro(breakevenRevenue),
-            numericValue: breakevenRevenue,
-            formatter: formatEuro,
-            color: color,
-            highlight: true,
+          StaggerFadeSlide(
+            index: 0,
+            child: Column(
+              children: [
+                ResultTile(
+                  label: 'Marge unitaire',
+                  value: formatEuro(unitMargin, decimals: true),
+                  numericValue: unitMargin,
+                  formatter: (v) => formatEuro(v, decimals: true),
+                ),
+                ResultTile(
+                  label: 'Taux de marge',
+                  value: formatPercent(marginRate),
+                  numericValue: marginRate,
+                  formatter: formatPercent,
+                ),
+                ResultTile(
+                  label: 'Quantité à vendre / mois',
+                  value: '${breakevenUnits.ceil()} unités',
+                  numericValue: breakevenUnits,
+                  formatter: (v) => '${v.ceil()} unités',
+                  color: color,
+                  highlight: true,
+                ),
+                ResultTile(
+                  label: 'Chiffre d\'affaires à atteindre / mois',
+                  value: formatEuro(breakevenRevenue),
+                  numericValue: breakevenRevenue,
+                  formatter: formatEuro,
+                  color: color,
+                  highlight: true,
+                ),
+              ],
+            ),
           ),
         ],
       ),

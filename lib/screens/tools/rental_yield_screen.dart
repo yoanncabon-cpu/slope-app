@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
+import '../../widgets/animations/animations.dart';
 import '../../widgets/calculator_field.dart';
+import '../../widgets/illustration_banner.dart';
 import '../../widgets/result_tile.dart';
 
 class RentalYieldScreen extends StatefulWidget {
@@ -50,8 +52,12 @@ class _RentalYieldScreenState extends State<RentalYieldScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Rendement locatif')),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
         children: [
+          const IllustrationBanner(
+            asset: 'assets/images/illustration_tools.svg',
+            horizontalPadding: 0,
+          ),
           Text(
             'Estimez la rentabilité d\'un investissement immobilier locatif, frais et charges inclus.',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -66,34 +72,41 @@ class _RentalYieldScreenState extends State<RentalYieldScreen> {
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
-          ResultTile(
-            label: 'Investissement total',
-            value: formatEuro(totalInvestment),
-            numericValue: totalInvestment,
-            formatter: formatEuro,
-          ),
-          ResultTile(
-            label: 'Rendement brut',
-            value: formatPercent(grossYield),
-            numericValue: grossYield,
-            formatter: formatPercent,
-            color: color,
-            highlight: true,
-          ),
-          ResultTile(
-            label: 'Rendement net',
-            value: formatPercent(netYield),
-            numericValue: netYield,
-            formatter: formatPercent,
-            color: AppColors.success,
-            highlight: true,
-          ),
-          ResultTile(
-            label: 'Cashflow mensuel net',
-            value: formatEuro(monthlyCashflow, decimals: true),
-            numericValue: monthlyCashflow,
-            formatter: (v) => formatEuro(v, decimals: true),
-            color: monthlyCashflow >= 0 ? AppColors.success : AppColors.danger,
+          StaggerFadeSlide(
+            index: 0,
+            child: Column(
+              children: [
+                ResultTile(
+                  label: 'Investissement total',
+                  value: formatEuro(totalInvestment),
+                  numericValue: totalInvestment,
+                  formatter: formatEuro,
+                ),
+                ResultTile(
+                  label: 'Rendement brut',
+                  value: formatPercent(grossYield),
+                  numericValue: grossYield,
+                  formatter: formatPercent,
+                  color: color,
+                  highlight: true,
+                ),
+                ResultTile(
+                  label: 'Rendement net',
+                  value: formatPercent(netYield),
+                  numericValue: netYield,
+                  formatter: formatPercent,
+                  color: AppColors.success,
+                  highlight: true,
+                ),
+                ResultTile(
+                  label: 'Cashflow mensuel net',
+                  value: formatEuro(monthlyCashflow, decimals: true),
+                  numericValue: monthlyCashflow,
+                  formatter: (v) => formatEuro(v, decimals: true),
+                  color: monthlyCashflow >= 0 ? AppColors.success : AppColors.danger,
+                ),
+              ],
+            ),
           ),
         ],
       ),

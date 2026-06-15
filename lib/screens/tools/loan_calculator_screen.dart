@@ -4,7 +4,10 @@ import 'package:flutter/material.dart';
 
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
+import '../../widgets/alert_banner.dart';
+import '../../widgets/animations/animations.dart';
 import '../../widgets/calculator_field.dart';
+import '../../widgets/illustration_banner.dart';
 import '../../widgets/result_tile.dart';
 
 class LoanCalculatorScreen extends StatefulWidget {
@@ -55,8 +58,12 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Capacité d\'emprunt')),
       body: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 16, 20, 32),
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 32),
         children: [
+          const IllustrationBanner(
+            asset: 'assets/images/illustration_tools.svg',
+            horizontalPadding: 0,
+          ),
           Text(
             'Calculez la mensualité et le coût total d\'un prêt en fonction du montant, du taux et de la durée.',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
@@ -70,46 +77,41 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
-          ResultTile(
-            label: 'Mensualité',
-            value: formatEuro(monthlyPayment, decimals: true),
-            numericValue: monthlyPayment,
-            formatter: (v) => formatEuro(v, decimals: true),
-            color: color,
-            highlight: true,
-          ),
-          ResultTile(
-            label: 'Coût total du crédit',
-            value: formatEuro(totalCost),
-            numericValue: totalCost,
-            formatter: formatEuro,
-          ),
-          ResultTile(
-            label: 'Total des intérêts payés',
-            value: formatEuro(totalInterest),
-            numericValue: totalInterest,
-            formatter: formatEuro,
-            color: AppColors.warning,
-          ),
-          const SizedBox(height: 8),
-          Container(
-            padding: const EdgeInsets.all(14),
-            decoration: BoxDecoration(
-              color: AppColors.info.withValues(alpha: 0.08),
-              borderRadius: BorderRadius.circular(14),
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          StaggerFadeSlide(
+            index: 0,
+            child: Column(
               children: [
-                const Icon(Icons.info_outline, color: AppColors.info),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Text(
-                    'Les banques considèrent généralement qu\'un taux d\'endettement supérieur à 35 % des revenus nets est risqué. Pensez à vérifier votre capacité de remboursement.',
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
+                ResultTile(
+                  label: 'Mensualité',
+                  value: formatEuro(monthlyPayment, decimals: true),
+                  numericValue: monthlyPayment,
+                  formatter: (v) => formatEuro(v, decimals: true),
+                  color: color,
+                  highlight: true,
+                ),
+                ResultTile(
+                  label: 'Coût total du crédit',
+                  value: formatEuro(totalCost),
+                  numericValue: totalCost,
+                  formatter: formatEuro,
+                ),
+                ResultTile(
+                  label: 'Total des intérêts payés',
+                  value: formatEuro(totalInterest),
+                  numericValue: totalInterest,
+                  formatter: formatEuro,
+                  color: AppColors.warning,
                 ),
               ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          StaggerFadeSlide(
+            index: 1,
+            child: const AlertBanner(
+              type: AlertType.info,
+              message:
+                  'Les banques considèrent généralement qu\'un taux d\'endettement supérieur à 35 % des revenus nets est risqué. Pensez à vérifier votre capacité de remboursement.',
             ),
           ),
         ],

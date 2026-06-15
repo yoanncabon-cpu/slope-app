@@ -78,6 +78,18 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
                 return ChoiceChip(
                   label: Text(category),
                   selected: selected,
+                  showCheckmark: false,
+                  selectedColor: AppColors.primary.withValues(alpha: 0.15),
+                  labelStyle: TextStyle(
+                    color: selected ? AppColors.primary : null,
+                    fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    side: selected
+                        ? BorderSide.none
+                        : BorderSide(color: Theme.of(context).colorScheme.outline),
+                  ),
                   onSelected: (_) => setState(() => _selectedCategory = category),
                 );
               },
@@ -120,36 +132,47 @@ class _TermCard extends StatelessWidget {
         : AppColors.categoryColor('idee');
 
     return Card(
-      child: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      clipBehavior: Clip.antiAlias,
+      child: IntrinsicHeight(
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(
-              children: [
-                Expanded(
-                  child: Text(term.term, style: Theme.of(context).textTheme.titleMedium),
-                ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: color.withValues(alpha: 0.12),
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                  child: Text(
-                    term.category,
-                    style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                          color: color,
-                          fontWeight: FontWeight.w600,
+            Container(width: 4, color: color),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(term.term, style: Theme.of(context).textTheme.titleMedium),
                         ),
-                  ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: color.withValues(alpha: 0.12),
+                            borderRadius: BorderRadius.circular(100),
+                          ),
+                          child: Text(
+                            term.category,
+                            style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                  color: color,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      term.definition,
+                      style: Theme.of(context).textTheme.bodyMedium?.copyWith(height: 1.5),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text(
-              term.definition,
-              style: Theme.of(context).textTheme.bodyMedium?.copyWith(height: 1.5),
+              ),
             ),
           ],
         ),
