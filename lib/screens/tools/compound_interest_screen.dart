@@ -1,8 +1,10 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+import '../../calculators/compound_interest_calculator.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
+import '../../widgets/alert_banner.dart';
 import '../../widgets/animations/animations.dart';
 import '../../widgets/calculator_field.dart';
 import '../../widgets/illustration_banner.dart';
@@ -39,24 +41,20 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
     final initial = _parse(_initialController);
     final monthly = _parse(_monthlyController);
     final rate = _parse(_rateController);
-    final years = _parse(_yearsController).clamp(1, 60).toInt();
+    final rawYears = _parse(_yearsController);
+    final years = rawYears.clamp(1, 60).toInt();
+    final yearsError = rawYears <= 0 ? 'La durée doit être supérieure à 0' : null;
 
-    final monthlyRate = rate / 100 / 12;
-    final yearlyData = <_YearData>[];
-    double balance = initial;
-    double invested = initial;
-
-    for (int year = 1; year <= years; year++) {
-      for (int month = 0; month < 12; month++) {
-        balance = balance * (1 + monthlyRate) + monthly;
-        invested += monthly;
-      }
-      yearlyData.add(_YearData(year: year, invested: invested, balance: balance));
-    }
-
-    final finalBalance = yearlyData.isNotEmpty ? yearlyData.last.balance : initial;
-    final totalInvested = yearlyData.isNotEmpty ? yearlyData.last.invested : initial;
-    final interestEarned = finalBalance - totalInvested;
+    final result = calculateCompoundInterest(
+      initial: initial,
+      monthly: monthly,
+      annualRatePercent: rate,
+      years: years,
+    );
+    final yearlyData = result.yearlyData;
+    final finalBalance = result.finalBalance;
+    final totalInvested = result.totalInvested;
+    final interestEarned = result.interestEarned;
     final color = AppColors.categoryColor('actions');
 
     return Scaffold(
@@ -78,7 +76,7 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
           CalculatorField(label: 'Capital initial', controller: _initialController, suffixText: '€', onChanged: (_) => setState(() {})),
           CalculatorField(label: 'Versement mensuel', controller: _monthlyController, suffixText: '€', onChanged: (_) => setState(() {})),
           CalculatorField(label: 'Rendement annuel estimé', controller: _rateController, suffixText: '%', onChanged: (_) => setState(() {})),
-          CalculatorField(label: 'Durée', controller: _yearsController, suffixText: 'années', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Durée', controller: _yearsController, suffixText: 'années', errorText: yearsError, onChanged: (_) => setState(() {})),
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
@@ -172,18 +170,18 @@ class _CompoundInterestScreenState extends State<CompoundInterestScreen> {
               _Legend(color: color, label: 'Intérêts'),
             ],
           ),
+          const SizedBox(height: 16),
+          const AlertBanner(
+            type: AlertType.info,
+            message:
+                'Simulation à rendement annuel constant, à titre pédagogique : les '
+                'marchés réels sont volatils et les performances passées ne '
+                'garantissent pas les résultats futurs.',
+          ),
         ],
       ),
     );
   }
-}
-
-class _YearData {
-  final int year;
-  final double invested;
-  final double balance;
-
-  _YearData({required this.year, required this.invested, required this.balance});
 }
 
 class _Legend extends StatelessWidget {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../blog/blog_screen.dart';
 import '../home/home_screen.dart';
 import '../ideas/business_ideas_screen.dart';
 import '../learn/learn_screen.dart';
@@ -22,7 +21,6 @@ class _MainShellState extends State<MainShell> with SingleTickerProviderStateMix
     HomeScreen(),
     LearnScreen(),
     BusinessIdeasScreen(),
-    BlogScreen(),
     ToolsScreen(),
     ProfileScreen(),
   ];
@@ -74,11 +72,6 @@ class _MainShellState extends State<MainShell> with SingleTickerProviderStateMix
             icon: Icon(Icons.lightbulb_outline),
             selectedIcon: Icon(Icons.lightbulb),
             label: 'Idées',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.article_outlined),
-            selectedIcon: Icon(Icons.article),
-            label: 'Blog',
           ),
           NavigationDestination(
             icon: Icon(Icons.calculate_outlined),

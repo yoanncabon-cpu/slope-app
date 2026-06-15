@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/animations/animations.dart';
 import '../../widgets/illustration_banner.dart';
+import 'auto_entrepreneur_calculator_screen.dart';
 import 'breakeven_calculator_screen.dart';
 import 'budget_calculator_screen.dart';
 import 'compound_interest_screen.dart';
@@ -50,6 +51,13 @@ class ToolsScreen extends StatelessWidget {
         icon: Icons.pie_chart,
         colorKey: 'epargne',
         builder: (_) => const BudgetCalculatorScreen(),
+      ),
+      _ToolItem(
+        title: 'Cotisations auto-entrepreneur',
+        subtitle: 'Estimez vos cotisations sociales et votre revenu net',
+        icon: Icons.receipt_long,
+        colorKey: 'financement',
+        builder: (_) => const AutoEntrepreneurCalculatorScreen(),
       ),
     ];
 

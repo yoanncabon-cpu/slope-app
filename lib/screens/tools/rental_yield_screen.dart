@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../calculators/rental_yield_calculator.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
+import '../../widgets/alert_banner.dart';
 import '../../widgets/animations/animations.dart';
 import '../../widgets/calculator_field.dart';
 import '../../widgets/illustration_banner.dart';
@@ -39,13 +41,19 @@ class _RentalYieldScreenState extends State<RentalYieldScreen> {
     final fees = _parse(_feesController);
     final monthlyRent = _parse(_rentController);
     final annualCharges = _parse(_chargesController);
+    final priceError = price <= 0 ? 'Le prix d\'achat doit être supérieur à 0' : null;
+    final rentError = monthlyRent <= 0 ? 'Le loyer doit être supérieur à 0' : null;
 
-    final totalInvestment = price + fees;
-    final annualRent = monthlyRent * 12;
-    final grossYield = totalInvestment > 0 ? annualRent / totalInvestment * 100 : 0.0;
-    final netIncome = annualRent - annualCharges;
-    final netYield = totalInvestment > 0 ? netIncome / totalInvestment * 100 : 0.0;
-    final monthlyCashflow = netIncome / 12;
+    final result = calculateRentalYield(
+      price: price,
+      fees: fees,
+      monthlyRent: monthlyRent,
+      annualCharges: annualCharges,
+    );
+    final totalInvestment = result.totalInvestment;
+    final grossYield = result.grossYieldPercent;
+    final netYield = result.netYieldPercent;
+    final monthlyCashflow = result.monthlyCashflow;
 
     final color = AppColors.categoryColor('immobilier');
 
@@ -65,9 +73,9 @@ class _RentalYieldScreenState extends State<RentalYieldScreen> {
                 ),
           ),
           const SizedBox(height: 20),
-          CalculatorField(label: 'Prix d\'achat du bien', controller: _priceController, suffixText: '€', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Prix d\'achat du bien', controller: _priceController, suffixText: '€', errorText: priceError, onChanged: (_) => setState(() {})),
           CalculatorField(label: 'Frais d\'acquisition (notaire, travaux...)', controller: _feesController, suffixText: '€', onChanged: (_) => setState(() {})),
-          CalculatorField(label: 'Loyer mensuel hors charges', controller: _rentController, suffixText: '€', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Loyer mensuel hors charges', controller: _rentController, suffixText: '€', errorText: rentError, onChanged: (_) => setState(() {})),
           CalculatorField(label: 'Charges annuelles (taxe foncière, gestion, assurance...)', controller: _chargesController, suffixText: '€', onChanged: (_) => setState(() {})),
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
@@ -107,6 +115,13 @@ class _RentalYieldScreenState extends State<RentalYieldScreen> {
                 ),
               ],
             ),
+          ),
+          const SizedBox(height: 16),
+          const AlertBanner(
+            type: AlertType.info,
+            message:
+                'Cette estimation ne prend pas en compte la fiscalité, les périodes '
+                'de vacance locative ni l\'évolution du marché immobilier.',
           ),
         ],
       ),

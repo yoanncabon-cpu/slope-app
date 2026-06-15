@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+import '../../calculators/budget_calculator.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
 import '../../widgets/animations/animations.dart';
@@ -31,9 +32,11 @@ class _BudgetCalculatorScreenState extends State<BudgetCalculatorScreen> {
   @override
   Widget build(BuildContext context) {
     final income = _parse(_incomeController);
-    final needs = income * 0.5;
-    final wants = income * 0.3;
-    final savings = income * 0.2;
+    final incomeError = income <= 0 ? 'Le revenu doit être supérieur à 0' : null;
+    final result = calculateBudget503020(income: income);
+    final needs = result.needs;
+    final wants = result.wants;
+    final savings = result.savings;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Règle 50/30/20')),
@@ -51,7 +54,7 @@ class _BudgetCalculatorScreenState extends State<BudgetCalculatorScreen> {
                 ),
           ),
           const SizedBox(height: 20),
-          CalculatorField(label: 'Revenu mensuel net', controller: _incomeController, suffixText: '€', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Revenu mensuel net', controller: _incomeController, suffixText: '€', errorText: incomeError, onChanged: (_) => setState(() {})),
           const SizedBox(height: 8),
           if (income > 0) ...[
             StaggerFadeSlide(

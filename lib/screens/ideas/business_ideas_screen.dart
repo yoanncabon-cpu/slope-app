@@ -7,7 +7,9 @@ import '../../theme/app_colors.dart';
 import '../../widgets/animations/animations.dart';
 import '../../widgets/idea_card.dart';
 import '../../widgets/illustration_banner.dart';
+import '../../widgets/search_and_filter_bar.dart';
 import 'business_idea_detail_screen.dart';
+import 'business_match_quiz_screen.dart';
 
 class BusinessIdeasScreen extends StatefulWidget {
   const BusinessIdeasScreen({super.key});
@@ -67,44 +69,22 @@ class _BusinessIdeasScreenState extends State<BusinessIdeasScreen> {
         children: [
           const IllustrationBanner(asset: 'assets/images/illustration_ideas.svg'),
           Padding(
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
-            child: TextField(
-              controller: _searchController,
-              onChanged: (value) => setState(() => _query = value),
-              decoration: InputDecoration(
-                hintText: 'Rechercher une idée...',
-                prefixIcon: const Icon(Icons.search),
-                suffixIcon: _query.isEmpty
-                    ? null
-                    : IconButton(
-                        icon: const Icon(Icons.close),
-                        onPressed: () {
-                          _searchController.clear();
-                          setState(() => _query = '');
-                        },
-                      ),
-              ),
-            ),
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
+            child: StaggerFadeSlide(index: 0, child: _BusinessMatchCtaCard()),
           ),
-          SizedBox(
-            height: 40,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              itemCount: categories.length,
-              separatorBuilder: (_, _) => const SizedBox(width: 8),
-              itemBuilder: (context, index) {
-                final category = categories[index];
-                final selected = category == _selectedCategory;
-                return ChoiceChip(
-                  label: Text(category),
-                  selected: selected,
-                  onSelected: (_) => setState(() => _selectedCategory = category),
-                );
-              },
-            ),
+          SearchAndFilterBar(
+            controller: _searchController,
+            hintText: 'Rechercher une idée...',
+            query: _query,
+            onQueryChanged: (value) => setState(() => _query = value),
+            onClear: () {
+              _searchController.clear();
+              setState(() => _query = '');
+            },
+            categories: categories,
+            selectedCategory: _selectedCategory,
+            onCategorySelected: (category) => setState(() => _selectedCategory = category),
           ),
-          const SizedBox(height: 12),
           Expanded(
             child: ideas.isEmpty
                 ? Center(
@@ -135,6 +115,76 @@ class _BusinessIdeasScreenState extends State<BusinessIdeasScreen> {
                   ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _BusinessMatchCtaCard extends StatelessWidget {
+  const _BusinessMatchCtaCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return TapTilt(
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [AppColors.primary, AppColors.accent],
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Material(
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(20),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(20),
+            onTap: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (_) => const BusinessMatchQuizScreen()),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(18),
+              child: Row(
+                children: [
+                  Container(
+                    width: 52,
+                    height: 52,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.18),
+                      borderRadius: BorderRadius.circular(14),
+                    ),
+                    child: const Icon(Icons.quiz, color: Colors.white, size: 28),
+                  ),
+                  const SizedBox(width: 14),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Quel projet pour moi ?',
+                          style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                              ),
+                        ),
+                        const SizedBox(height: 4),
+                        Text(
+                          'Répondez à 5 questions pour des recommandations personnalisées',
+                          style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                                color: Colors.white.withValues(alpha: 0.9),
+                              ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Icon(Icons.chevron_right, color: Colors.white),
+                ],
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }

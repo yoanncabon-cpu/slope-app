@@ -79,14 +79,24 @@ class _ModuleList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final overall = progress.overallProgress(modules);
+    final completed = progress.completedModulesCount(modules);
+
     return ListView.separated(
       padding: const EdgeInsets.all(20),
-      itemCount: modules.length,
+      itemCount: modules.length + 1,
       separatorBuilder: (_, _) => const SizedBox(height: 12),
       itemBuilder: (context, index) {
-        final module = modules[index];
+        if (index == 0) {
+          return _TrackProgressHeader(
+            overall: overall,
+            completed: completed,
+            total: modules.length,
+          );
+        }
+        final module = modules[index - 1];
         return StaggerFadeSlide(
-          index: index,
+          index: index - 1,
           child: ModuleCard(
             module: module,
             progress: progress.moduleProgress(module),
@@ -97,6 +107,54 @@ class _ModuleList extends StatelessWidget {
           ),
         );
       },
+    );
+  }
+}
+
+class _TrackProgressHeader extends StatelessWidget {
+  final double overall;
+  final int completed;
+  final int total;
+
+  const _TrackProgressHeader({
+    required this.overall,
+    required this.completed,
+    required this.total,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Theme.of(context).colorScheme.surfaceContainerHighest.withValues(alpha: 0.5),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  '$completed sur $total modules terminés',
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                        fontWeight: FontWeight.w600,
+                      ),
+                ),
+                const SizedBox(height: 10),
+                AnimatedProgressBar(value: overall, minHeight: 8),
+              ],
+            ),
+          ),
+          const SizedBox(width: 16),
+          AnimatedCount(
+            value: overall * 100,
+            formatter: (v) => '${v.round()} %',
+            style: Theme.of(context).textTheme.titleLarge,
+          ),
+        ],
+      ),
     );
   }
 }

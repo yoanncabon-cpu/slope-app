@@ -7,6 +7,7 @@ import '../../providers/theme_provider.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/animations/animations.dart';
 import '../../widgets/illustration_banner.dart';
+import '../blog/blog_screen.dart';
 import 'glossary_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -138,21 +139,42 @@ class ProfileScreen extends StatelessWidget {
           Text('Ressources', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),
           Card(
-            child: ListTile(
-              contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-              leading: Container(
-                width: 44,
-                height: 44,
-                decoration: BoxDecoration(
-                  color: AppColors.info.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(12),
+            child: Column(
+              children: [
+                ListTile(
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  leading: Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: AppColors.info.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Icon(Icons.menu_book_outlined, color: AppColors.info),
+                  ),
+                  title: const Text('Glossaire'),
+                  subtitle: Text('${content.glossary.length} termes expliqués'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const GlossaryScreen())),
                 ),
-                child: const Icon(Icons.menu_book_outlined, color: AppColors.info),
-              ),
-              title: const Text('Glossaire'),
-              subtitle: Text('${content.glossary.length} termes expliqués'),
-              trailing: const Icon(Icons.chevron_right),
-              onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const GlossaryScreen())),
+                const Divider(height: 1),
+                ListTile(
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                  leading: Container(
+                    width: 44,
+                    height: 44,
+                    decoration: BoxDecoration(
+                      color: AppColors.accent.withValues(alpha: 0.12),
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: const Icon(Icons.article_outlined, color: AppColors.accent),
+                  ),
+                  title: const Text('Blog'),
+                  subtitle: Text('${content.blogArticles.length} articles à découvrir'),
+                  trailing: const Icon(Icons.chevron_right),
+                  onTap: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const BlogScreen())),
+                ),
+              ],
             ),
           ),
           const SizedBox(height: 28),

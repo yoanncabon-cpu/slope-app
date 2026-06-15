@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../calculators/breakeven_calculator.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
 import '../../widgets/alert_banner.dart';
@@ -37,14 +38,16 @@ class _BreakevenCalculatorScreenState extends State<BreakevenCalculatorScreen> {
     final fixedCosts = _parse(_fixedCostsController);
     final price = _parse(_priceController);
     final variableCost = _parse(_variableCostController);
+    final priceError = price <= 0 ? 'Le prix de vente doit être supérieur à 0' : null;
 
-    final unitMargin = price - variableCost;
-    final breakevenUnits = unitMargin > 0 ? fixedCosts / unitMargin : 0.0;
-    final breakevenRevenue = breakevenUnits * price;
-    final marginRate = price > 0 ? unitMargin / price * 100 : 0.0;
+    final result = calculateBreakeven(fixedCosts: fixedCosts, price: price, variableCost: variableCost);
+    final unitMargin = result.unitMargin;
+    final breakevenUnits = result.breakevenUnits;
+    final breakevenRevenue = result.breakevenRevenue;
+    final marginRate = result.marginRatePercent;
+    final isViable = result.isViable;
 
     final color = AppColors.categoryColor('gestion');
-    final isViable = unitMargin > 0;
 
     return Scaffold(
       appBar: AppBar(title: const Text('Seuil de rentabilité')),
@@ -63,7 +66,7 @@ class _BreakevenCalculatorScreenState extends State<BreakevenCalculatorScreen> {
           ),
           const SizedBox(height: 20),
           CalculatorField(label: 'Charges fixes mensuelles', controller: _fixedCostsController, suffixText: '€', onChanged: (_) => setState(() {})),
-          CalculatorField(label: 'Prix de vente unitaire', controller: _priceController, suffixText: '€', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Prix de vente unitaire', controller: _priceController, suffixText: '€', errorText: priceError, onChanged: (_) => setState(() {})),
           CalculatorField(label: 'Coût variable unitaire', controller: _variableCostController, suffixText: '€', onChanged: (_) => setState(() {})),
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),

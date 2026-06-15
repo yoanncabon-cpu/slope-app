@@ -5,6 +5,7 @@ import '../../providers/content_provider.dart';
 import '../../providers/progress_provider.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/animations/animations.dart';
+import 'quiz_screen.dart';
 
 class LessonScreen extends StatelessWidget {
   final String moduleId;
@@ -29,6 +30,7 @@ class LessonScreen extends StatelessWidget {
     final index = module.lessons.indexWhere((l) => l.id == lessonId);
     final isCompleted = progress.isLessonCompleted(lesson.id);
     final color = AppColors.categoryColor(module.colorKey);
+    final hasNextLesson = index + 1 < module.lessons.length;
 
     final paragraphs = lesson.content
         .split('\n')
@@ -78,12 +80,12 @@ class LessonScreen extends StatelessWidget {
                             ),
                           ),
                           const SizedBox(width: 10),
-                          Icon(Icons.schedule, size: 16, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5)),
+                          Icon(Icons.schedule, size: 16, color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7)),
                           const SizedBox(width: 4),
                           Text(
                             '${lesson.durationMinutes} min',
                             style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
+                                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
                                 ),
                           ),
                         ],
@@ -111,21 +113,56 @@ class LessonScreen extends StatelessWidget {
             top: false,
             child: Padding(
               padding: const EdgeInsets.fromLTRB(20, 8, 20, 16),
-              child: TapTilt(
-                child: SizedBox(
-                  width: double.infinity,
-                  child: isCompleted
-                      ? OutlinedButton.icon(
-                          onPressed: () => progress.setLessonCompleted(lesson.id, false),
-                          icon: const Icon(Icons.check_circle, color: AppColors.success),
-                          label: const Text('Leçon terminée'),
-                        )
-                      : ElevatedButton.icon(
-                          onPressed: () => progress.setLessonCompleted(lesson.id, true),
-                          icon: const Icon(Icons.check),
-                          label: const Text('Marquer comme terminée'),
-                        ),
-                ),
+              child: Column(
+                children: [
+                  TapTilt(
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: isCompleted
+                          ? OutlinedButton.icon(
+                              onPressed: () => progress.setLessonCompleted(lesson.id, false),
+                              icon: const Icon(Icons.check_circle, color: AppColors.success),
+                              label: const Text('Leçon terminée'),
+                            )
+                          : ElevatedButton.icon(
+                              onPressed: () => progress.setLessonCompleted(lesson.id, true),
+                              icon: const Icon(Icons.check),
+                              label: const Text('Marquer comme terminée'),
+                            ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  TapTilt(
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        onPressed: () {
+                          if (hasNextLesson) {
+                            final nextLesson = module.lessons[index + 1];
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => LessonScreen(
+                                  moduleId: module.id,
+                                  lessonId: nextLesson.id,
+                                ),
+                              ),
+                            );
+                          } else {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => QuizScreen(moduleId: module.id),
+                              ),
+                            );
+                          }
+                        },
+                        icon: Icon(hasNextLesson ? Icons.arrow_forward : Icons.quiz),
+                        label: Text(hasNextLesson ? 'Leçon suivante' : 'Faire le quiz du module'),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

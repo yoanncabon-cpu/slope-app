@@ -1,7 +1,6 @@
-import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 
+import '../../calculators/loan_calculator.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
 import '../../widgets/alert_banner.dart';
@@ -38,21 +37,14 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
   Widget build(BuildContext context) {
     final amount = _parse(_amountController);
     final annualRate = _parse(_rateController);
-    final years = _parse(_yearsController).clamp(1, 40);
-    final months = (years * 12).round();
-    final monthlyRate = annualRate / 100 / 12;
+    final years = _parse(_yearsController);
+    final amountError = amount <= 0 ? 'Le montant emprunté doit être supérieur à 0' : null;
+    final yearsError = years <= 0 ? 'La durée doit être supérieure à 0' : null;
 
-    double monthlyPayment;
-    if (amount <= 0 || months <= 0) {
-      monthlyPayment = 0;
-    } else if (monthlyRate == 0) {
-      monthlyPayment = amount / months;
-    } else {
-      monthlyPayment = amount * monthlyRate / (1 - math.pow(1 + monthlyRate, -months));
-    }
-
-    final totalCost = monthlyPayment * months;
-    final totalInterest = totalCost - amount;
+    final result = calculateLoan(amount: amount, annualRatePercent: annualRate, years: years);
+    final monthlyPayment = result.monthlyPayment;
+    final totalCost = result.totalCost;
+    final totalInterest = result.totalInterest;
     final color = AppColors.categoryColor('obligations');
 
     return Scaffold(
@@ -71,9 +63,9 @@ class _LoanCalculatorScreenState extends State<LoanCalculatorScreen> {
                 ),
           ),
           const SizedBox(height: 20),
-          CalculatorField(label: 'Montant emprunté', controller: _amountController, suffixText: '€', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Montant emprunté', controller: _amountController, suffixText: '€', errorText: amountError, onChanged: (_) => setState(() {})),
           CalculatorField(label: 'Taux d\'intérêt annuel', controller: _rateController, suffixText: '%', onChanged: (_) => setState(() {})),
-          CalculatorField(label: 'Durée du prêt', controller: _yearsController, suffixText: 'années', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Durée du prêt', controller: _yearsController, suffixText: 'années', errorText: yearsError, onChanged: (_) => setState(() {})),
           const SizedBox(height: 8),
           Text('Résultat', style: Theme.of(context).textTheme.titleLarge),
           const SizedBox(height: 12),

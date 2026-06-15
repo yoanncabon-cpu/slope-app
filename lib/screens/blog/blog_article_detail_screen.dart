@@ -32,6 +32,7 @@ class BlogArticleDetailScreen extends StatelessWidget {
         title: Text(article.category),
         actions: [
           IconButton(
+            tooltip: isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris',
             onPressed: () => progress.toggleFavoriteArticle(article.id),
             icon: Icon(
               isFavorite ? Icons.bookmark : Icons.bookmark_border,

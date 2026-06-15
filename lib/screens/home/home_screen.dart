@@ -43,9 +43,12 @@ class HomeScreen extends StatelessWidget {
         : null;
 
     return SafeArea(
-      child: ListView(
-        padding: const EdgeInsets.fromLTRB(20, 24, 20, 32),
-        children: [
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final isWide = constraints.maxWidth >= 768;
+          final content = ListView(
+            padding: const EdgeInsets.fromLTRB(20, 24, 20, 32),
+            children: [
           Text(
             'Bienvenue sur Slope',
             style: Theme.of(context).textTheme.headlineMedium,
@@ -54,7 +57,7 @@ class HomeScreen extends StatelessWidget {
           Text(
             'Apprenez à investir et entreprendre, un module à la fois.',
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.65),
+                  color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.75),
                 ),
           ),
           const IllustrationBanner(

@@ -34,6 +34,7 @@ class BusinessIdeaDetailScreen extends StatelessWidget {
         title: Text(idea.title),
         actions: [
           IconButton(
+            tooltip: isFavorite ? 'Retirer des favoris' : 'Ajouter aux favoris',
             onPressed: () => progress.toggleFavoriteIdea(idea.id),
             icon: Icon(
               isFavorite ? Icons.favorite : Icons.favorite_border,

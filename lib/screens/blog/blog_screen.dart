@@ -7,6 +7,7 @@ import '../../theme/app_colors.dart';
 import '../../widgets/animations/animations.dart';
 import '../../widgets/blog_article_card.dart';
 import '../../widgets/illustration_banner.dart';
+import '../../widgets/search_and_filter_bar.dart';
 import 'blog_article_detail_screen.dart';
 
 class BlogScreen extends StatefulWidget {
@@ -69,45 +70,19 @@ class _BlogScreenState extends State<BlogScreen> {
       body: Column(
         children: [
           const IllustrationBanner(asset: 'assets/images/illustration_blog.svg'),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
-            child: TextField(
-              controller: _searchController,
-              onChanged: (value) => setState(() => _query = value),
-              decoration: InputDecoration(
-                hintText: 'Rechercher un article...',
-                prefixIcon: const Icon(Icons.search),
-                suffixIcon: _query.isEmpty
-                    ? null
-                    : IconButton(
-                        icon: const Icon(Icons.close),
-                        onPressed: () {
-                          _searchController.clear();
-                          setState(() => _query = '');
-                        },
-                      ),
-              ),
-            ),
+          SearchAndFilterBar(
+            controller: _searchController,
+            hintText: 'Rechercher un article...',
+            query: _query,
+            onQueryChanged: (value) => setState(() => _query = value),
+            onClear: () {
+              _searchController.clear();
+              setState(() => _query = '');
+            },
+            categories: categories,
+            selectedCategory: _selectedCategory,
+            onCategorySelected: (category) => setState(() => _selectedCategory = category),
           ),
-          SizedBox(
-            height: 40,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              itemCount: categories.length,
-              separatorBuilder: (_, _) => const SizedBox(width: 8),
-              itemBuilder: (context, index) {
-                final category = categories[index];
-                final selected = category == _selectedCategory;
-                return ChoiceChip(
-                  label: Text(category),
-                  selected: selected,
-                  onSelected: (_) => setState(() => _selectedCategory = category),
-                );
-              },
-            ),
-          ),
-          const SizedBox(height: 12),
           Expanded(
             child: articles.isEmpty
                 ? Center(

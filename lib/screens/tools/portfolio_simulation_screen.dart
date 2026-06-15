@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+import '../../calculators/portfolio_allocation.dart';
 import '../../models/simulation_asset_class.dart';
 import '../../theme/app_colors.dart';
 import '../../utils/formatters.dart';
@@ -49,62 +50,30 @@ class _PortfolioSimulationScreenState extends State<PortfolioSimulationScreen> {
 
   void _onAllocationChanged(String key, double newValue) {
     setState(() {
-      final oldValue = _allocations[key]!;
-      final delta = newValue - oldValue;
-      _allocations[key] = newValue;
-
-      final others = _allocations.keys.where((k) => k != key).toList();
-      final othersSum = others.fold<double>(0, (s, k) => s + _allocations[k]!);
-      if (othersSum > 0) {
-        for (final k in others) {
-          final share = _allocations[k]! / othersSum;
-          _allocations[k] = (_allocations[k]! - delta * share).clamp(0, 100);
-        }
-      }
-
-      final total = _allocations.values.fold<double>(0, (s, v) => s + v);
-      if (total > 0) {
-        final factor = 100 / total;
-        _allocations.updateAll((k, v) => v * factor);
-      }
+      final updated = rebalanceAllocations(_allocations, key, newValue);
+      _allocations
+        ..clear()
+        ..addAll(updated);
     });
-  }
-
-  double _gaussianSample(Random random) {
-    final u1 = random.nextDouble().clamp(1e-9, 1.0);
-    final u2 = random.nextDouble();
-    return sqrt(-2 * log(u1)) * cos(2 * pi * u2);
   }
 
   void _runSimulation() {
     final initial = _parse(_initialController);
     final monthly = _parse(_monthlyController);
     final years = _parse(_yearsController).clamp(1, 40).toInt();
-    final random = Random();
 
-    final pockets = <String, double>{
-      for (final asset in simulationAssetClasses)
-        asset.key: initial * (_allocations[asset.key]! / 100),
-    };
-
-    final portfolioValues = <double>[initial];
-    final investedValues = <double>[initial];
-
-    for (int year = 1; year <= years; year++) {
-      for (final asset in simulationAssetClasses) {
-        final allocation = _allocations[asset.key]! / 100;
-        final annualContribution = monthly * 12 * allocation;
-        final returnRate = asset.expectedReturn + asset.volatility * _gaussianSample(random);
-        final value = (pockets[asset.key]! + annualContribution) * (1 + returnRate);
-        pockets[asset.key] = value.clamp(0, double.infinity);
-      }
-      portfolioValues.add(pockets.values.fold<double>(0, (s, v) => s + v));
-      investedValues.add(initial + monthly * 12 * year);
-    }
+    final result = simulatePortfolio(
+      initial: initial,
+      monthly: monthly,
+      years: years,
+      allocations: _allocations,
+      assetClasses: simulationAssetClasses,
+      random: Random(),
+    );
 
     setState(() {
-      _portfolioValues = portfolioValues;
-      _investedValues = investedValues;
+      _portfolioValues = result.portfolioValues;
+      _investedValues = result.investedValues;
     });
   }
 
@@ -117,7 +86,9 @@ class _PortfolioSimulationScreenState extends State<PortfolioSimulationScreen> {
     final finalValue = portfolioValues?.last;
     final totalInvested = investedValues?.last;
     final gain = (finalValue != null && totalInvested != null) ? finalValue - totalInvested : null;
-    final years = _parse(_yearsController).clamp(1, 40).toInt();
+    final rawYears = _parse(_yearsController);
+    final years = rawYears.clamp(1, 40).toInt();
+    final yearsError = rawYears <= 0 ? 'La durée doit être supérieure à 0' : null;
     final annualizedReturn = (finalValue != null && totalInvested != null && totalInvested > 0)
         ? pow(finalValue / totalInvested, 1 / years) - 1
         : null;
@@ -142,7 +113,7 @@ class _PortfolioSimulationScreenState extends State<PortfolioSimulationScreen> {
           const SizedBox(height: 20),
           CalculatorField(label: 'Capital initial', controller: _initialController, suffixText: '€', onChanged: (_) => setState(() {})),
           CalculatorField(label: 'Versement mensuel', controller: _monthlyController, suffixText: '€', onChanged: (_) => setState(() {})),
-          CalculatorField(label: 'Durée', controller: _yearsController, suffixText: 'années', onChanged: (_) => setState(() {})),
+          CalculatorField(label: 'Durée', controller: _yearsController, suffixText: 'années', errorText: yearsError, onChanged: (_) => setState(() {})),
           const SizedBox(height: 8),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -32,6 +32,9 @@ class BusinessIdea {
   final List<String> cons;
   final List<String> firstSteps;
   final List<String> skillsNeeded;
+  final int weeklyTimeMin;
+  final int weeklyTimeMax;
+  final List<String> skillTags;
 
   const BusinessIdea({
     required this.id,
@@ -53,6 +56,9 @@ class BusinessIdea {
     required this.cons,
     required this.firstSteps,
     required this.skillsNeeded,
+    required this.weeklyTimeMin,
+    required this.weeklyTimeMax,
+    required this.skillTags,
   });
 
   factory BusinessIdea.fromJson(Map<String, dynamic> json) {
@@ -78,6 +84,9 @@ class BusinessIdea {
       cons: (json['cons'] as List).cast<String>(),
       firstSteps: (json['firstSteps'] as List).cast<String>(),
       skillsNeeded: (json['skillsNeeded'] as List).cast<String>(),
+      weeklyTimeMin: json['weeklyTimeMin'] as int,
+      weeklyTimeMax: json['weeklyTimeMax'] as int,
+      skillTags: (json['skillTags'] as List).cast<String>(),
     );
   }
 }

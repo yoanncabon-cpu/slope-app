@@ -9,6 +9,7 @@ class CalculatorField extends StatelessWidget {
   final String? suffixText;
   final IconData? prefixIcon;
   final ValueChanged<String>? onChanged;
+  final String? errorText;
 
   const CalculatorField({
     super.key,
@@ -17,6 +18,7 @@ class CalculatorField extends StatelessWidget {
     this.suffixText,
     this.prefixIcon,
     this.onChanged,
+    this.errorText,
   });
 
   @override
@@ -38,12 +40,19 @@ class CalculatorField extends StatelessWidget {
           labelText: label,
           suffixText: suffixText,
           prefixIcon: prefixIcon == null ? null : Icon(prefixIcon),
+          errorText: errorText,
           filled: true,
           fillColor: colorScheme.surfaceContainerHighest.withValues(alpha: 0.4),
           border: border,
           enabledBorder: border,
           focusedBorder: border.copyWith(
             borderSide: const BorderSide(color: AppColors.primary, width: 2),
+          ),
+          errorBorder: border.copyWith(
+            borderSide: const BorderSide(color: AppColors.danger, width: 1.5),
+          ),
+          focusedErrorBorder: border.copyWith(
+            borderSide: const BorderSide(color: AppColors.danger, width: 2),
           ),
         ),
       ),

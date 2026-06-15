@@ -45,7 +45,10 @@
       "Sélection de produits et négociation fournisseurs",
       "Service client et gestion des litiges",
       "Analyse de données (coût d'acquisition, marges)"
-    ]
+    ],
+    "weeklyTimeMin": 10,
+    "weeklyTimeMax": 25,
+    "skillTags": ["marketing_digital", "vente_negociation", "relation_client"]
   },
   {
     "id": "print_on_demand",
@@ -93,7 +96,10 @@
       "Storytelling et communication de marque",
       "Marketing sur les réseaux sociaux",
       "Bases en e-commerce"
-    ]
+    ],
+    "weeklyTimeMin": 8,
+    "weeklyTimeMax": 20,
+    "skillTags": ["creation_contenu", "marketing_digital"]
   },
   {
     "id": "saas_niche",
@@ -141,7 +147,10 @@
       "Compréhension fine du secteur cible",
       "Vente B2B et relation client",
       "Gestion de produit (priorisation des fonctionnalités)"
-    ]
+    ],
+    "weeklyTimeMin": 25,
+    "weeklyTimeMax": 50,
+    "skillTags": ["competence_technique", "vente_negociation", "expertise_metier"]
   },
   {
     "id": "app_mobile",
@@ -189,7 +198,10 @@
       "UX/UI design",
       "Acquisition d'utilisateurs (ASO, réseaux sociaux, contenu)",
       "Analyse de la rétention et des données d'usage"
-    ]
+    ],
+    "weeklyTimeMin": 25,
+    "weeklyTimeMax": 50,
+    "skillTags": ["competence_technique", "creation_contenu", "marketing_digital"]
   },
   {
     "id": "coaching_formation",
@@ -237,7 +249,10 @@
       "Pédagogie et création de contenu",
       "Communication et marketing de contenu",
       "Bases en outils de visioconférence et plateformes de formation"
-    ]
+    ],
+    "weeklyTimeMin": 8,
+    "weeklyTimeMax": 20,
+    "skillTags": ["expertise_metier", "creation_contenu", "marketing_digital"]
   },
   {
     "id": "agence_digitale",
@@ -285,7 +300,10 @@
       "Gestion de projet et relation client",
       "Prospection commerciale",
       "Organisation et gestion du temps"
-    ]
+    ],
+    "weeklyTimeMin": 15,
+    "weeklyTimeMax": 40,
+    "skillTags": ["competence_technique", "vente_negociation", "organisation_logistique"]
   },
   {
     "id": "food_truck",
@@ -333,7 +351,10 @@
       "Gestion des stocks et des coûts matières",
       "Relation client et service rapide",
       "Connaissance des normes d'hygiène (HACCP)"
-    ]
+    ],
+    "weeklyTimeMin": 40,
+    "weeklyTimeMax": 60,
+    "skillTags": ["expertise_metier", "organisation_logistique", "relation_client"]
   },
   {
     "id": "box_abonnement",
@@ -381,7 +402,10 @@
       "Logistique et gestion des stocks",
       "Marketing de contenu et communauté",
       "Gestion d'abonnements et fidélisation"
-    ]
+    ],
+    "weeklyTimeMin": 15,
+    "weeklyTimeMax": 35,
+    "skillTags": ["organisation_logistique", "marketing_digital", "vente_negociation"]
   },
   {
     "id": "location_materiel",
@@ -429,7 +453,10 @@
       "Relation client et gestion des litiges",
       "Notions de base en assurance et contrats",
       "Marketing local"
-    ]
+    ],
+    "weeklyTimeMin": 5,
+    "weeklyTimeMax": 15,
+    "skillTags": ["organisation_logistique", "relation_client", "gestion_administrative"]
   },
   {
     "id": "conciergerie_airbnb",
@@ -477,7 +504,10 @@
       "Relation client multicanal et gestion des imprévus",
       "Notions de tarification dynamique",
       "Marketing pour les annonces (photo, rédaction)"
-    ]
+    ],
+    "weeklyTimeMin": 15,
+    "weeklyTimeMax": 35,
+    "skillTags": ["organisation_logistique", "relation_client", "marketing_digital"]
   },
   {
     "id": "artisanat_etsy",
@@ -525,7 +555,10 @@
       "Photographie produit",
       "Marketing sur réseaux sociaux visuels",
       "Gestion des commandes et expéditions"
-    ]
+    ],
+    "weeklyTimeMin": 8,
+    "weeklyTimeMax": 20,
+    "skillTags": ["creation_contenu", "marketing_digital", "organisation_logistique"]
   },
   {
     "id": "coaching_sportif",
@@ -573,7 +606,10 @@
       "Pédagogie et motivation client",
       "Marketing local et réseaux sociaux",
       "Gestion de planning et de clientèle"
-    ]
+    ],
+    "weeklyTimeMin": 10,
+    "weeklyTimeMax": 30,
+    "skillTags": ["expertise_metier", "relation_client", "marketing_digital"]
   },
   {
     "id": "services_domicile",
@@ -621,7 +657,10 @@
       "Relation client et gestion de la qualité",
       "Connaissance du cadre réglementaire des services à la personne",
       "Marketing local"
-    ]
+    ],
+    "weeklyTimeMin": 20,
+    "weeklyTimeMax": 45,
+    "skillTags": ["organisation_logistique", "relation_client", "gestion_administrative"]
   },
   {
     "id": "cosmetiques_naturels",
@@ -669,7 +708,10 @@
       "Connaissance de la réglementation cosmétique",
       "Branding et storytelling",
       "Vente directe et e-commerce"
-    ]
+    ],
+    "weeklyTimeMin": 15,
+    "weeklyTimeMax": 35,
+    "skillTags": ["expertise_metier", "gestion_administrative", "creation_contenu"]
   },
   {
     "id": "courtage_immo",
@@ -717,7 +759,10 @@
       "Relation client et négociation",
       "Outils digitaux (CRM, visites virtuelles, signature électronique)",
       "Réseau professionnel (notaires, banques, agences)"
-    ]
+    ],
+    "weeklyTimeMin": 20,
+    "weeklyTimeMax": 40,
+    "skillTags": ["expertise_metier", "vente_negociation", "relation_client"]
   },
   {
     "id": "studio_contenu",
@@ -765,6 +810,9 @@
       "Créativité et sens du storytelling",
       "Prospection commerciale B2B",
       "Connaissance des formats propres à chaque plateforme"
-    ]
+    ],
+    "weeklyTimeMin": 20,
+    "weeklyTimeMax": 40,
+    "skillTags": ["creation_contenu", "vente_negociation"]
   }
 ]

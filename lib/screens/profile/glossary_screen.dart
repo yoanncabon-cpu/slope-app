@@ -5,6 +5,7 @@ import '../../models/glossary_term.dart';
 import '../../providers/content_provider.dart';
 import '../../theme/app_colors.dart';
 import '../../widgets/animations/animations.dart';
+import '../../widgets/search_and_filter_bar.dart';
 
 class GlossaryScreen extends StatefulWidget {
   const GlossaryScreen({super.key});
@@ -45,57 +46,19 @@ class _GlossaryScreenState extends State<GlossaryScreen> {
       appBar: AppBar(title: const Text('Glossaire')),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 12),
-            child: TextField(
-              controller: _searchController,
-              onChanged: (value) => setState(() => _query = value),
-              decoration: InputDecoration(
-                hintText: 'Rechercher un terme...',
-                prefixIcon: const Icon(Icons.search),
-                suffixIcon: _query.isEmpty
-                    ? null
-                    : IconButton(
-                        icon: const Icon(Icons.close),
-                        onPressed: () {
-                          _searchController.clear();
-                          setState(() => _query = '');
-                        },
-                      ),
-              ),
-            ),
+          SearchAndFilterBar(
+            controller: _searchController,
+            hintText: 'Rechercher un terme...',
+            query: _query,
+            onQueryChanged: (value) => setState(() => _query = value),
+            onClear: () {
+              _searchController.clear();
+              setState(() => _query = '');
+            },
+            categories: categories,
+            selectedCategory: _selectedCategory,
+            onCategorySelected: (category) => setState(() => _selectedCategory = category),
           ),
-          SizedBox(
-            height: 40,
-            child: ListView.separated(
-              scrollDirection: Axis.horizontal,
-              padding: const EdgeInsets.symmetric(horizontal: 20),
-              itemCount: categories.length,
-              separatorBuilder: (_, _) => const SizedBox(width: 8),
-              itemBuilder: (context, index) {
-                final category = categories[index];
-                final selected = category == _selectedCategory;
-                return ChoiceChip(
-                  label: Text(category),
-                  selected: selected,
-                  showCheckmark: false,
-                  selectedColor: AppColors.primary.withValues(alpha: 0.15),
-                  labelStyle: TextStyle(
-                    color: selected ? AppColors.primary : null,
-                    fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                    side: selected
-                        ? BorderSide.none
-                        : BorderSide(color: Theme.of(context).colorScheme.outline),
-                  ),
-                  onSelected: (_) => setState(() => _selectedCategory = category),
-                );
-              },
-            ),
-          ),
-          const SizedBox(height: 12),
           Expanded(
             child: terms.isEmpty
                 ? Center(
